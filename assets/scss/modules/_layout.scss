@@ -58,6 +58,12 @@ div, .container {
     right: $phoneGutters;
   }
   @include device(lg) {
+    display: flex;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    flex-direction: row;
     padding: {
       left: $deskGutters;
       right: $deskGutters;
@@ -72,6 +78,9 @@ div, .container {
 .nav__btn {
   &:hover {
     cursor: pointer;
+  }
+  @include device(lg) {
+    display: none;
   }
 }
 

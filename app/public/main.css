@@ -564,6 +564,12 @@ div, .container {
 }
 @media screen and (min-width: 1024px) {
   .nav__list {
+    display: flex;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    flex-direction: row;
     padding-left: 0;
     padding-right: 0;
   }
@@ -575,6 +581,11 @@ div, .container {
 
 .nav__btn:hover {
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .nav__btn {
+    display: none;
+  }
 }
 
 /* main –––––––––––––––––––––––––––––– */
@@ -611,15 +622,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li, td, th {
   font-family: "Times New Roman", Georgia, Garamond, serif;
-}
-
-h1 {
-  font-size: 2rem;
-}
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 3rem;
-  }
 }
 
 /* Link styles

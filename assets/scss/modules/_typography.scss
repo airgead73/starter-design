@@ -8,9 +8,3 @@ p, li, td, th {
   font-family: $bodyType;
 }
 
-h1 {
-  font-size: 2rem;
-  @include device(lg) {
-    font-size: 3rem;
-  }
-}
