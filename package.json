@@ -1,0 +1,29 @@
+{
+  "name": "starter-ejs",
+  "version": "1.0.0",
+  "description": "fullstack application using node, express, mongodb, auth0, and gulp.",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airgead73/starter-ejs.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "auth0",
+    "gulp"
+  ],
+  "author": "dan moneypenny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airgead73/starter-ejs/issues"
+  },
+  "homepage": "https://github.com/airgead73/starter-ejs#readme",
+  "browserslist": [
+    ">1%",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
