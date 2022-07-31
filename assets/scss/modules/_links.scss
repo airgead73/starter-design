@@ -1,3 +1,22 @@
 /* Link styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+a {
+  &:hover {
+    color: navy;
+  }
+  &:visited {
+    color: purple;
+  }
+  &:link {
+    color: blue;
+  }
+  &:active {
+    color: green;
+  }
+  &:focus {
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: blue;
+  }
+}
