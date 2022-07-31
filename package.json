@@ -1,9 +1,11 @@
 {
-  "name": "starter-ejs",
+  "name": "starter-design",
   "version": "1.0.0",
-  "description": "fullstack application using node, express, mongodb, auth0, and gulp.",
+  "description": "fullstack application using node, express, mongodb, auth0, and gulp. Used for creating design templates.",
   "main": "index.js",
-  "scripts": { "start": "node index.js" },
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/airgead73/starter-ejs.git"
