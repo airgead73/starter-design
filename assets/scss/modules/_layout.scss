@@ -1,6 +1,8 @@
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+$phoneGutters: 12px;
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,10 +17,6 @@ div, .container {
   }
 }
 
-main {
-  flex: 1;
-}
-
 /* header –––––––––––––––––––––––––––– */
 
 
@@ -27,6 +25,8 @@ main {
   padding: {
     top: 10px;
     bottom: 10px;
+    left: $phoneGutters;
+    right: $phoneGutters;
   }
   & div {
     display: flex;
@@ -46,6 +46,10 @@ main {
   top: 50px;
   flex-direction: column;
   background-color: white;
+  padding: {
+    left: $phoneGutters;
+    right: $phoneGutters;
+  }
 }
 
 .nav__list.show {
@@ -61,3 +65,13 @@ main {
 .nav__item {}
 
 .nav__link {}
+
+/* main –––––––––––––––––––––––––––––– */
+
+main {
+  flex: 1;
+  padding: {
+    right: $phoneGutters;
+    left: $phoneGutters;
+  }
+}

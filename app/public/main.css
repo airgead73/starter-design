@@ -529,15 +529,13 @@ div, .container {
   margin-right: auto;
 }
 
-main {
-  flex: 1;
-}
-
 /* header –––––––––––––––––––––––––––– */
 .header {
   position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .header div {
   display: flex;
@@ -555,6 +553,8 @@ main {
   top: 50px;
   flex-direction: column;
   background-color: white;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .nav__list.show {
@@ -563,6 +563,13 @@ main {
 
 .nav__btn:hover {
   cursor: pointer;
+}
+
+/* main –––––––––––––––––––––––––––––– */
+main {
+  flex: 1;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 /* Base Styles
