@@ -1,0 +1,176 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin container {
+  position: relative;
+  width: 100%;
+  max-width: $containerWidth;
+  margin: {
+    right: auto;
+    left: auto;
+  };
+  padding: $layoutPadding;
+  box-sizing: border-box;
+  @include device(lg) {
+    padding: $layoutPadding * 5;
+  }
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+@mixin column {
+  flex-basis: 100%;
+      padding: {
+        top: $layoutPadding;
+        bottom: $layoutPadding;
+        left: $layoutPadding;
+        right: $layoutPadding;
+      }  
+  @include device(lg) {
+    flex: 1;
+    padding: {
+      right: $layoutPadding * 5;
+    }
+    &:last-child {
+      padding: {
+        right: 0;
+      }
+    }
+    .p-column & {
+      padding: {
+        top: $layoutPadding * 4.5;
+        bottom: $layoutPadding * 4.5;
+        left: $layoutPadding * 5;
+        right: $layoutPadding * 5;
+      }
+    }
+  }
+}
+
+.container {
+  @include container;
+}
+
+section,
+.row {
+  @include row;
+}
+
+div,
+.column {
+  @include column;
+}
+
+._20 {
+  flex: 1;
+  @include device(lg) {
+    flex: 2;
+  }
+}
+
+._25 {
+  flex: 1;
+  @include device(lg) {
+    flex: 2.5;
+  }
+}
+
+._30 {
+  flex: 1;
+  @include device(lg) {
+    flex: 3;
+  }
+}
+
+._35 {
+  flex: 1;
+  @include device(lg) {
+    flex: 3.5;
+  }
+}
+
+._40 {
+  flex: 1;
+  @include device(lg) {
+    flex: 4;
+  }
+}
+
+._45 {
+  flex: 1;
+  @include device(lg) {
+    flex: 4.5;
+  }
+}
+
+._50 {
+  flex: 1;
+  @include device(lg) {
+    flex: 5;
+  }
+}
+
+._55 {
+  flex: 1;
+  @include device(lg) {
+    flex: 5.5;
+  }
+}
+
+._60 {
+  flex: 1;
+  @include device(lg) {
+    flex: 6;
+  }
+}
+
+._65 {
+  flex: 1;
+  @include device(lg) {
+    flex: 6.5;
+  }
+}
+
+._70 {
+  flex: 1;
+  @include device(lg) {
+    flex: 7.5;
+  }
+}
+
+._75 {
+  flex: 1;
+  @include device(lg) {
+    flex: 7.5;
+  }
+}
+
+._80 {
+  flex: 1;
+  @include device(lg) {
+    flex: 8;
+  }
+}
+
+// section default row
+// div default column
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-auto {
+  align-items: auto;
+}

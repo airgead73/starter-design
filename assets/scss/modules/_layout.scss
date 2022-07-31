@@ -1,0 +1,132 @@
+$leftBar: 250px;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: auto;
+  left: auto;
+  width: auto;
+  padding: {
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
+  background-color: $accentColor;
+  color: $baseWhite;
+  @include device(lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $leftBar;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+h1 {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+nav {
+  background-color: inherit;
+}
+
+nav button {
+  display: block;
+  color: inherit;
+  border-color: $baseWhite;
+  @include device(lg) {
+    display: none;
+  }
+}
+
+nav ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  z-index: 1;
+  width: 100%;
+  @include device(lg) {
+    display: block;
+    position: relative;
+    left: auto;
+  }
+}
+
+nav a {
+  color: inherit;
+}
+
+nav ul.show {
+  display: block;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  @include device(lg) {
+    flex-direction: row;
+    margin-left: $leftBar;
+  }
+}
+
+article {
+  flex-basis: 100%;
+  padding: {
+    top: 0;
+    bottom: 0;
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
+  @include device(lg) {
+    flex: 6;
+    padding: {
+      left: calc($layoutPadding * 3);
+      right: calc($layoutPadding * 3);
+    }
+  }
+}
+
+aside {
+  flex-basis: 100%;
+  padding: {
+    top: 0;
+    bottom: 0;
+    left: $layoutPadding;
+    right: $layoutPadding;
+  } 
+  @include device(lg) {
+    flex: 4;
+    padding: {
+      left: calc($layoutPadding * 3);
+      right: calc($layoutPadding * 3);
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: $baseWhite;
+  @include device(lg) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: $leftBar;
+  }
+}
+

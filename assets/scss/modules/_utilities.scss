@@ -1,0 +1,38 @@
+/*
+  Utilities
+  ––––––––––––––––––––––––––––––––––––––––––––––––––
+  */
+  .u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Misc
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid $lightGray;
+  }
+  
+  .p {
+    padding: {
+      top: $layoutPadding;
+      bottom: $layoutPadding;
+      left: $layoutPadding;
+      right: $layoutPadding;
+    }
+    @include device(lg) {
+      padding: {
+        top: $layoutPadding * 4.5;
+        bottom: $layoutPadding * 4.5;
+        left: $layoutPadding * 4;
+        right: $layoutPadding * 4;
+      }
+    }
+  }

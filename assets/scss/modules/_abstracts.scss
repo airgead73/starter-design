@@ -1,0 +1,57 @@
+// colors
+
+$baseTextColor: #222;
+$baseGray: #555;
+$lightGray: #e1e1e1;
+$offblack: mix(black, white, 80%);
+$baseWhite: #fff;
+$baseBlack: #333;
+$baseBorder: #33c3f0;
+//$accentColor: #1eaedb;
+$accentColor: #b7410e;
+//$accentColor: $offblack;
+$accentHover: mix($accentColor, black, 80%);
+
+$gray-0: #e1e1e1;
+$gray-1: #d1d1d1;
+$gray-2: #bbb;
+$gray-3: #888;
+$gray-4: #555;
+$gray-5: #333;
+
+// type
+$bodyText: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+
+$headingText: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+
+$typeMarginBottom: 2rem;
+
+$baseWeight: 300;
+
+// dimensions
+
+$containerWidth: 2000px;
+$layoutPadding: 15px;
+$globalRadius: 4px;
+
+// mixins
+$media: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+  3xl: 1920px
+);
+
+@mixin device($breakpoint) {
+  @each $breakpoints, $size in $media {
+    @if $breakpoint==$breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}

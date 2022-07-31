@@ -1,0 +1,50 @@
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: $accentColor;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $accentColor;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover {
+    color: $baseBlack;
+    border-color: gray-3;
+    outline: 0;
+  }
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: $baseWhite;
+  background-color: $accentColor;
+  border-color: $accentColor;
+  &:hover {
+    color: $baseWhite;
+    background-color: $accentHover;
+    border-color: $accentHover;
+  }
+  &:focus {
+    color: $baseWhite;
+    background-color: $accentHover;
+    border-color: $accentHover;
+  }
+}
