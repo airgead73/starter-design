@@ -543,6 +543,12 @@ div, .container {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /* nav ––––––––––––––––––––––––––––––– */
 .nav__list {
@@ -555,6 +561,12 @@ div, .container {
   background-color: white;
   padding-left: 12px;
   padding-right: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .nav__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .nav__list.show {
@@ -570,6 +582,12 @@ main {
   flex: 1;
   padding-right: 12px;
   padding-left: 12px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /* Base Styles
@@ -593,6 +611,15 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li, td, th {
   font-family: "Times New Roman", Georgia, Garamond, serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 /* Link styles

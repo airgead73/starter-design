@@ -2,6 +2,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 $phoneGutters: 12px;
+$deskGutters: 0;
 
 body {
   display: flex;
@@ -34,6 +35,12 @@ div, .container {
     justify-content: space-between;
     align-items: center;
   }
+  @include device(lg) {
+    padding: {
+      left: $deskGutters;
+      right: $deskGutters;
+    }
+  }
 }
 
 /* nav ––––––––––––––––––––––––––––––– */
@@ -50,6 +57,12 @@ div, .container {
     left: $phoneGutters;
     right: $phoneGutters;
   }
+  @include device(lg) {
+    padding: {
+      left: $deskGutters;
+      right: $deskGutters;
+    }
+  }  
 }
 
 .nav__list.show {
@@ -73,5 +86,11 @@ main {
   padding: {
     right: $phoneGutters;
     left: $phoneGutters;
+  }
+  @include device(lg) {
+    padding: {
+      left: $deskGutters;
+      right: $deskGutters;
+    }
   }
 }
