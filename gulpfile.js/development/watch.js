@@ -4,7 +4,7 @@ const clean = require('./clean');
 const javascript = require('./javascript')
 
 function watchTasks() {
-  watch(['assets/scss/**/*.scss', 'assets/scripts/**/*.js'], { ignoreInitial: false, delay: 500 },
+  watch(['assets/scss/index.scss','assets/scss/**/*.scss', 'assets/scripts/**/*.js'], { ignoreInitial: false, delay: 500 },
   series(
     clean,
     javascript,
