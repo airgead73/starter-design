@@ -23,65 +23,28 @@ div, .container {
 
 .header {
   position: relative;
-  padding: {
-    top: 10px;
-    bottom: 10px;
-    left: $phoneGutters;
-    right: $phoneGutters;
-  }
-  & div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  @include device(lg) {
-    padding: {
-      left: $deskGutters;
-      right: $deskGutters;
-    }
-  }
 }
 
 /* nav ––––––––––––––––––––––––––––––– */
 
 .nav__list {
   display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50px;
-  flex-direction: column;
-  background-color: white;
-  padding: {
-    left: $phoneGutters;
-    right: $phoneGutters;
-  }
-  @include device(lg) {
-    display: flex;
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-    flex-direction: row;
-    padding: {
-      left: $deskGutters;
-      right: $deskGutters;
-    }
-  }  
 }
 
 .nav__list.show {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .nav__btn {
-  &:hover {
-    cursor: pointer;
-  }
-  @include device(lg) {
-    display: none;
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+  width: 50px;
+  height: 25px;
+  text-align: center;
 }
 
 .nav__item {}
@@ -92,14 +55,4 @@ div, .container {
 
 main {
   flex: 1;
-  padding: {
-    right: $phoneGutters;
-    left: $phoneGutters;
-  }
-  @include device(lg) {
-    padding: {
-      left: $deskGutters;
-      right: $deskGutters;
-    }
-  }
 }
