@@ -1,83 +1,86 @@
-<%- include ('../../partials/head') %>
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <% if(development) { %>
-      <link rel="stylesheet" href="/main.css" type="text/css">
-      <script src="/bundle.js" defer></script>
-      <% } else { %>
-        <link rel="stylesheet" href="/main.min.css" type="text/css">
-        <script src="/bundle.min.js" defer></script>
-        <% } %>
-          <title>
-            <%= typeof title !='undefined' ? title : 'Page Title' %>
-          </title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if(development) { %>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <script src="/bundle.js" defer></script>
+    <% } else { %>
+      <link rel="stylesheet" href="/main.min.css" type="text/css">
+      <script src="/bundle.min.js" defer></script>
+      <% } %>
+        <title>
+          <%= typeof title !='undefined' ? title : 'Page Title' %>
+        </title>
+</head>
 
-  <body>
+<body>
 
-    <header id="top-of-page">
-      <h1> <a href="#">design starter</a></h1>
-      <nav>
-        <ul>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contacts</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">logout</a></li>
+  <header id="top-of-page" class="header">
+    <div>
+      <h1 class="header__title"> <a href="#">design starter</a></h1>
+      <nav class="nav">
+        <button class="nav__btn" id="nav__btn">menu</button>
+        <ul class="nav__list" id="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">contacts</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">logout</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
 
-    <main>
-      <article>
-        <h2>templates</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur ipsum veritatis autem.
-          Ducimus assumenda officia sed <a href="">repellat</a>, maxime iste eos explicabo, nobis dignissimos, ipsa
-          eveniet similique
-          aspernatur recusandae aperiam repudiandae quisquam delectus necessitatibus in dicta veniam eaque tempora?
-          Ratione autem quisquam nobis exercitationem quod veritatis eum cumque nam sed!</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, tenetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia voluptates officia neque nulla,
-          illo libero fuga odio, blanditiis excepturi enim sequi reprehenderit voluptatum ullam veritatis et perferendis
-          eligendi asperiores maiores. Odio dicta at sint? Pariatur fuga expedita ullam qui ea, voluptatibus officiis
-          tempore quasi recusandae quibusdam, vero dolorum quisquam dolore dignissimos vitae quam explicabo ex. Ea cum
-          unde quas perferendis perspiciatis nihil, autem veniam repellat laboriosam expedita repellendus consequatur
-          numquam adipisci quaerat sequi sit provident quo facilis praesentium id quam explicabo ipsum. Necessitatibus
-          ducimus voluptate natus similique eligendi architecto itaque odit iusto voluptatem sit aliquam ex provident
-          recusandae officia quasi id, dolorem laboriosam asperiores velit saepe. Eos illo, nulla adipisci, pariatur
-          reprehenderit doloribus enim, quae totam vitae temporibus obcaecati debitis voluptas dignissimos corporis
-          aliquid itaque molestiae! Beatae neque earum et? Quos quasi labore incidunt quidem, nemo a velit et deleniti,
-          voluptas earum dolorum. Perferendis, praesentium. Rerum libero repudiandae a?</p>
-      </article>
-      <aside>
-        <h3>sidebar</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis earum aut odit nemo incidunt fugiat
-          eaque expedita accusantium. Delectus, aperiam libero explicabo porro fugit veritatis.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat natus, alias vel inventore omnis
-          asperiores officia eius accusantium delectus ex, atque et sint assumenda fugit quae expedita, iusto non
-          tempora aspernatur facilis. Eos aut nemo, voluptatem quos blanditiis modi delectus facere reiciendis corrupti
-          quisquam minus at praesentium tenetur ipsum.</p>
-        <ul>
-          <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-          <li><a href="">Lorem, ipsum.</a></li>
-          <li><a href="">Dolor sit amet consectetur adipisicing.</a></li>
-          <li><a href="">Ipsum dolor sit.</a></li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur recusandae expedita nesciunt
-          ut. Amet omnis, rerum unde perferendis tenetur inventore molestiae. Aut dolorum rem atque ipsa! Molestias
-          facilis rem cum id explicabo ut, unde labore omnis incidunt sunt et!</p>
-      </aside>
-    </main>
+  </header>
 
-    <footer>
-      <p>&copy; design starter 2022</p>
-      <p><a href="#top-of-page">back to top</a></p>
-    </footer>
+  <main class="container">
+    <article>
+      <h2>templates</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur ipsum veritatis autem.
+        Ducimus assumenda officia sed <a href="">repellat</a>, maxime iste eos explicabo, nobis dignissimos, ipsa
+        eveniet similique
+        aspernatur recusandae aperiam repudiandae quisquam delectus necessitatibus in dicta veniam eaque tempora?
+        Ratione autem quisquam nobis exercitationem quod veritatis eum cumque nam sed!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, tenetur.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia voluptates officia neque nulla,
+        illo libero fuga odio, blanditiis excepturi enim sequi reprehenderit voluptatum ullam veritatis et perferendis
+        eligendi asperiores maiores. Odio dicta at sint? Pariatur fuga expedita ullam qui ea, voluptatibus officiis
+        tempore quasi recusandae quibusdam, vero dolorum quisquam dolore dignissimos vitae quam explicabo ex. Ea cum
+        unde quas perferendis perspiciatis nihil, autem veniam repellat laboriosam expedita repellendus consequatur
+        numquam adipisci quaerat sequi sit provident quo facilis praesentium id quam explicabo ipsum. Necessitatibus
+        ducimus voluptate natus similique eligendi architecto itaque odit iusto voluptatem sit aliquam ex provident
+        recusandae officia quasi id, dolorem laboriosam asperiores velit saepe. Eos illo, nulla adipisci, pariatur
+        reprehenderit doloribus enim, quae totam vitae temporibus obcaecati debitis voluptas dignissimos corporis
+        aliquid itaque molestiae! Beatae neque earum et? Quos quasi labore incidunt quidem, nemo a velit et deleniti,
+        voluptas earum dolorum. Perferendis, praesentium. Rerum libero repudiandae a?</p>
+    </article>
+    <aside>
+      <h3>sidebar</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis earum aut odit nemo incidunt fugiat
+        eaque expedita accusantium. Delectus, aperiam libero explicabo porro fugit veritatis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat natus, alias vel inventore omnis
+        asperiores officia eius accusantium delectus ex, atque et sint assumenda fugit quae expedita, iusto non
+        tempora aspernatur facilis. Eos aut nemo, voluptatem quos blanditiis modi delectus facere reiciendis corrupti
+        quisquam minus at praesentium tenetur ipsum.</p>
+      <ul>
+        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+        <li><a href="">Lorem, ipsum.</a></li>
+        <li><a href="">Dolor sit amet consectetur adipisicing.</a></li>
+        <li><a href="">Ipsum dolor sit.</a></li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur recusandae expedita nesciunt
+        ut. Amet omnis, rerum unde perferendis tenetur inventore molestiae. Aut dolorum rem atque ipsa! Molestias
+        facilis rem cum id explicabo ut, unde labore omnis incidunt sunt et!</p>
+    </aside>
+  </main>
 
-  </body>
+  <footer>
+    <p>&copy; design starter 2022</p>
+    <p><a href="#top-of-page">back to top</a></p>
+  </footer>
 
-  </html>
+</body>
+
+</html>

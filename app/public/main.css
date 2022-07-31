@@ -515,28 +515,97 @@ h1 {
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+div, .container {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  flex: 1;
+}
+
+/* header –––––––––––––––––––––––––––– */
+.header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav ––––––––––––––––––––––––––––––– */
+.nav__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  flex-direction: column;
+  background-color: white;
+}
+
+.nav__list.show {
+  display: flex;
+}
+
+.nav__btn:hover {
+  cursor: pointer;
+}
+
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Tahoma, Verdana, Trebuchet, Arial, sans-serif;
+}
+
+p, li, td, th {
+  font-family: "Times New Roman", Georgia, Garamond, serif;
+}
+
 /* Link styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:hover {
-  color: navy;
+  color: inherit;
 }
 a:visited {
-  color: purple;
+  color: inherit;
 }
 a:link {
-  color: blue;
+  color: inherit;
 }
 a:active {
-  color: green;
+  color: inherit;
 }
 a:focus {
   outline-width: 1px;
   outline-style: dotted;
-  outline-color: blue;
+  outline-color: inherit;
 }
 
 /* Buttons

@@ -3,20 +3,20 @@
 
 a {
   &:hover {
-    color: navy;
+    color: inherit;
   }
   &:visited {
-    color: purple;
+    color: inherit;
   }
   &:link {
-    color: blue;
+    color: inherit;
   }
   &:active {
-    color: green;
+    color: inherit;
   }
   &:focus {
     outline-width: 1px;
     outline-style: dotted;
-    outline-color: blue;
+    outline-color: inherit;
   }
 }

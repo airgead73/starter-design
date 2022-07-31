@@ -23,41 +23,51 @@ main {
 
 
 .header {
-  position: relative;
+  background-color: slategrey;
   padding: {
-    top: 10px;
-    bottom: 10px;
+    top: 12px;
+    bottom: 12px;
   }
+  color: white;
   & div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
   }
 }
 
 /* nav ––––––––––––––––––––––––––––––– */
 
 .nav__list {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50px;
-  flex-direction: column;
-  background-color: white;
-}
-
-.nav__list.show {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.nav__btn {
+.nav__item {
+  display: block;
+  flex: 1;
+}
+
+.nav__link {
+  display: inline-block;
+  color: inherit;
+  font-family: $headingType;
+  border-bottom: {
+    width: 2px;
+    color: transparent;
+    style: solid;
+  }
+  padding: {
+    bottom: 1px;
+  }
+  transition: border-bottom-color, .25s;
   &:hover {
-    cursor: pointer;
+    border-bottom-color: inherit;
+  }
+  &:link {
+    color: inherit;
   }
 }
-
-.nav__item {}
-
-.nav__link {}
