@@ -8,7 +8,7 @@ const { dashboard } = require('./templates.controller');
 //const { handleQuery } = require('../../middleware');
 
 //routes
-templateRouter.route('/').get(handleQuery(Author), dashboard);
+templateRouter.route('/').get(dashboard);
 
 // export
 module.exports = templateRouter;
