@@ -1,5 +1,5 @@
-const authorRouter = require('./authors.routes');
+const templateRouter = require('./templates.routes');
 
 module.exports = {
-  authorRouter
+  templateRouter
 }
