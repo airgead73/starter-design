@@ -1,5 +1,4 @@
 const initMenu = () => {
-  console.log('init menu')
   const navBtn = document.getElementById('nav__menu');
   const navList = document.getElementById('nav__list');
   const navIcon = document.getElementById('nav__icon');
