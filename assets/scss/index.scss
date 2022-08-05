@@ -85,6 +85,13 @@
 
 @import './modules/normalize';
 //@import './modules/reset-a';
+@import './modules/_fa/fontawesome.scss';
+@import './modules/_fa/brands.scss';
+@import './modules/_fa/solid.scss';
+@import './modules/_fa/regular.scss';
+@import './modules/_fa/light.scss';
+@import './modules/_fa/thin.scss';
+@import './modules/_fa/duotone.scss';
 @import './modules/reset-b';
 @import './modules/abstracts';
 @import './modules/grid';
