@@ -35,7 +35,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 html {
   font-family: sans-serif;
@@ -19565,20 +19565,46 @@ body {
 }
 
 div, .container {
-  width: 100%;
+  width: 98%;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* header –––––––––––––––––––––––––––– */
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /* nav ––––––––––––––––––––––––––––––– */
 .nav {
   position: relative;
+  width: 98%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 640px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .nav__list {
   display: none;
+  padding-top: 10px;
+}
+@media screen and (min-width: 640px) {
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-top: 0;
+  }
 }
 
 .nav__list.show {
@@ -19591,6 +19617,28 @@ div, .container {
   right: 0;
   top: 0;
 }
+@media screen and (min-width: 640px) {
+  .nav__menu {
+    display: none;
+  }
+}
+
+.nav__link {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 640px) {
+  .nav__link {
+    display: inline-block;
+    border-bottom: 3px solid;
+    border-bottom-color: transparent;
+    transition: border-bottom-color, 0.26s;
+  }
+  .nav__link:hover {
+    border-bottom-color: black;
+  }
+}
 
 /* main –––––––––––––––––––––––––––––– */
 main {
@@ -19602,7 +19650,7 @@ main {
 html {
   font-size: 62.5%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   html {
     font-size: 100%;
   }

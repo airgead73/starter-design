@@ -10,27 +10,42 @@ body {
 }
 
 div, .container {
-  width: 100%;
-  max-width: $containerWidth;
-  margin: {
-    left: auto;
-    right: auto;
-  }
+  @include container();
 }
 
 /* header –––––––––––––––––––––––––––– */
 
 
-.header {}
+.header {
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
+}
 
 /* nav ––––––––––––––––––––––––––––––– */
 
 .nav {
   position: relative;
+  @include container();
+  @include device(sm) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .nav__list {
   display: none;
+  padding-top: 10px;
+  @include device(sm) {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-top: 0;
+    
+  }
 }
 
 .nav__list.show {
@@ -42,11 +57,28 @@ div, .container {
   position: absolute;
   right: 0;
   top: 0;
+  @include device(sm) {
+    display: none;
+  }
 }
 
 .nav__item {}
 
-.nav__link {}
+.nav__link {
+  display: block;
+  font-size: .95rem;
+  font-weight: 300;
+  @include device(sm) {
+    display: inline-block;
+    border-bottom: 3px solid;
+    border-bottom-color: transparent;
+    transition: border-bottom-color, .26s;
+    &:hover {
+      border-bottom-color: black;
+    }
+  }
+
+}
 
 /* main –––––––––––––––––––––––––––––– */
 
