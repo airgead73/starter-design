@@ -2,13 +2,14 @@
 'use strict';
 
 const initMenu = () => {
-  const navBtn = document.getElementById('menu__btn');
-  const navList = document.getElementById('nav__list');
+  console.log('init menu');
+  // const navBtn = document.getElementById('menu__btn');
+  // const navList = document.getElementById('nav__list');
   
-  navBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    navList.classList.toggle('show');
-  });
+  // navBtn.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   navList.classList.toggle('show');
+  // });
   
 };
 
