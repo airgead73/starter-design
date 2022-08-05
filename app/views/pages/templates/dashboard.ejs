@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="/main.min.css" type="text/css">
       <script src="/bundle.min.js" defer></script>
       <% } %>
+        <script src="https://kit.fontawesome.com/c2a0ddd321.js" crossorigin="anonymous"></script>
         <title>
           <%= typeof title !='undefined' ? title : 'Page Title' %>
         </title>
@@ -19,7 +20,7 @@
 
 <body>
 
-  <header id="top-of-page" class="header">
+  <!-- <header id="top-of-page" class="header">
     <div>
       <h1 class="header__title"><a href="#">design starter</a></h1>
       <nav class="nav">
@@ -32,6 +33,20 @@
       </nav>
     </div>
 
+  </header> -->
+  <header id="top-of-page" class="header">
+    <nav class="nav">
+      <a href="/" class="nav__logo h1">design starter</a>
+      <a href="#nav__list" class="nav__menu" id="nav__menu">
+        menu
+      </a>
+      <ul class="nav__list show" id="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">contacts</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">projects</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">logout</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">

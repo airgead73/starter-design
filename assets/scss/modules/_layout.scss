@@ -25,11 +25,24 @@ div, .container {
 
 /* nav ––––––––––––––––––––––––––––––– */
 
-.nav__list {}
+.nav {
+  position: relative;
+}
 
-.nav__list.show {}
+.nav__list {
+  display: none;
+}
 
-.nav__btn {}
+.nav__list.show {
+  display: block;
+}
+
+.nav__menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 .nav__item {}
 
