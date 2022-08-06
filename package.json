@@ -10,7 +10,7 @@
     "watch": "concurrently \"npm:public\" \"npm:server \"",
     "build": "gulp",
     "heroku-postbuild": "echo Skip builds on Heroku",
-    "deploy": "git push heroku v2:main",
+    "deploy": "git push heroku v2:main -a starter-design",
     "log": "heroku logs --tail"
   },
   "repository": {
