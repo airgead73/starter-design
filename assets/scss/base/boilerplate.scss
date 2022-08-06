@@ -1,7 +1,12 @@
+/* Boilerplate
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/type' as t;
+
 body {
+  display: block;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: t.$text;
   background-color: white;
   color: black;
 }
