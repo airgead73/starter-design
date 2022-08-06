@@ -81,7 +81,7 @@ body {
   color: black;
 }
 
-/* Major Second
+/* Minor Second
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 p, li, td, th {
   font-family: "Roboto", Helvetica, Tahoma, Verdana, Arial, sans-serif;
@@ -100,26 +100,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   margin-top: 0;
-  font-size: 1.802rem;
+  font-size: 1.383rem;
 }
 
 h2, .h2 {
-  font-size: 1.602rem;
+  font-size: 1.296rem;
 }
 
 h3, .h3 {
-  font-size: 1.424rem;
+  font-size: 1.215rem;
 }
 
 h4, .h4 {
-  font-size: 1.266rem;
+  font-size: 1.138rem;
 }
 
 h5, .h5 {
-  font-size: 1.125rem;
+  font-size: 1.067rem;
 }
 
 small, .text_small {
-  font-size: 0.889rem;
+  font-size: 0.937rem;
 }
 /*# sourceMappingURL=main.css.map */
