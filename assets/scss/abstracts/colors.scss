@@ -11,6 +11,22 @@ $gray: (
   900: #3d3d3d,  
 );
 
+
+
+$primary: map-get($gray, 800);
+$secondary: map-get($gray, 400);
+$accent: indianred;
+
 @function gray($number: 500) {
   @return map-get($gray, $number);
+}
+
+@function accent($theme: 'light', $value: 100) {
+  $percent: $value * 1%;
+  @if $theme == 'light' {
+    @return mix($accent, white, $percent);
+  } @else {
+    @return mix($accent, black, $percent)
+  }
+  
 }
