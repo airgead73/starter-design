@@ -1,6 +1,7 @@
 /* Boilerplate
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @use '../abstracts/type' as t;
+@use '../abstracts/colors.scss' as c;
 
 body {
   display: block;
@@ -8,5 +9,5 @@ body {
   padding: 0;
   font-family: t.$text;
   background-color: white;
-  color: black;
+  color: c.gray(900);
 }

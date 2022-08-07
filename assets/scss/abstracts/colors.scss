@@ -1,0 +1,16 @@
+$gray: (
+  50: #f7f7f7,
+  100: #efefef,
+  200: #dfdfdf,
+  300: #cacaca,
+  400: #a8a8a8,
+  500: #878787,
+  600: #6d6d6d,
+  700: #5f5f5f,
+  800: #4a4a4a,
+  900: #3d3d3d,  
+);
+
+@function gray($number: 500) {
+  @return map-get($gray, $number);
+}

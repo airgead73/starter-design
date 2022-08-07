@@ -1,0 +1,38 @@
+$container: 11280px;
+$padding: 25px;
+$margin: 25px;
+$margin: 25px;
+
+// containers
+@mixin container($width: 98%) {
+  width: $width;
+  max-width: $containerWidth;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+// queries
+
+$media: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+  3xl: 1920px  
+);
+
+@mixin screen($breakpoint) {
+  @each $breakpoints, $size in d.$media {
+    @if $breakpoint==$breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
+
+
+
