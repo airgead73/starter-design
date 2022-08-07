@@ -21,12 +21,34 @@ $accent: indianred;
   @return map-get($gray, $number);
 }
 
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
 @function accent($theme: 'light', $value: 100) {
   $percent: $value * 1%;
   @if $theme == 'light' {
-    @return mix($accent, white, $percent);
+    @return mix(white, $accent, $percent);
   } @else {
-    @return mix($accent, black, $percent)
+    @return mix(black, $accent, $percent)
   }
   
+}
+
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
 }
