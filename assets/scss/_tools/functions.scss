@@ -1,0 +1,9 @@
+// get value of custom property
+@function cssvar($name) {
+  @return var(--#{$name});
+}
+
+// convert hex to rgb
+@function to-rgb($value) {
+  @return red($value), green($value), blue($value);
+}

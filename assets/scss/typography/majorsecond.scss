@@ -1,9 +1,9 @@
 /* Major Second
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@use '../abstracts/type' as t;
+@use '../_tools/functions.scss' as f;
 
 p, li, td, th {
-  font-family: t.$text;
+  font-family: f.cssvar(text);
 }
 
 p {
@@ -12,7 +12,7 @@ p {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   margin: 3rem 0 1.38rem;
-  font-family: t.$headings;
+  font-family: f.cssvar(headings);
   font-weight: 400;
   line-height: 1.3;
 }
