@@ -1,3 +1,5 @@
+@use '../_variables/dimensions.scss' as d;
+
 // set custom properties
 @mixin cssvars($css_variables) {
   :root {
@@ -21,4 +23,52 @@
          url('/fonts/#{$file}.ttf') format('truetype'), // Safari, Android, iOS
          url('/fonts/#{$file}.svg#Oswald') format('svg'); // Legacy iOS
   }
+}
+
+// dimensions
+@mixin container ($width: 98%) {
+  width: $width;
+  max-width: d.$container;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin p($top: null, $right: null, $bottom: null, $left: null) {
+  @if $top != null {
+    padding-top: $top;
+  }
+  @if $right != null {
+    padding-right: $right;
+  }
+  @if $bottom != null {
+    padding-bottom: $bottom;
+  }
+  @if $left != null {
+    padding-left: $left;
+  }
+}
+
+@mixin m($top: null, $right: null, $bottom: null, $left: null) {
+  @if $top != null {
+    margin-top: $top;
+  }
+  @if $right != null {
+    margin-right: $right;
+  }
+  @if $bottom != null {
+    margin-bottom: $bottom;
+  }
+  @if $left != null {
+    margin-left: $left;
+  }
+}
+
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
 }

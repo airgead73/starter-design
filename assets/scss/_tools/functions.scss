@@ -7,3 +7,24 @@
 @function to-rgb($value) {
   @return red($value), green($value), blue($value);
 }
+
+// colors
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// scut rem
+$scut-rem-base: 16 !default;
+
+@function scut-strip-unit ($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function scut-rem ($pixels) {
+  @return scut-strip-unit($pixels) / $scut-rem-base * 1rem;
+}
+

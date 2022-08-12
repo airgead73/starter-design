@@ -1,29 +1,29 @@
 /* Font Faces
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@use '../_tools/mixins' as m;
+@use '../_tools' as *;
 @use '../_variables/type' as t;
 
 /* oswald-300 - latin */
-@include m.font-face("Oswald", oswald-v49-latin-300, normal, 300);
+@include font-face("Oswald", oswald-v49-latin-300, normal, 300);
 
 /* oswald-regular - latin */
-@include m.font-face("Oswald", oswald-v49-latin-regular, normal, 400);
+@include font-face("Oswald", oswald-v49-latin-regular, normal, 400);
 
 /* oswald-700 - latin */
-@include m.font-face("Oswald", oswald-v49-latin-700, normal, 700);
+@include font-face("Oswald", oswald-v49-latin-700, normal, 700);
 
 /* roboto-300 - latin */
-@include m.font-face("Roboto", roboto-v30-latin-300, normal, 300);
+@include font-face("Roboto", roboto-v30-latin-300, normal, 300);
 
 /* roboto-regular - latin */
-@include m.font-face("Roboto", roboto-v30-latin-regular, normal, 400);
+@include font-face("Roboto", roboto-v30-latin-regular, normal, 400);
 
 /* roboto-700 - latin */
-@include m.font-face("Roboto", roboto-v30-latin-700, normal, 700);
+@include font-face("Roboto", roboto-v30-latin-700, normal, 700);
 
 /* CSS Custom Properties
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@include m.cssvars((
+@include cssvars((
   text: t.$text,
   headings: t.$headings
 ))
