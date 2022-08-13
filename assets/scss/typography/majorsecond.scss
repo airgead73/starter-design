@@ -4,6 +4,8 @@
 
 p, li, td, th {
   font-family: cssvar(text);
+  font-size: .9rem;
+  font-weight: 300;
 }
 
 p {
@@ -13,7 +15,7 @@ p {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   margin: 3rem 0 1.38rem;
   font-family: cssvar(headings);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.3;
 }
 

@@ -72,64 +72,72 @@ meter {
 
 /* Font Faces
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* oswald-300 - latin */
+/* lato-300 - latin */
 @font-face {
-  font-family: "Oswald";
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
-  src: url("/fonts/oswald-v49-latin-300.eot");
-  src: local("Oswald"), url("/fonts/oswald-v49-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/oswald-v49-latin-300.woff2") format("woff2"), url("/fonts/oswald-v49-latin-300.woff") format("woff"), url("/fonts/oswald-v49-latin-300.ttf") format("truetype"), url("/fonts/oswald-v49-latin-300.svg#Oswald") format("svg");
+  src: url("/fonts/lato-v23-latin-300.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-300.woff2") format("woff2"), url("/fonts/lato-v23-latin-300.woff") format("woff"), url("/fonts/lato-v23-latin-300.ttf") format("truetype"), url("/fonts/lato-v23-latin-300.svg#Oswald") format("svg");
 }
-/* oswald-regular - latin */
+/* lato-regular - latin */
 @font-face {
-  font-family: "Oswald";
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/oswald-v49-latin-regular.eot");
-  src: local("Oswald"), url("/fonts/oswald-v49-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/oswald-v49-latin-regular.woff2") format("woff2"), url("/fonts/oswald-v49-latin-regular.woff") format("woff"), url("/fonts/oswald-v49-latin-regular.ttf") format("truetype"), url("/fonts/oswald-v49-latin-regular.svg#Oswald") format("svg");
+  src: url("/fonts/lato-v23-latin-regular.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-regular.woff2") format("woff2"), url("/fonts/lato-v23-latin-regular.woff") format("woff"), url("/fonts/lato-v23-latin-regular.ttf") format("truetype"), url("/fonts/lato-v23-latin-regular.svg#Oswald") format("svg");
 }
-/* oswald-700 - latin */
+/* lato-900 - latin */
 @font-face {
-  font-family: "Oswald";
+  font-family: "Lato";
   font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/oswald-v49-latin-700.eot");
-  src: local("Oswald"), url("/fonts/oswald-v49-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/oswald-v49-latin-700.woff2") format("woff2"), url("/fonts/oswald-v49-latin-700.woff") format("woff"), url("/fonts/oswald-v49-latin-700.ttf") format("truetype"), url("/fonts/oswald-v49-latin-700.svg#Oswald") format("svg");
+  font-weight: 900;
+  src: url("/fonts/lato-v23-latin-900.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-900.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-900.woff2") format("woff2"), url("/fonts/lato-v23-latin-900.woff") format("woff"), url("/fonts/lato-v23-latin-900.ttf") format("truetype"), url("/fonts/lato-v23-latin-900.svg#Oswald") format("svg");
 }
-/* roboto-300 - latin */
+/* open-sans-300 - latin */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("/fonts/roboto-v30-latin-300.eot");
-  src: local("Roboto"), url("/fonts/roboto-v30-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/roboto-v30-latin-300.woff2") format("woff2"), url("/fonts/roboto-v30-latin-300.woff") format("woff"), url("/fonts/roboto-v30-latin-300.ttf") format("truetype"), url("/fonts/roboto-v30-latin-300.svg#Oswald") format("svg");
+  src: url("/fonts/open-sans-v29-latin-300.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-300.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-300.woff") format("woff"), url("/fonts/open-sans-v29-latin-300.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-300.svg#Oswald") format("svg");
 }
-/* roboto-regular - latin */
+/* open-sans-regular - latin */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/roboto-v30-latin-regular.eot");
-  src: local("Roboto"), url("/fonts/roboto-v30-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("/fonts/roboto-v30-latin-regular.woff") format("woff"), url("/fonts/roboto-v30-latin-regular.ttf") format("truetype"), url("/fonts/roboto-v30-latin-regular.svg#Oswald") format("svg");
+  src: url("/fonts/open-sans-v29-latin-regular.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-regular.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-regular.woff") format("woff"), url("/fonts/open-sans-v29-latin-regular.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-regular.svg#Oswald") format("svg");
 }
-/* roboto-700 - latin */
+/* open-sans-700 - latin */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/roboto-v30-latin-700.eot");
-  src: local("Roboto"), url("/fonts/roboto-v30-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/roboto-v30-latin-700.woff2") format("woff2"), url("/fonts/roboto-v30-latin-700.woff") format("woff"), url("/fonts/roboto-v30-latin-700.ttf") format("truetype"), url("/fonts/roboto-v30-latin-700.svg#Oswald") format("svg");
+  src: url("/fonts/open-sans-v29-latin-700.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-700.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-700.woff") format("woff"), url("/fonts/open-sans-v29-latin-700.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-700.svg#Oswald") format("svg");
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/open-sans-v29-latin-italic.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-italic.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-italic.woff") format("woff"), url("/fonts/open-sans-v29-latin-italic.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-italic.svg#Oswald") format("svg");
 }
 /* CSS Custom Properties
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-  --text: Roboto, Helvetica, Tahoma, Verdana, Arial, sans-serif;
-  --headings: Oswald, Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  --text: Open Sans, Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  --headings: Lato, Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
 /* Start 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Major Second
+/* Golden Ratio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 p, li, td, th {
   font-family: var(--text);
@@ -148,26 +156,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   margin-top: 0;
-  font-size: 1.802rem;
+  font-size: 11.089rem;
 }
 
 h2, .h2 {
-  font-size: 1.602rem;
+  font-size: 6.854rem;
 }
 
 h3, .h3 {
-  font-size: 1.424rem;
+  font-size: 4.236rem;
 }
 
 h4, .h4 {
-  font-size: 1.266rem;
+  font-size: 2.618rem;
 }
 
 h5, .h5 {
-  font-size: 1.125rem;
+  font-size: 1.618rem;
 }
 
 small, .text_small {
-  font-size: 0.889rem;
+  font-size: 0.618rem;
 }
 /*# sourceMappingURL=main.css.map */
