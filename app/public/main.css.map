@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss","index.css"],"names":[],"mappings":"AAEA;EACE,YAHM;ACER","file":"main.css","sourcesContent":["$color: black;\n\np {\n  color: $color;\n}","p {\n  color: black;\n}"]}
