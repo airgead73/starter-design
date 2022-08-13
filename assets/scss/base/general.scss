@@ -26,7 +26,5 @@
 
 /* CSS Custom Properties
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@include cssvars((
-  text: t.$text,
-  headings: t.$headings
-))
+$custom_properties: "text" #{t.$text}, "headings" #{t.$headings};
+@include cssvars($custom_properties)
