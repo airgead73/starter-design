@@ -16,7 +16,7 @@
  */
 
 const { handleError } = require('./middleware');
-const { connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
+const { authConfig, connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
 const clientRouter = require('./units.client/router.client');
 const apiRouter = require('./units.api/router.api');
 
@@ -25,7 +25,7 @@ const apiRouter = require('./units.api/router.api');
  */
 const app = express();
 connectDB();
-//app.use(auth(authConfig));
+app.use(auth(authConfig));
 
 /**
  * security
@@ -52,10 +52,10 @@ app.set('view engine', 'ejs');
 /**
  * locals
  */
-//  app.use(function (req, res, next) {
-//   res.locals.isAuthenticated = req.oidc.isAuthenticated();
-//   next();
-// });
+ app.use(function (req, res, next) {
+  res.locals.isAuthenticated = req.oidc.isAuthenticated();
+  next();
+});
 
 /**
  * routes

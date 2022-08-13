@@ -1,14 +1,12 @@
 const checkAuthClient = function(req, res, next) {
 
-  next();
+  const { isAuthenticated } = res.locals;
 
-  // const { isAuthenticated } = res.locals;
-
-  // if(isAuthenticated) {
-  //   return next();
-  // } else {
-  //   return res.status(401).redirect('/login');
-  // }
+  if(isAuthenticated) {
+    return next();
+  } else {
+    return res.status(401).redirect('/login');
+  }
 
 }
 

@@ -3,8 +3,8 @@ const clientRouter = Router();
 const { homeRouter } = require('./home');
 
 // middleware 
-//const { checkAuthClient } = require('../middleware');
-//clientRouter.use(checkAuthClient);
+const { checkAuthClient } = require('../middleware');
+clientRouter.use(checkAuthClient);
 
 clientRouter.use('/', homeRouter);
 
