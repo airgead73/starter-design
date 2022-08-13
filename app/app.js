@@ -14,7 +14,7 @@
 /**
  * internal imports
  */
-const { isDev } = require('./config/env');
+
 const { handleError } = require('./middleware');
 const { authConfig, connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
 const clientRouter = require('./units.client/router.client');
@@ -25,7 +25,7 @@ const apiRouter = require('./units.api/router.api');
  */
 const app = express();
 connectDB();
-app.use(auth(authConfig));
+//app.use(auth(authConfig));
 
 /**
  * security
