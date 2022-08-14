@@ -1,5 +1,7 @@
 const CLEAN = require('./CLEAN');
+const { PRODUCTION_JS } = require('./PRODUCTION')
 
 module.exports = {
-  CLEAN
+  CLEAN,
+  PRODUCTION_JS
 }
