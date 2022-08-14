@@ -1,3 +1,4 @@
+// third-party imports
 const { dest } = require('gulp');
 const rollup = require('rollup-stream');
 const sourcemaps = require('gulp-sourcemaps')
@@ -5,6 +6,10 @@ const rename = require('gulp-rename');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
+
+
+
+// functions
 
 function javascript() {
   return rollup({

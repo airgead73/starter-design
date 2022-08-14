@@ -1,6 +1,6 @@
 const { dev } = require('./development');
 const { build } = require('./production');
-const clean = require('./production/clean');
+const { clean } = require('./clean');
 
 exports.dev = dev;
 exports.clean = clean;
