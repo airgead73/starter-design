@@ -8,24 +8,23 @@ const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 
 // constants
-const { PRODUCTION_JS: CONSTANTS } = require('../constants');
+const { PRODUCTION_JS: C } = require('../constants');
 
 // functions
 
 function javascript() {
   return rollup({
-    //input: './assets/scripts/main.js',
-    input: CONSTANTS.INPUT,
+    input: C.INPUT,
     sourcemap: true,
     format: 'iife'
   })
-  .pipe(source('main.js', './assets/scripts'))
+  .pipe(source(C.SOURCE_FILE, C.SOURCE_PATH))
   .pipe(buffer())
   .pipe(uglify())
   .pipe(sourcemaps.init({loadMaps: true}))
-  .pipe(rename('bundle.min.js'))
+  .pipe(rename(C.OUTPUT))
   .pipe(sourcemaps.write('.'))
-  .pipe(dest('./app/public'));  
+  .pipe(dest(C.DEST));  
 }
 
 module.exports = javascript;
