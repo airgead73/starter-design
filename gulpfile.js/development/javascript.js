@@ -5,18 +5,22 @@ const rename = require('gulp-rename');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
+// constants
+const { DEVELOPMENT_JS: C } = require('../constants');
+
+// functions
 function javascript() {
   return rollup({
-    input: './assets/scripts/main.js',
+    input: C.INPUT,
     sourcemap: true,
     format: 'iife'
   })
-  .pipe(source('main.js', './assets/scripts'))
+  .pipe(source(C.SOURCE_FILE, C.SOURCE_PATH))
   .pipe(buffer())
   .pipe(sourcemaps.init({loadMaps: true}))
-  .pipe(rename('bundle.js'))
+  .pipe(rename(C.OUTPUT))
   .pipe(sourcemaps.write('.'))
-  .pipe(dest('./app/public'));  
+  .pipe(dest(C.DEST));  
 }
 
 module.exports = javascript;
