@@ -1,5 +1,13 @@
 $color: blue;
 
+.header {
+  padding:0;
+}
+
+.nav {
+  padding: 0;
+}
+
 .h2 {
   color: $color;
 }
@@ -10,5 +18,9 @@ $color: blue;
 
 .h4 {
   font-size: 16px;
+}
+
+.h5 {
+  color: green;
 }
 

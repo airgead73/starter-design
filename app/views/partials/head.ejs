@@ -14,10 +14,10 @@
       <% } else { %>
         <link rel="stylesheet" href="/main.min.css" type="text/css">
         <script src="/bundle.min.js" defer></script>
-        } %>
-        <title>
-          <%= typeof title !='undefined' ? title : 'Page Title' %>
-        </title>
+        <% } %>
+          <title>
+            <%= typeof title !='undefined' ? title : 'Page Title' %>
+          </title>
 </head>
 
 <body>

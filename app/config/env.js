@@ -1,6 +1,6 @@
 /* GENERAL ENVIRONMENT */
 const isDev = process.env.NODE_ENV === 'development';
-const isTEST = process.env.NODE_ENV === 'test';
+const isTest = process.env.NODE_ENV === 'test';
 
 /* AUTH */
 const authSecret = process.env.AUTH_SECRET;
