@@ -5,6 +5,11 @@ const {
 } = require('./PRODUCTION');
 
 const { 
+  TEST_JS, 
+  TEST_SCSS,
+} = require('./TEST');
+
+const { 
   DEVELOPMENT_JS,
   DEVELOPMENT_SCSS,
   DEVELOPMENT_WATCH
@@ -16,5 +21,7 @@ module.exports = {
   DEVELOPMENT_SCSS,
   DEVELOPMENT_WATCH,
   PRODUCTION_JS,
-  PRODUCTION_SCSS
+  PRODUCTION_SCSS,
+  TEST_JS,
+  TEST_SCSS
 }

@@ -1,19 +1,19 @@
-const PRODUCTION_JS = {
+const TEST_JS = {
   INPUT: './assets/scripts/main.js',
   SOURCE_FILE: 'main.js',
   SOURCE_PATH: './assets/scripts',
-  OUTPUT: 'bundle.min.js',
+  OUTPUT: 'bundle.test.js',
   DEST: './app/public'
 };
 
-const PRODUCTION_SCSS = {
+const TEST_SCSS = {
   SRC: 'assets/scss/index.scss',
-  OUTPUT: 'main.min.css',
+  OUTPUT: 'main.test.css',
   DEST: 'app/public'
 }
 
 module.exports = {
-  PRODUCTION_JS,
-  PRODUCTION_SCSS
+  TEST_JS,
+  TEST_SCSS
 }
 
