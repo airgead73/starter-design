@@ -7,13 +7,15 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 
-
+// constants
+const { PRODUCTION_JS: CONSTANTS } = require('../constants');
 
 // functions
 
 function javascript() {
   return rollup({
-    input: './assets/scripts/main.js',
+    //input: './assets/scripts/main.js',
+    input: CONSTANTS.INPUT,
     sourcemap: true,
     format: 'iife'
   })
