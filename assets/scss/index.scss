@@ -1,2 +1,14 @@
-@use 'base';
+$color: blue;
+
+.h2 {
+  color: $color;
+}
+
+.h3 {
+  background-color: $color;
+}
+
+.h4 {
+  font-size: 16px;
+}
 

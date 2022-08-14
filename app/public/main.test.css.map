@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss","index.css"],"names":[],"mappings":"AAEA;EACE,WAHM;ACER;;ADIA;EACE,sBAPM;ACMR","file":"main.test.css","sourcesContent":["$color: blue;\n\n.h2 {\n  color: $color;\n}\n\n.h3 {\n  background-color: $color;\n}\n\n.h4 {\n  font-size: 16px;\n}\n\n",".h2 {\n  color: blue;\n}\n\n.h3 {\n  background-color: blue;\n}"]}

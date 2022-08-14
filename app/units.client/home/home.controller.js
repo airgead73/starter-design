@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const { isDev } = require('../../config/env');
+const { isDev, isTest } = require('../../config/env');
 
 /**
  * @desc dashboard view
@@ -13,7 +13,8 @@ exports.home = asyncHandler(async (req, res, next) => {
     .status(200)
     .render('pages/dashboard', {
       title: 'starter',
-      development: isDev
+      development: isDev,
+      test: isTest
   });
 
 });

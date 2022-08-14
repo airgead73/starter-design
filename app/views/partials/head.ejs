@@ -8,10 +8,13 @@
   <% if(development) { %>
     <link rel="stylesheet" href="/main.css" type="text/css">
     <script src="/bundle.js" defer></script>
-    <% } else { %>
-      <link rel="stylesheet" href="/main.min.css" type="text/css">
-      <script src="/bundle.min.js" defer></script>
-      <% } %>
+    <% } else if(test) { %>
+      <link rel="stylesheet" href="/main.test.css" type="text/css">
+      <script src="/bundle.test.js" defer></script>
+      <% } else { %>
+        <link rel="stylesheet" href="/main.min.css" type="text/css">
+        <script src="/bundle.min.js" defer></script>
+        } %>
         <title>
           <%= typeof title !='undefined' ? title : 'Page Title' %>
         </title>
