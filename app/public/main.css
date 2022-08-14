@@ -74,6 +74,174 @@
   --clr-gray-900: #3d3d3d;
 }
 
+.bg--gray-100 {
+  background-color: #d6d6d6;
+}
+.bg--gray-200 {
+  background-color: #c2c2c2;
+}
+.bg--gray-300 {
+  background-color: #afafaf;
+}
+.bg--gray-400 {
+  background-color: #9b9b9b;
+}
+.bg--gray-500 {
+  background-color: #888888;
+}
+.bg--gray-600 {
+  background-color: #757575;
+}
+.bg--gray-700 {
+  background-color: #616161;
+}
+.bg--gray-800 {
+  background-color: #4e4e4e;
+}
+.bg--gray-900 {
+  background-color: #3a3a3a;
+}
+
+.bg--blue-100 {
+  background-color: #cedaff;
+}
+.bg--blue-200 {
+  background-color: #a7bdff;
+}
+.bg--blue-300 {
+  background-color: #81a0ff;
+}
+.bg--blue-400 {
+  background-color: #5a83ff;
+}
+.bg--blue-500 {
+  background-color: #3366FF;
+}
+.bg--blue-600 {
+  background-color: #0c49ff;
+}
+.bg--blue-700 {
+  background-color: #0039e4;
+}
+.bg--blue-800 {
+  background-color: #002fbe;
+}
+.bg--blue-900 {
+  background-color: #002697;
+}
+
+.bg--teal-100 {
+  background-color: #d9fafe;
+}
+.bg--teal-200 {
+  background-color: #b4f5fd;
+}
+.bg--teal-300 {
+  background-color: #8ef1fb;
+}
+.bg--teal-400 {
+  background-color: #69ecfa;
+}
+.bg--teal-500 {
+  background-color: #43E7F9;
+}
+.bg--teal-600 {
+  background-color: #1de2f8;
+}
+.bg--teal-700 {
+  background-color: #07d1e7;
+}
+.bg--teal-800 {
+  background-color: #06afc2;
+}
+.bg--teal-900 {
+  background-color: #058d9c;
+}
+
+.bg--green-100 {
+  background-color: #caf2c1;
+}
+.bg--green-200 {
+  background-color: #aeeba2;
+}
+.bg--green-300 {
+  background-color: #92e482;
+}
+.bg--green-400 {
+  background-color: #77dd62;
+}
+.bg--green-500 {
+  background-color: #5BD642;
+}
+.bg--green-600 {
+  background-color: #45c62b;
+}
+.bg--green-700 {
+  background-color: #3aa624;
+}
+.bg--green-800 {
+  background-color: #2f871d;
+}
+.bg--green-900 {
+  background-color: #246716;
+}
+
+.bg--orange-100 {
+  background-color: #ffe4b3;
+}
+.bg--orange-200 {
+  background-color: #ffd78c;
+}
+.bg--orange-300 {
+  background-color: #ffc966;
+}
+.bg--orange-400 {
+  background-color: #ffbc3f;
+}
+.bg--orange-500 {
+  background-color: #ffae18;
+}
+.bg--orange-600 {
+  background-color: #f09c00;
+}
+.bg--orange-700 {
+  background-color: #c98300;
+}
+.bg--orange-800 {
+  background-color: #a36a00;
+}
+.bg--orange-900 {
+  background-color: #7c5000;
+}
+
+.bg--red-100 {
+  background-color: #ffd2cd;
+}
+.bg--red-200 {
+  background-color: #ffafa6;
+}
+.bg--red-300 {
+  background-color: #ff8d80;
+}
+.bg--red-400 {
+  background-color: #ff6a59;
+}
+.bg--red-500 {
+  background-color: #FF4732;
+}
+.bg--red-600 {
+  background-color: #ff240b;
+}
+.bg--red-700 {
+  background-color: #e31700;
+}
+.bg--red-800 {
+  background-color: #bd1300;
+}
+.bg--red-900 {
+  background-color: #960f00;
+}
+
 /* Reset
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* adapted from andy bell reset: https://piccalil.li/blog/a-modern-css-reset */
