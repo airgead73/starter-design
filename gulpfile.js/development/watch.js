@@ -1,10 +1,13 @@
 const { series, watch } = require('gulp');
 const scss = require('./scss');
 const { clean } = require('../clean');
-const javascript = require('./javascript')
+const javascript = require('./javascript');
+
+// constants
+const { DEVELOPMENT_WATCH: C } = require('../constants');
 
 function watchTasks() {
-  watch(['assets/scss/index.scss','assets/scss/**/*.scss', 'assets/scripts/**/*.js'], { ignoreInitial: false, delay: 500 },
+  watch(C.ARRAY, { ignoreInitial: false, delay: 500 },
   series(
     clean,
     javascript,

@@ -12,8 +12,11 @@ const PRODUCTION_SCSS = {
   DEST: 'app/public'
 }
 
+const PRODUCTION_MAPS = ['bundle.min.js.map', 'main.min.css.map'];
+
 module.exports = {
   PRODUCTION_JS,
-  PRODUCTION_SCSS
+  PRODUCTION_SCSS,
+  PRODUCTION_MAPS
 }
 
