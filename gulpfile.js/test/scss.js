@@ -12,8 +12,8 @@ const { TEST_SCSS: C } = require('../constants');
 function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
-    .pipe(purgecss({ content: ['./app/views/pages/*.ejs', './app/views/partials/*.ejs']}))
     .pipe(postcss([autoprefixer(), combinemq()])) 
+    .pipe(purgecss({ content: ['./app/public/*.html']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
