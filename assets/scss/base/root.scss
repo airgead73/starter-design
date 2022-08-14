@@ -1,0 +1,15 @@
+/* Root
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/variables/colors.scss' as *;
+
+$text: "'Open Sans'", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+$heading: "'Lato'", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+
+
+:root {
+  --font-text: #{$text};
+  --font-headings: #{$heading};
+  @each $color, $value in $gray {
+    --clr-gray-#{$color}: #{$value};
+  }
+}

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Font Faces
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* lato-300 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/lato-v23-latin-300.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-300.woff2") format("woff2"), url("/fonts/lato-v23-latin-300.woff") format("woff"), url("/fonts/lato-v23-latin-300.ttf") format("truetype"), url("/fonts/lato-v23-latin-300.svg#Oswald") format("svg");
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/lato-v23-latin-regular.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-regular.woff2") format("woff2"), url("/fonts/lato-v23-latin-regular.woff") format("woff"), url("/fonts/lato-v23-latin-regular.ttf") format("truetype"), url("/fonts/lato-v23-latin-regular.svg#Oswald") format("svg");
+}
+/* lato-900 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/lato-v23-latin-900.eot");
+  src: local("Lato"), url("/fonts/lato-v23-latin-900.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-900.woff2") format("woff2"), url("/fonts/lato-v23-latin-900.woff") format("woff"), url("/fonts/lato-v23-latin-900.ttf") format("truetype"), url("/fonts/lato-v23-latin-900.svg#Oswald") format("svg");
+}
+/* open-sans-300 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/open-sans-v29-latin-300.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-300.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-300.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-300.woff") format("woff"), url("/fonts/open-sans-v29-latin-300.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-300.svg#Oswald") format("svg");
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/open-sans-v29-latin-regular.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-regular.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-regular.woff") format("woff"), url("/fonts/open-sans-v29-latin-regular.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-regular.svg#Oswald") format("svg");
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/open-sans-v29-latin-700.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-700.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-700.woff") format("woff"), url("/fonts/open-sans-v29-latin-700.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-700.svg#Oswald") format("svg");
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/open-sans-v29-latin-italic.eot");
+  src: local("Open Sans"), url("/fonts/open-sans-v29-latin-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/open-sans-v29-latin-italic.woff2") format("woff2"), url("/fonts/open-sans-v29-latin-italic.woff") format("woff"), url("/fonts/open-sans-v29-latin-italic.ttf") format("truetype"), url("/fonts/open-sans-v29-latin-italic.svg#Oswald") format("svg");
+}
+/* Root
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --font-text: 'Open Sans', Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  --font-headings: 'Lato', Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  --clr-gray-50: #f2f2f2;
+  --clr-gray-100: #efefef;
+  --clr-gray-200: #dfdfdf;
+  --clr-gray-300: #cacaca;
+  --clr-gray-400: #a8a8a8;
+  --clr-gray-500: #878787;
+  --clr-gray-600: #6d6d6d;
+  --clr-gray-700: #5f5f5f;
+  --clr-gray-800: #4a4a4a;
+  --clr-gray-900: #3d3d3d;
+}
+
+/* Reset
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* adapted from andy bell reset: https://piccalil.li/blog/a-modern-css-reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd,
+li {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+/*# sourceMappingURL=main.css.map */
