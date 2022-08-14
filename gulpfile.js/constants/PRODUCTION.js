@@ -6,7 +6,12 @@ const PRODUCTION_JS = {
   DEST: './app/public'
 };
 
+const PRODUCTION_SCSS = {
+  SRC: 'assets/scss/index.scss'
+}
+
 module.exports = {
-  PRODUCTION_JS
+  PRODUCTION_JS,
+  PRODUCTION_SCSS
 }
 
