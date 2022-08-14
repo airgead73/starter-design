@@ -5,7 +5,11 @@ const DEVELOPMENT_JS = {
   OUTPUT: 'bundle.js',
   DEST: './app/public'
 };
-const DEVELOPMENT_SCSS = {};
+const DEVELOPMENT_SCSS = {
+  SRC: 'assets/scss/index.scss',
+  OUTPUT: 'main.css',
+  DEST: 'app/public'
+};
 const DEVELOPMENT_WATCH = {};
 
 module.exports = {

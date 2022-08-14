@@ -4,12 +4,15 @@ const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 
+// constants
+const { DEVELOPMENT_SCSS: C } = require('../constants');
+
 function scss() {
-  return (src('assets/scss/index.scss', { sourcemaps: true }))
+  return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer])) 
-    .pipe(rename('main.css'))
-    .pipe(dest('app/public', { sourcemaps: '.'}))
+    .pipe(rename(C.OUTPUT))
+    .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
 
 module.exports = scss;
