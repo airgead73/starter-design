@@ -5,6 +5,7 @@ const combinemq = require('postcss-combine-media-query');
 const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
+const purgecss = require('gulp-purgecss');
 
 const { PRODUCTION_SCSS: C } = require('../constants');
 
@@ -12,6 +13,7 @@ function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer(), combinemq(), cssnano()])) 
+    .pipe(purgecss({ content: ['./app/views/**/*.ejs']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }

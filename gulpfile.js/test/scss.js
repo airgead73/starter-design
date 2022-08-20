@@ -9,8 +9,6 @@ const purgecss = require('gulp-purgecss');
 
 const { TEST_SCSS: C } = require('../constants');
 
-// ['./app/public/*.html']
-
 function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
