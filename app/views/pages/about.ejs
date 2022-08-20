@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include ('../partials/head') %>
+  <%- include ('../partials/header') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- development -->
-  <!-- test -->
-  <!-- production -->
-  <title>Document</title>
-</head>
-
-<body>
-  <header id="top-of-page" class="head-container">
-    <h1><a href="/">starter</a>
-    </h1>
-    <nav class="side-navigation">
-      <button id="nav__btn" type="button">menu</button>
-      <ul id="nav__list">
-        <li><a href="/authors">authors</a></li>
-        <li><a href="/books">books</a></li>
-        <li><a href="/templates">templates</a></li>
-        <li><a href="/logout">logout</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="main">
     <article>
       <h2>dashboard</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores quis odit voluptate enim aliquid
@@ -44,7 +18,7 @@
         culpa.</p>
     </article>
     <aside>
-      <h3 class="h3">right bar</h3>
+      <h3 class="h5">right bar</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloremque qui repellendus hic soluta, eius
         debitis, itaque fugit libero reiciendis perferendis dolores minus, officiis sunt voluptates! Necessitatibus amet
         quia, cumque labore dolore quasi suscipit, iste, cupiditate molestias quis aliquid placeat officiis impedit.
@@ -56,12 +30,5 @@
         fugiat? Reprehenderit, enim dolores quia voluptatibus eos eveniet! Iure numquam ad quidem iusto? Voluptate,
         molestiae!</p>
     </aside>
-  </main>
 
-  <footer class="footer">
-    <p class="footer__credit"><small>starter &copy; 2022 <a href="#top-of-page">back to top</a></small></p>
-  </footer>
-
-</body>
-
-</html>
+    <%- include('../partials/footer') %>

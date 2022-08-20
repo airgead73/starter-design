@@ -9,11 +9,13 @@ const purgecss = require('gulp-purgecss');
 
 const { TEST_SCSS: C } = require('../constants');
 
+// ['./app/public/*.html']
+
 function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer(), combinemq()])) 
-    .pipe(purgecss({ content: ['./app/public/*.html']}))
+    .pipe(purgecss({ content: ['./app/views/**/*.ejs']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
