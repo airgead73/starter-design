@@ -8,6 +8,7 @@ const TEST_JS = {
 
 const TEST_SCSS = {
   SRC: 'assets/scss/index.scss',
+  CONTENT: ['./app/views/**/*.ejs'],
   OUTPUT: 'main.test.css',
   DEST: 'app/public'
 }

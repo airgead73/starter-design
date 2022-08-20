@@ -8,6 +8,7 @@ const PRODUCTION_JS = {
 
 const PRODUCTION_SCSS = {
   SRC: 'assets/scss/index.scss',
+  CONTENT: ['./app/views/**/*.ejs'],
   OUTPUT: 'main.min.css',
   DEST: 'app/public'
 }
