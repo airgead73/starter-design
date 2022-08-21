@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* Font Faces
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
   font-family: "Inter";
   font-style: "normal";
@@ -26,26 +29,11 @@
   src: url("/fonts/inter-v12-latin-900.eot");
   src: local("Inter"), url("/fonts/inter-v12-latin-900.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-900.woff2") format("woff2"), url("/fonts/inter-v12-latin-900.woff") format("woff"), url("/fonts/inter-v12-latin-900.ttf") format("truetype"), url("/fonts/inter-v12-latin-900.svg#Oswald") format("svg");
 }
-html {
-  font-size: 100%;
-}
-
-body {
-  max-width: 65ch;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Garamond, "Times New Roman", Georgia, serif;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  letter-spacing: -0.5pt;
-}
-
-strong {
-  font-weight: 700;
-}
+/* Root
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Reset
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* adapted from andy bell reset: https://piccalil.li/blog/a-modern-css-reset */
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*# sourceMappingURL=main.css.map */
