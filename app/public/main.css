@@ -70,6 +70,34 @@ html {
 
 body {
   min-height: 100vh;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Garamond, "Times New Roman", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
+
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li, th, td, dl, dd, ol, ul {
+  margin-bottom: inherit;
+  line-height: inherit;
+}
+
+p, li, th, td, dl, dd {
+  font-size: inherit;
+  margin-bottom: inherit;
+}
+
+/*
+h1 32px
+h2 24px
+h3 18.72
+h4 16px
+h5 13.28px
+h6 10.72px
+h6
+ */
 /*# sourceMappingURL=main.css.map */

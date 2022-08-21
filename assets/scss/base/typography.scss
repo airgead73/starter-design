@@ -1,0 +1,52 @@
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/variables/root' as r;
+
+%typeShared {
+  margin-bottom: inherit;
+  line-height: inherit;
+}
+
+ol, ul {
+  @extend %typeShared;
+}
+
+p, li, th, td, dl, dd {
+  font-size: inherit;
+  margin-bottom: inherit;
+  @extend %typeShared;
+}
+
+h1, .h1 {
+  @extend %typeShared;
+}
+
+h2, .h2 {
+  @extend %typeShared;
+}
+
+h3, .h3 {
+  @extend %typeShared;
+}
+
+h4, .h4 {
+  @extend %typeShared;
+}
+
+h5, .h5 {
+  @extend %typeShared;
+}
+
+h6, .h6 {
+  @extend %typeShared;
+}
+
+/*
+h1 32px
+h2 24px
+h3 18.72
+h4 16px
+h5 13.28px
+h6 10.72px
+h6
+ */
