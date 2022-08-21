@@ -2,6 +2,7 @@
 node_modules
 .DS_Store
 notes.txt
+resources/fonts
 
 # gulp output
 */bundle.js
