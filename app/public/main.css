@@ -86,6 +86,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li, th, td, dl, dd, ol,
   line-height: inherit;
 }
 
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.75pt;
+}
+
 p, li, th, td, dl, dd {
   font-size: inherit;
   margin-bottom: inherit;
@@ -118,15 +123,6 @@ h6, .h6 {
 small, .small {
   font-size: 0.83em;
   font-weight: 200;
+  font-family: inherit;
 }
-
-/*
-h1 32px
-h2 24px
-h3 18.72
-h4 16px
-h5 13.28px
-h6 10.72px
-h6
- */
 /*# sourceMappingURL=main.css.map */
