@@ -62,6 +62,10 @@ th, .th, caption, .caption {
   @extend %headingShared;
 }
 
+table {
+  margin-bottom: inherit;
+}
+
 small, .small {
   font-size: .83em;
   font-weight: 200;

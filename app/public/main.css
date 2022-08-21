@@ -120,6 +120,10 @@ h6, .h6 {
   font-size: 0.67rem;
 }
 
+table {
+  margin-bottom: inherit;
+}
+
 small, .small {
   font-size: 0.83em;
   font-weight: 200;
