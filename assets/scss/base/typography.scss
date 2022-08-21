@@ -18,27 +18,38 @@ p, li, th, td, dl, dd {
 }
 
 h1, .h1 {
+  font-size: r.$baseSize * 2; 
   @extend %typeShared;
 }
 
 h2, .h2 {
+  font-size: r.$baseSize * 1.5;
   @extend %typeShared;
 }
 
 h3, .h3 {
+  font-size: r.$baseSize * 1.17;
   @extend %typeShared;
 }
 
 h4, .h4 {
+  font-size: r.$baseSize;
   @extend %typeShared;
 }
 
 h5, .h5 {
+  font-size: r.$baseSize * .83;
   @extend %typeShared;
 }
 
 h6, .h6 {
+  font-size: r.$baseSize * .67;
   @extend %typeShared;
+}
+
+small, .small {
+  font-size: .83em;
+  font-weight: 200;
 }
 
 /*

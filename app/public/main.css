@@ -91,6 +91,35 @@ p, li, th, td, dl, dd {
   margin-bottom: inherit;
 }
 
+h1, .h1 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.17rem;
+}
+
+h4, .h4 {
+  font-size: 1rem;
+}
+
+h5, .h5 {
+  font-size: 0.83rem;
+}
+
+h6, .h6 {
+  font-size: 0.67rem;
+}
+
+small, .small {
+  font-size: 0.83em;
+  font-weight: 200;
+}
+
 /*
 h1 32px
 h2 24px
