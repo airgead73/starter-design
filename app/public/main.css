@@ -73,7 +73,7 @@ body {
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
-  font-family: Garamond, "Times New Roman", Georgia, serif;
+  font-family: "Times New Roman", Georgia, Garamond, serif;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -128,5 +128,14 @@ small, .small {
   font-size: 0.83em;
   font-weight: 200;
   font-family: inherit;
+}
+
+table, td, th {
+  border: 1px solid;
+}
+
+td, th {
+  padding: 5px 8px;
+  vertical-align: top;
 }
 /*# sourceMappingURL=main.css.map */
