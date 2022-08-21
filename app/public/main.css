@@ -1,24 +1,51 @@
-.head-container {
-  color: blue;
+@font-face {
+  font-family: "Inter";
+  font-style: "normal";
+  font-weight: 400;
+  src: url("/fonts/inter-v12-latin-regular.eot");
+  src: local("Inter"), url("/fonts/inter-v12-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-regular.woff2") format("woff2"), url("/fonts/inter-v12-latin-regular.woff") format("woff"), url("/fonts/inter-v12-latin-regular.ttf") format("truetype"), url("/fonts/inter-v12-latin-regular.svg#Oswald") format("svg");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: "normal";
+  font-weight: 200;
+  src: url("/fonts/inter-v12-latin-200.eot");
+  src: local("Inter"), url("/fonts/inter-v12-latin-200.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-200.woff2") format("woff2"), url("/fonts/inter-v12-latin-200.woff") format("woff"), url("/fonts/inter-v12-latin-200.ttf") format("truetype"), url("/fonts/inter-v12-latin-200.svg#Oswald") format("svg");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: "normal";
+  font-weight: 700;
+  src: url("/fonts/inter-v12-latin-700.eot");
+  src: local("Inter"), url("/fonts/inter-v12-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-700.woff2") format("woff2"), url("/fonts/inter-v12-latin-700.woff") format("woff"), url("/fonts/inter-v12-latin-700.ttf") format("truetype"), url("/fonts/inter-v12-latin-700.svg#Oswald") format("svg");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: "normal";
+  font-weight: 900;
+  src: url("/fonts/inter-v12-latin-900.eot");
+  src: local("Inter"), url("/fonts/inter-v12-latin-900.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-900.woff2") format("woff2"), url("/fonts/inter-v12-latin-900.woff") format("woff"), url("/fonts/inter-v12-latin-900.ttf") format("truetype"), url("/fonts/inter-v12-latin-900.svg#Oswald") format("svg");
+}
+html {
+  font-size: 100%;
 }
 
-.side-navigation {
-  padding: 0;
+body {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Garamond", serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.h2 {
-  color: blue;
+h1, h2, h3, h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.5pt;
 }
 
-.h3 {
-  background-color: blue;
-}
-
-.h4 {
-  font-size: 16px;
-}
-
-.h5 {
-  color: green;
+strong {
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

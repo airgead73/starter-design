@@ -1,26 +1,32 @@
-$color: blue;
+@use './abstracts/tools' as *;
 
-.head-container {
-  color: blue;
+@include font-face('Inter', 'inter-v12-latin-regular', 'normal', 400);
+
+@include font-face('Inter', 'inter-v12-latin-200', 'normal', 200);
+
+@include font-face('Inter', 'inter-v12-latin-700', 'normal', 700);
+
+@include font-face('Inter', 'inter-v12-latin-900', 'normal', 900);
+
+html {
+  font-size: 100%;
 }
 
-.side-navigation {
-  padding: 0;
+body {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Garamond', serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.h2 {
-  color: $color;
+h1,h2,h3,h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  letter-spacing: -.5pt;
 }
 
-.h3 {
-  background-color: $color;
+strong {
+  font-weight: 700;
 }
-
-.h4 {
-  font-size: 16px;
-}
-
-.h5 {
-  color: green;
-}
-
