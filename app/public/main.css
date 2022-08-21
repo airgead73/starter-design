@@ -5,29 +5,25 @@
   font-family: "Inter";
   font-style: "normal";
   font-weight: 400;
-  src: url("/fonts/inter-v12-latin-regular.eot");
-  src: local("Inter"), url("/fonts/inter-v12-latin-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-regular.woff2") format("woff2"), url("/fonts/inter-v12-latin-regular.woff") format("woff"), url("/fonts/inter-v12-latin-regular.ttf") format("truetype"), url("/fonts/inter-v12-latin-regular.svg#Oswald") format("svg");
+  src: local("Inter"), url("/fonts/inter-v12-latin-regular.woff2") format("woff2"), url("/fonts/inter-v12-latin-regular.woff") format("woff"), url("/fonts/inter-v12-latin-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inter";
   font-style: "normal";
   font-weight: 200;
-  src: url("/fonts/inter-v12-latin-200.eot");
-  src: local("Inter"), url("/fonts/inter-v12-latin-200.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-200.woff2") format("woff2"), url("/fonts/inter-v12-latin-200.woff") format("woff"), url("/fonts/inter-v12-latin-200.ttf") format("truetype"), url("/fonts/inter-v12-latin-200.svg#Oswald") format("svg");
+  src: local("Inter"), url("/fonts/inter-v12-latin-200.woff2") format("woff2"), url("/fonts/inter-v12-latin-200.woff") format("woff"), url("/fonts/inter-v12-latin-200.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inter";
   font-style: "normal";
   font-weight: 700;
-  src: url("/fonts/inter-v12-latin-700.eot");
-  src: local("Inter"), url("/fonts/inter-v12-latin-700.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-700.woff2") format("woff2"), url("/fonts/inter-v12-latin-700.woff") format("woff"), url("/fonts/inter-v12-latin-700.ttf") format("truetype"), url("/fonts/inter-v12-latin-700.svg#Oswald") format("svg");
+  src: local("Inter"), url("/fonts/inter-v12-latin-700.woff2") format("woff2"), url("/fonts/inter-v12-latin-700.woff") format("woff"), url("/fonts/inter-v12-latin-700.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inter";
   font-style: "normal";
   font-weight: 900;
-  src: url("/fonts/inter-v12-latin-900.eot");
-  src: local("Inter"), url("/fonts/inter-v12-latin-900.eot?#iefix") format("embedded-opentype"), url("/fonts/inter-v12-latin-900.woff2") format("woff2"), url("/fonts/inter-v12-latin-900.woff") format("woff"), url("/fonts/inter-v12-latin-900.ttf") format("truetype"), url("/fonts/inter-v12-latin-900.svg#Oswald") format("svg");
+  src: local("Inter"), url("/fonts/inter-v12-latin-900.woff2") format("woff2"), url("/fonts/inter-v12-latin-900.woff") format("woff"), url("/fonts/inter-v12-latin-900.ttf") format("truetype");
 }
 /* Root
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
