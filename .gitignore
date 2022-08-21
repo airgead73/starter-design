@@ -3,6 +3,7 @@ node_modules
 .DS_Store
 notes.txt
 resources/fonts
+resources/loremipsum.txt
 
 # gulp output
 */bundle.js
