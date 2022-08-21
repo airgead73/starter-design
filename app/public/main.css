@@ -86,7 +86,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li, th, td, dl, dd, ol,
   line-height: inherit;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+th, .th, caption, .caption, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.75pt;
 }
