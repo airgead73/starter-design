@@ -1,4 +1,29 @@
 /* Reset
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* adapted from andy bell reset: https://piccalil.li/blog/a-modern-css-reset */
+a, button {
+  cursor: revert;
+}
 
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+:where([hidden]) {
+  display: none;
+}

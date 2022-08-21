@@ -25,11 +25,51 @@
   font-weight: 900;
   src: local("Inter"), url("/fonts/inter-v12-latin-900.woff2") format("woff2"), url("/fonts/inter-v12-latin-900.woff") format("woff"), url("/fonts/inter-v12-latin-900.ttf") format("truetype");
 }
-/* Root
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Reset
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* adapted from andy bell reset: https://piccalil.li/blog/a-modern-css-reset */
+a, button {
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Garamond, "Times New Roman", Georgia, serif;
+}
 /*# sourceMappingURL=main.css.map */
