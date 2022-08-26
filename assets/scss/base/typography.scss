@@ -17,8 +17,9 @@ ol, ul {
 }
 
 p, li, th, td, dl, dd {
-  font-size: inherit;
+  font-size: .875rem;
   margin-bottom: inherit;
+  font-weight: 200;
   @extend %typeShared;
 }
 

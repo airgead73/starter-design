@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Georgia, Garamond, serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -88,8 +88,9 @@ th, .th, caption, .caption, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1
 }
 
 p, li, th, td, dl, dd {
-  font-size: inherit;
+  font-size: 0.875rem;
   margin-bottom: inherit;
+  font-weight: 200;
 }
 
 h1, .h1 {
@@ -124,6 +125,16 @@ small, .small {
   font-size: 0.83em;
   font-weight: 200;
   font-family: inherit;
+}
+
+ul[role=list] {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ol[role=list] {
+  list-style-type: decimal;
+  padding-left: 20px;
 }
 
 table, td, th {
