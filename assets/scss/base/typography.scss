@@ -12,7 +12,7 @@
 %headingShared {
   font-weight: r.$rootHeavy;
   margin-bottom: 1rem;
-  letter-spacing: -.075rem;
+  letter-spacing: -.075pt;
 }
 
 p, ol, ul {
@@ -25,30 +25,44 @@ p, ol, ul {
 
 h1, .h1 {
   @extend %headingShared;
+  font-size: r.$rootSize * 2;
 }
 
 h2, .h2 {
   @extend %headingShared;
+  font-size: r.$rootSize * 1.5;
 }
 
 h3, .h3 {
   @extend %headingShared;
+  font-size: r.$rootSize * 1.17;
 }
 
 h4, .h4 {
   @extend %headingShared;
+  font-size: r.$rootSize;
 }
 
 h5, .h5 {
   @extend %headingShared;
+  font-size: r.$rootSize * .83;
 }
 
 h6, .h6 {
-
+  @extend %headingShared;
+  font-size: r.$rootSize * .67;
 }
 
-th, .th, caption, .caption {}
+th, .th, caption, .caption {
+  @extend %typeShared;
+}
+  
+table {
+  @extend %typeShared;
+}
 
-table {}
-
-small, .small {}
+small, .small {
+  font-size: .83em;
+  font-weight: inherit;
+  font-family: inherit;
+}
