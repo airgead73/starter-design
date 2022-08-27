@@ -132,6 +132,36 @@ small, .small {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+a:link {
+  color: inherit;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  -webkit-text-decoration: underline solid;
+          text-decoration: underline solid;
+}
+a:focus {
+  color: #4682b4;
+  -webkit-text-decoration: underline solid;
+          text-decoration: underline solid;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+a:active {
+  color: #4682b4;
+  -webkit-text-decoration: underline solid;
+          text-decoration: underline solid;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-color: #4682b4;
+          text-decoration-color: #4682b4;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul[role=list] {
   list-style-type: disc;
   padding-left: 20px;
@@ -142,6 +172,8 @@ ol[role=list] {
   padding-left: 20px;
 }
 
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 table, td, th {
   border: 1px solid;
 }
@@ -153,25 +185,6 @@ td, th {
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-section {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  margin-bottom: 1rem;
-}
-
-article {
-  max-width: 75ch;
-  margin-bottom: 1rem;
-  color: inherit;
-}
-
-aside {
-  max-width: 60ch;
-  margin-bottom: 1rem;
-  color: inherit;
-}
-
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
@@ -186,10 +199,6 @@ body {
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-header {
-  margin-bottom: 40px;
-}
-
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Main
@@ -206,52 +215,6 @@ main {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Aside
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.aside--primary {
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  border-radius: 4px;
-  background-color: #dcdcdc;
-  color: #373737;
-}
-
-.aside--secondary {
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  border-radius: 4px;
-  background-color: #cd5c5c;
-  color: #331717;
-}
-
-.aside--primary--outline {
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
-  border-color: #dcdcdc;
-  color: #6e6e6e;
-}
-
-.aside--secondary--outline {
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
-  border-color: #cd5c5c;
-  color: #672e2e;
-}
-
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*# sourceMappingURL=main.css.map */

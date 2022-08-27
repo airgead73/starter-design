@@ -1,11 +1,36 @@
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @use 'sass:color';
-@use '../abstracts/variables/root' as r;
-a {  
-  &:link {}
-  &:visited {}
-  &:hover {}
-  &:focus {}
-  &:active {}
+@use '../abstracts/tools' as *;
+
+@mixin setLinks() {  
+  &:link {
+    color: inherit;
+    text-decoration: underline dotted;
+  }
+  &:visited {
+    color: inherit;
+  }
+  &:hover {
+    text-decoration: underline solid;
+  }
+  &:focus {
+    color: clr(secondary);
+    text-decoration: underline solid;
+    text-decoration-thickness: 2px; 
+    outline: none;   
+  }
+  &:active {
+    color: clr(secondary);
+    text-decoration: underline solid;
+    text-decoration-thickness: 3px;
+    text-decoration-color: clr(secondary);    
+  }
 }
+
+
+a {
+  @include setLinks();
+}
+
+
