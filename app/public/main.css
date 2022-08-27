@@ -70,6 +70,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 
 body {
@@ -179,8 +180,23 @@ main {
   flex: 1;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+
 /* article */
+article {
+  max-width: 65ch;
+}
+
 /* aside */
+aside {
+  max-width: 55ch;
+}
+
 /* footer */
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -189,8 +205,8 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #502917;
-  color: #d3cac5;
+  background-color: #28150b;
+  color: #c9c5c2;
 }
 
 /* Navigation
@@ -210,6 +226,8 @@ main {
 .footer {
   background-color: #d0a996;
   padding: 15px 0 0 0;
+  background-color: #28150b;
+  color: #c9c5c2;
 }
 .footer__text {
   text-align: center;

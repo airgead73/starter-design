@@ -7,5 +7,5 @@
   top: 0;
   left: 0;
   right: 0;
-  @include setBG(clr(primary, darker));
+  @include setBG(clr(primary, darkest));
 }
