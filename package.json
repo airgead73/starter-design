@@ -12,7 +12,7 @@
     "stage": "concurrently \"npm:test\" \"NODE_ENV=test nodemon -r dotenv/config index.js \"",
     "build": "gulp",
     "heroku-postbuild": "echo Skip builds on Heroku",
-    "deploy": "git push heroku v7:main",
+    "deploy": "git push heroku v8:main",
     "log": "heroku logs --tail"
   },
   "repository": {
