@@ -130,6 +130,13 @@ small, .small {
 
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+div, .container {
+  width: 95%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 html {
   height: 100%;
 }
@@ -141,23 +148,74 @@ body {
 }
 
 /* header */
+header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* navigation */
+nav {
+  color: inherit;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: inherit;
+}
+nav li {
+  color: inherit;
+}
+nav a:link {
+  color: inherit;
+}
+
 /* main */
+main {
+  flex: 1;
+}
+
 /* article */
 /* aside */
 /* footer */
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #502917;
+  color: #d3cac5;
+}
+
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.main {
+  margin-top: 100px;
+}
+
 /* Article
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Aside
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  background-color: #d0a996;
+  padding: 15px 0 0 0;
+}
+.footer__text {
+  text-align: center;
+  line-height: 1;
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Links

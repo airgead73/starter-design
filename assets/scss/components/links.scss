@@ -4,7 +4,9 @@
 @use '../abstracts/tools' as *;
 
 @mixin setLinks() {  
-  &:link {}
+  &:link {
+    color: inherit;
+  }
   &:visited {}
   &:hover {}
   &:focus {}

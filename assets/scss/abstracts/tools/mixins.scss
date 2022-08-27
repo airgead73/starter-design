@@ -22,7 +22,7 @@
 @mixin setBG($color) {
   $textColor: contrastText($color);
   background-color: $color;
-  color: $textColor;  
+  color: $textColor; 
 }
 
 ////////////////////////////
