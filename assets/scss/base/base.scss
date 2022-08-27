@@ -3,22 +3,8 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
+html {}
 
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-}
+*, *::before, *::after {}
 
-body {
-  font-family: r.$bodyFont;
-  font-size: r.$baseSize;
-  line-height: 1.5;
-  margin-bottom: r.$baseSize;
-  color: clr(primary, darker);
-}
+body {}

@@ -57,79 +57,8 @@ textarea {
 
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  color: #6e6e6e;
-}
-
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li, th, td, dl, dd, ol, ul {
-  margin-bottom: inherit;
-  line-height: inherit;
-}
-
-th, .th, caption, .caption, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  font-family: "Inter", sans-serif;
-  letter-spacing: -0.75pt;
-  color: #373737;
-}
-
-p, li, th, td, dl, dd {
-  font-size: 0.875rem;
-  margin-bottom: inherit;
-  font-weight: 200;
-}
-
-h1, .h1 {
-  font-size: 2rem;
-}
-
-h2, .h2 {
-  font-size: 1.5rem;
-}
-
-h3, .h3 {
-  font-size: 1.17rem;
-}
-
-h4, .h4 {
-  font-size: 1rem;
-}
-
-h5, .h5 {
-  font-size: 0.83rem;
-}
-
-h6, .h6 {
-  font-size: 0.67rem;
-}
-
-table {
-  margin-bottom: inherit;
-}
-
-small, .small {
-  font-size: 0.83em;
-  font-weight: 200;
-  font-family: inherit;
-}
-
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {

@@ -3,74 +3,28 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-%typeShared {
-  margin-bottom: inherit;
-  line-height: inherit;
-}
+%typeShared {}
 
-%headingShared {
-  font-family: r.$headingFont;
-  letter-spacing: -.75pt;
-  color: clr(primary, darkest);
-}
+%headingShared {}
 
-ol, ul {
-  @extend %typeShared;
-}
+ol, ul {}
 
-p, li, th, td, dl, dd {
-  font-size: .875rem;
-  margin-bottom: inherit;
-  font-weight: 200;
-  @extend %typeShared;
-}
+p, li, th, td, dl, dd {}
 
-h1, .h1 {
-  font-size: r.$baseSize * 2; 
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h1, .h1 {}
 
-h2, .h2 {
-  font-size: r.$baseSize * 1.5;
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h2, .h2 {}
 
-h3, .h3 {
-  font-size: r.$baseSize * 1.17;
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h3, .h3 {}
 
-h4, .h4 {
-  font-size: r.$baseSize;
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h4, .h4 {}
 
-h5, .h5 {
-  font-size: r.$baseSize * .83;
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h5, .h5 {}
 
-h6, .h6 {
-  font-size: r.$baseSize * .67;
-  @extend %typeShared;
-  @extend %headingShared;
-}
+h6, .h6 {}
 
-th, .th, caption, .caption {
-  @extend %headingShared;
-}
+th, .th, caption, .caption {}
 
-table {
-  margin-bottom: inherit;
-}
+table {}
 
-small, .small {
-  font-size: .83em;
-  font-weight: 200;
-  font-family: inherit;
-}
+small, .small {}
