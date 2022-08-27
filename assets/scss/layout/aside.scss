@@ -1,0 +1,48 @@
+/* Aside
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/tools' as *;
+@use '../abstracts/variables/root' as r;
+
+@mixin commonAside() {
+  padding: {
+    top: 20px;
+    right: 30px;
+    bottom: 20px;
+    left: 20px;
+  }
+  border: {
+    radius: r.$baseRadius
+  }
+}
+
+@mixin commonBorder() {
+  border: {
+    width: 1px;
+    style: solid;
+  }
+  background-color: transparent;
+}
+
+.aside--primary {
+  @include commonAside();
+  @include setBG(clr(primary));
+}
+
+.aside--secondary {
+  @include commonAside();
+  @include setBG(clr(secondary));
+}
+
+.aside--primary--outline {
+  @include commonAside();
+  @include commonBorder();
+  border-color: clr(primary);
+  color: clr(primary, darker);  
+}
+
+.aside--secondary--outline {
+  @include commonAside();
+  @include commonBorder();
+  border-color: clr(secondary);
+  color: clr(secondary, darker);  
+}

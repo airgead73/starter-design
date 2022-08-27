@@ -1,5 +1,8 @@
+@use '../tools' as *;
 @use './fonts.scss' as f;
 
 $bodyFont: f.$inter;
 $headingFont: f.$inter;
 $baseSize: 1rem;
+$baseRadius: 4px;
+$primaryColor: clr(primary, darker);

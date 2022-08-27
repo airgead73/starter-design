@@ -1,5 +1,6 @@
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
 html {
@@ -11,6 +12,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 
 body {
@@ -18,4 +20,5 @@ body {
   font-size: r.$baseSize;
   line-height: 1.5;
   margin-bottom: r.$baseSize;
+  color: clr(primary, darker);
 }

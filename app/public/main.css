@@ -66,6 +66,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 
 body {
@@ -73,6 +74,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+  color: #6e6e6e;
 }
 
 /* Typography
@@ -85,6 +87,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li, th, td, dl, dd, ol,
 th, .th, caption, .caption, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.75pt;
+  color: #373737;
 }
 
 p, li, th, td, dl, dd {
@@ -127,6 +130,8 @@ small, .small {
   font-family: inherit;
 }
 
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul[role=list] {
   list-style-type: disc;
   padding-left: 20px;
@@ -146,6 +151,8 @@ td, th {
   vertical-align: top;
 }
 
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 section {
   display: flex;
   flex-direction: row;
@@ -156,11 +163,13 @@ section {
 article {
   max-width: 75ch;
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 aside {
   max-width: 60ch;
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 /* Layout
@@ -175,6 +184,16 @@ body {
   min-height: 100vh;
 }
 
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+  margin-bottom: 40px;
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Main
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 main {
   width: 98%;
   max-width: 1200px;
@@ -182,4 +201,57 @@ main {
   margin-right: auto;
   flex: 1;
 }
+
+/* Article
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Aside
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.aside--primary {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 4px;
+  background-color: #dcdcdc;
+  color: #373737;
+}
+
+.aside--secondary {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 4px;
+  background-color: #cd5c5c;
+  color: #331717;
+}
+
+.aside--primary--outline {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #dcdcdc;
+  color: #6e6e6e;
+}
+
+.aside--secondary--outline {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #cd5c5c;
+  color: #672e2e;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*# sourceMappingURL=main.css.map */

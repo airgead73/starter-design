@@ -1,12 +1,55 @@
+$darkKhaki: #bdb76b;
+$gainsBoro: #dcdcdc;
+$indianRed: #cd5c5c;
+$oliveDrab: #6b8e23;
+$saddleBrown: #8b4513;
+$tomato: #ff6347;
+$fireBrick: #b22222;
+$siena: #a0522d;
+$chocolate: #d2691e;
+$steelBlue: #4682b4;
+
+$primary: $gainsBoro;
+$secondary: $indianRed;
+
+$light: 25%;
+$lighter: 50%;
+$lightest: 75%;
+$dark: 25%;
+$darker: 50%;
+$darkest: 75%;
+
+$autumn: (
+  green: #004a2f,
+  black: #002f35,
+  orange: #ff6337,
+  yellow: #ffa323
+);
+
+$winter: (
+  black: #233142,
+  blue: #455d7a,
+  red: #f95959,
+  gray: #e3e3e3
+);
+
 $colors: (
   primary: (
-    base: $primary-color,
-    light: mix(white, $primary-color, 10%),
-    dark: mix(black, $primary-color, 10%)
+    base: $primary,
+    light: mix(white, $primary, $light),
+    lighter: mix(white, $primary, $lighter),
+    lightest: mix(white, $primary, $lightest),
+    dark: mix(black, $primary, $dark),
+    darker: mix(black, $primary, $darker),
+    darkest: mix(black, $primary, $darkest),    
   ),
-  accent: (
-    base: $accent-color,
-    light: mix(white, $accent-color, 10%),
-    dark: mix(black, $accent-color, 10%)
-  )
-)
+  secondary: (
+    base: $secondary,
+    light: mix(white, $secondary, $light),
+    lighter: mix(white, $secondary, $lighter),
+    lightest: mix(white, $secondary, $lightest),
+    dark: mix(black, $secondary, $dark),
+    darker: mix(black, $secondary, $darker),
+    darkest: mix(black, $secondary, $darkest),  
+  ),
+);

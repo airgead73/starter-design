@@ -1,3 +1,5 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 section {
   display: flex;
   flex-direction: row;
@@ -8,9 +10,11 @@ section {
 article {
   max-width: 75ch;
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 aside {
   max-width: 60ch;
-  margin-bottom: 1rem;;
+  margin-bottom: 1rem;
+  color: inherit;
 }
