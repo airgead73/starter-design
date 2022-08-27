@@ -31,6 +31,14 @@ a, button {
   cursor: revert;
 }
 
+strong {
+  font-weight: 700;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -53,8 +61,43 @@ textarea {
 
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+p, ol, ul {
+  font-size: 0.875rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.075rem;
+}
+
+p li, ol li, ul li {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Links

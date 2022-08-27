@@ -3,25 +3,49 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-%typeShared {}
+%typeShared {
+  font-size: .875rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
 
-%headingShared {}
+%headingShared {
+  font-weight: r.$rootHeavy;
+  margin-bottom: 1rem;
+  letter-spacing: -.075rem;
+}
 
-ol, ul {}
+p, ol, ul {
+  @extend %typeShared;
+  & li {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
 
-p, li, th, td, dl, dd {}
+h1, .h1 {
+  @extend %headingShared;
+}
 
-h1, .h1 {}
+h2, .h2 {
+  @extend %headingShared;
+}
 
-h2, .h2 {}
+h3, .h3 {
+  @extend %headingShared;
+}
 
-h3, .h3 {}
+h4, .h4 {
+  @extend %headingShared;
+}
 
-h4, .h4 {}
+h5, .h5 {
+  @extend %headingShared;
+}
 
-h5, .h5 {}
+h6, .h6 {
 
-h6, .h6 {}
+}
 
 th, .th, caption, .caption {}
 

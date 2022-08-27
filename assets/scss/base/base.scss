@@ -3,8 +3,20 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-html {}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
 
-*, *::before, *::after {}
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 
-body {}
+body {
+  line-height: 1.5;
+  font-family: r.$bodyFont;
+  font-size: .9rem;
+  font-weight: 200;
+}
