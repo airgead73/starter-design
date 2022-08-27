@@ -31,10 +31,6 @@ a, button {
   cursor: revert;
 }
 
-ol, ul, menu {
-  list-style: none;
-}
-
 img {
   max-width: 100%;
 }
@@ -59,59 +55,16 @@ textarea {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a:link {
-  color: inherit;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-a:visited {
-  color: inherit;
-}
-a:hover {
-  -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
-}
-a:focus {
-  color: #4682b4;
-  -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
-  text-decoration-thickness: 2px;
-  outline: none;
-}
-a:active {
-  color: #4682b4;
-  -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
-  text-decoration-thickness: 3px;
-  -webkit-text-decoration-color: #4682b4;
-          text-decoration-color: #4682b4;
-}
-
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul[role=list] {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-ol[role=list] {
-  list-style-type: decimal;
-  padding-left: 20px;
-}
-
+/* Figures
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-table, td, th {
-  border: 1px solid;
-}
-
-td, th {
-  padding: 5px 8px;
-  vertical-align: top;
-}
-
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
