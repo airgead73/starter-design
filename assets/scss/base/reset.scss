@@ -4,6 +4,11 @@ a, button {
   cursor: revert;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 strong {
   font-weight: 700;
 }

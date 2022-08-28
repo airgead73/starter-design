@@ -31,6 +31,11 @@ a, button {
   cursor: revert;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 strong {
   font-weight: 700;
 }
@@ -250,6 +255,62 @@ footer * {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn {
+  border-radius: 4px;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+.btn--primary {
+  background-color: #dcdcdc;
+  color: #373737;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--primary:hover {
+  background-color: #6e6e6e;
+  color: #dbdbdb;
+}
+
+.btn--secondary {
+  background-color: #4682b4;
+  color: #d1e0ec;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--secondary:hover {
+  background-color: #23415a;
+  color: #c8d0d6;
+}
+
+.btn--dark {
+  background-color: #23415a;
+  color: #c8d0d6;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--dark:hover {
+  background-color: #4682b4;
+  color: #d1e0ec;
+}
+
+.btn--light {
+  background-color: #d1e0ec;
+  color: #34383b;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--light:hover {
+  background-color: #23415a;
+  color: #c8d0d6;
+}
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {
