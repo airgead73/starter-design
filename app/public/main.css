@@ -208,45 +208,16 @@ footer {
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #28150b;
-  color: #c9c5c2;
-}
-.header__title {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.main {
-  margin-top: 100px;
-}
-
 /* Article
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Aside
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.footer {
-  background-color: #d0a996;
-  padding: 15px 0 0 0;
-  background-color: #28150b;
-  color: #c9c5c2;
-}
-.footer__text {
-  text-align: center;
-  line-height: 1;
-}
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Links
