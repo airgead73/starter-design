@@ -1,2 +1,13 @@
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@use '../abstracts/tools' as *;
+
+.nav {
+  &__list {
+    padding-right: 5px;
+  }
+  &__item {
+    text-align: right;
+  }
+}
+  

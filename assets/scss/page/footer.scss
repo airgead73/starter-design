@@ -2,3 +2,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @use '../abstracts/tools' as *;
 
+.footer {
+  text-align: center;
+  padding: 5px 0;
+  @include setBG(clr(primary, darkest));
+}

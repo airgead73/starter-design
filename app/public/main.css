@@ -167,7 +167,7 @@ header {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 200px;
 }
 header * {
   margin: 0;
@@ -187,7 +187,7 @@ main {
   border-color: orange;
   flex: 1;
   max-width: 1200px;
-  margin-left: 300px;
+  margin-left: 200px;
   padding-left: 30px;
 }
 
@@ -213,7 +213,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 200px;
   z-index: 1;
 }
 footer * {
@@ -222,8 +222,27 @@ footer * {
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  background-color: #e7d4cb;
+  color: #3a3533;
+}
+.header__title {
+  background-color: #28150b;
+  color: #c9c5c2;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1.25rem;
+}
+
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nav__list {
+  padding-right: 5px;
+}
+.nav__item {
+  text-align: right;
+}
+
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Article
@@ -232,6 +251,13 @@ footer * {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  text-align: center;
+  padding: 5px 0;
+  background-color: #28150b;
+  color: #c9c5c2;
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Links
