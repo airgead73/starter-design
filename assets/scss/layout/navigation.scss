@@ -1,16 +1,14 @@
 /* navigation */
+@use '../abstracts/tools' as *;
+@use '../abstracts/variables/root' as r;
+
 nav {
-  color: inherit;
+  @include flag(brown);
   & ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    margin: 0;
     gap: 12px;
-    margin-bottom: 0;
   }
-  & li {
-    line-height: 1;
-  }
-
 }

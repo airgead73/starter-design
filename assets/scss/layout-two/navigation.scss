@@ -1,7 +1,0 @@
-/* navigation */
-@use '../abstracts/tools' as *;
-@use '../abstracts/variables/root' as r;
-
-nav {
-  @include flag(brown);
-}
