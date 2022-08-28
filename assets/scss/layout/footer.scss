@@ -4,4 +4,7 @@
 
 footer {
   @include flag(gray);
+  & * {
+    margin: 0;
+  }
 }
