@@ -4,11 +4,4 @@
 
 nav {
   @include flag(brown);
-  & ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    gap: 12px;
-  }
 }

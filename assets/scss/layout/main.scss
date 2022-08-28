@@ -4,8 +4,5 @@
 
 main {
   @include flag(orange);
-  @include container(1200px);
-  display: flex;
-  flex-direction: row;
   flex: 1;
 }
