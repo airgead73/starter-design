@@ -8,6 +8,15 @@ div, .container {
 
 section, .row {
   @include row();
+  position: relative;
   gap: 50px;
   min-height: 100vh;
+}
+
+.btt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
 }

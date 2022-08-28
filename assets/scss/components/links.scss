@@ -3,12 +3,51 @@
 @use 'sass:color';
 @use '../abstracts/tools' as *;
 
+// @mixin setLinks() {  
+//   &:link {
+//     color: inherit;
+//     text-decoration: underline dotted;
+//   }
+//   &:visited {
+//     color: inherit;
+//     outline:auto;
+//   }
+//   &:hover {
+//     text-decoration: underline solid;
+//   }
+//   &:focus {
+//     text-decoration: underline solid;
+//     outline: none;
+//   }
+//   &:active {
+//     text-decoration-thickness: 2px;
+//     outline: none;
+//   }
+// }
+
 @mixin setLinks() {  
   &:link {
     color: inherit;
+    font-weight: 700;
+    text-decoration: none;
   }
-  &:visited {}
-  &:hover {}
-  &:focus {}
-  &:active {}
+  &:visited {
+    color: inherit;
+    outline:auto;
+  }
+  &:hover {
+    text-decoration: underline dotted;
+  }
+  &:focus {
+    text-decoration: underline dotted;
+    outline: none;
+  }
+  &:active {
+    text-decoration: underline solid;
+    outline: none;
+  }
+}
+
+a {
+  @include setLinks();
 }
