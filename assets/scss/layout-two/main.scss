@@ -1,3 +1,8 @@
 /* main */
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
+
+main {
+  @include flag(orange);
+  flex: 1;
+}

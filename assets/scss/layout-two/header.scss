@@ -1,3 +1,12 @@
 /* header */
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
+
+header {
+  @include flag(blue);
+  display: flex;
+  flex-direction: row;
+  & * {
+    margin: 0;
+  }
+}

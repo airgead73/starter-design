@@ -1,4 +1,7 @@
-/* Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* grid */
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
+
+div, .container {
+  @include container(3000px);
+}
