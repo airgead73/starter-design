@@ -155,6 +155,7 @@ section, .row {
   border-color: black;
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
 }
 
 /* header */
@@ -185,8 +186,6 @@ main {
   border-style: solid;
   border-color: orange;
   flex: 1;
-  display: flex;
-  flex-direction: row;
   max-width: 1200px;
   margin-left: 300px;
   padding-left: 30px;

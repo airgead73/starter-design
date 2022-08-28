@@ -9,4 +9,5 @@ div, .container {
 section, .row {
   @include flag(black);
   @include row();
+  min-height: 100vh;
 }
