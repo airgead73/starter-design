@@ -4,6 +4,9 @@
 
 main {
   @include flag(orange);
+  display: flex;
+  flex: row;
   flex: 1;
-  margin-left: r.$rootGutter * 1.125;
+  margin-left: r.$rootLeftBar;
+  max-width: r.$rootContainer;
 }

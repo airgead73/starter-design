@@ -4,7 +4,9 @@
 
 footer {
   @include flag(gray);
-  margin-left: r.$rootGutter * 1.125;
+  margin-left: r.$rootLeftBar;
+  max-width: r.$rootContainer;
+  padding-left: 30px;
   & * {
     margin: 0;
   }
