@@ -154,6 +154,11 @@ header {
   border-width: 4px;
   border-style: solid;
   border-color: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
 }
 header * {
   margin: 0;
@@ -172,6 +177,7 @@ main {
   border-style: solid;
   border-color: orange;
   flex: 1;
+  margin-left: 341.71875px;
 }
 
 /* article */
@@ -193,6 +199,7 @@ footer {
   border-width: 4px;
   border-style: solid;
   border-color: gray;
+  margin-left: 341.71875px;
 }
 footer * {
   margin: 0;

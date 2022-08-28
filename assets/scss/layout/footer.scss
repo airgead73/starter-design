@@ -4,6 +4,7 @@
 
 footer {
   @include flag(gray);
+  margin-left: r.$rootGutter * 1.125;
   & * {
     margin: 0;
   }
