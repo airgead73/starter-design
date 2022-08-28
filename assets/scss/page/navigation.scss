@@ -4,10 +4,12 @@
 
 .nav {
   &__list {
-    padding-right: 5px;
+    padding-top: 12px;
+    padding-right: 12px;
   }
   &__item {
     text-align: right;
+    margin-bottom: 5px;
   }
 }
   

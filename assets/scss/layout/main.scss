@@ -3,7 +3,6 @@
 @use '../abstracts/variables/root' as r;
 
 main {
-  @include flag(orange);
   flex: 1;
   max-width: r.$rootContainer;
   margin-left: r.$rootLeftBar;

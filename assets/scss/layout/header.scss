@@ -3,7 +3,6 @@
 @use '../abstracts/variables/root' as r;
 
 header {
-  @include flag(blue);
   position: fixed;
   top: 0;
   left: 0;
