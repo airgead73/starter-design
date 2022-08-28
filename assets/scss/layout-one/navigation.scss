@@ -7,12 +7,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    color: inherit;
+    margin-bottom: 0;
   }
   & li {
-    color: inherit;
+    line-height: 1;
   }
-  & a:link {
-    color: inherit;
-  }
+
 }

@@ -149,11 +149,12 @@ body {
 }
 
 /* header */
-header div {
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 12px;
 }
 
 /* navigation */
@@ -166,13 +167,10 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  color: inherit;
+  margin-bottom: 0;
 }
 nav li {
-  color: inherit;
-}
-nav a:link {
-  color: inherit;
+  line-height: 1;
 }
 
 /* main */
@@ -183,8 +181,8 @@ main {
 section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 30px;
+  justify-content: flex-start;
+  gap: 50px;
 }
 
 /* article */
@@ -207,6 +205,11 @@ aside {
   right: 0;
   background-color: #28150b;
   color: #c9c5c2;
+}
+.header__title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 /* Navigation
