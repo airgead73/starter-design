@@ -155,9 +155,9 @@ header {
   border-style: solid;
   border-color: blue;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 header * {
   margin: 0;
