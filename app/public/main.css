@@ -245,6 +245,21 @@ footer * {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.list {
+  margin-bottom: 1rem;
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+.list li {
+  margin-bottom: 0.5rem;
+}
+.list--ordered {
+  list-style-type: decimal;
+}
+.list--unordered {
+  list-style-type: disc;
+}
+
 /* Figures
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Tables
