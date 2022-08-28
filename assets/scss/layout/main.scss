@@ -4,9 +4,10 @@
 
 main {
   @include flag(orange);
-  display: flex;
-  flex: row;
   flex: 1;
-  margin-left: r.$rootLeftBar;
+  display: flex;
+  flex-direction: row;
   max-width: r.$rootContainer;
+  margin-left: r.$rootLeftBar;
+  padding-left: 30px;
 }

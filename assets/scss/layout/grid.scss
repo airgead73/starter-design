@@ -5,3 +5,8 @@
 div, .container {
   @include container(3000px);
 }
+
+section, .row {
+  @include flag(black);
+  @include row();
+}

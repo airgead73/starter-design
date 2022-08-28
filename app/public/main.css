@@ -149,6 +149,14 @@ div, .container {
   margin-right: auto;
 }
 
+section, .row {
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  flex-direction: row;
+}
+
 /* header */
 header {
   border-width: 4px;
@@ -176,11 +184,12 @@ main {
   border-width: 4px;
   border-style: solid;
   border-color: orange;
-  display: flex;
-  flex: row;
   flex: 1;
-  margin-left: 300px;
+  display: flex;
+  flex-direction: row;
   max-width: 1200px;
+  margin-left: 300px;
+  padding-left: 30px;
 }
 
 /* article */
@@ -188,7 +197,6 @@ article {
   border-width: 4px;
   border-style: solid;
   border-color: green;
-  padding-left: 35px;
 }
 
 /* aside */
@@ -203,9 +211,11 @@ footer {
   border-width: 4px;
   border-style: solid;
   border-color: gray;
-  margin-left: 300px;
-  max-width: 1200px;
-  padding-left: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: 1;
 }
 footer * {
   margin: 0;
