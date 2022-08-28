@@ -155,6 +155,7 @@ section, .row {
   border-color: black;
   display: flex;
   flex-direction: row;
+  gap: 50px;
   min-height: 100vh;
 }
 
@@ -184,6 +185,7 @@ article {
   border-width: 4px;
   border-style: solid;
   border-color: green;
+  flex: 6.5;
 }
 
 /* aside */
@@ -191,6 +193,7 @@ aside {
   border-width: 4px;
   border-style: solid;
   border-color: red;
+  flex: 3.5;
 }
 
 /* footer */

@@ -9,5 +9,6 @@ div, .container {
 section, .row {
   @include flag(black);
   @include row();
+  gap: 50px;
   min-height: 100vh;
 }
