@@ -3,6 +3,5 @@
 @use '../abstracts/variables/root' as r;
 
 aside {
-  @include flag(red);
   flex: 3.5;
 }

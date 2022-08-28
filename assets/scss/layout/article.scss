@@ -3,6 +3,5 @@
 @use '../abstracts/variables/root' as r;
 
 article {
-  @include flag(green);
   flex: 6.5
 }
