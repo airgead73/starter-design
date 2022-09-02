@@ -5,8 +5,8 @@
 @use './links.scss' as *;
 @use 'sass:color';
 
-@mixin btnCommon() {
-  border-radius: 8px;
+%btnCommon {
+  border-radius: 4px;
   text-transform: uppercase;
   font-size: .65rem;
   line-height: 1;
@@ -17,7 +17,7 @@
 }
 
 @mixin btnSolid($color: clr(primary)) {
-  @include btnCommon();
+  @extend %btnCommon;
   @include setBG($color);
   transition-property: background-color, color;
   transition-duration: .26s;
@@ -28,15 +28,14 @@
 
 @mixin btnOutline($color: clr(primary)) {
   $lightness: lightness($color);
-  @include btnCommon();
-  
+  @extend %btnCommon;  
   @if($lightness > 50) {
     color: mix(black, $color, 50%);
   } @else {
     color: $color;
   }
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: $color;
   transition-property: background-color, color;
@@ -46,58 +45,115 @@
   }
 }
 
-.btn {
+%iconCommon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+@mixin iconSolid($color: clr(primary)) {
+  @extend %iconCommon;
+  @include setBG($color);
+  transition-property: background-color, color;
+  transition-duration: .26s;
+  &:hover {
+    @include setBG(color.invert($color))
+  }  
+}
+
+@mixin iconOutline($color: clr(primary)) {
+  $lightness: lightness($color);
+  @extend %iconCommon;  
+  @if($lightness > 50) {
+    color: mix(black, $color, 50%);
+  } @else {
+    color: $color;
+  }
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color;
+  transition-property: background-color, color;
+  transition-duration: .26s;
+  &:hover {
+    @include setBG($color);
+  }
+}
+
+.btn {  
   @include btnSolid(clr(primary));
+  &--green {
+    @include btnSolid(clr(green));
+  }
+  &--red {
+    @include btnSolid(clr(red));
+  }
+  &--blue{
+    @include btnSolid(clr(blue));
+  }
+  &--yellow {
+    @include btnSolid(clr(yellow));
+  }
+  &--orange {
+    @include btnSolid(clr(orange));
+  }
  }
 
-.btn--green {
-  @include btnSolid(clr(green));
-}
-
-.btn--red {
-  @include btnSolid(clr(red));
-}
-
-.btn--blue {
-  @include btnSolid(clr(blue));
-}
-
-.btn--orange {
-  @include btnSolid(clr(orange));
-}
-
-.btn--yellow {
-  @include btnSolid(clr(yellow));
-}
-
-.btn--black {
-  @include btnSolid(clr(black));
-}
-
-.btn--outline {
+ .btn--outline { 
   @include btnOutline(clr(primary));
+  &--green {
+    @include btnOutline(clr(green));
+  }
+  &--red {
+    @include btnOutline(clr(red));
+  }
+  &--blue{
+    @include btnOutline(clr(blue));
+  }
+  &--yellow {
+    @include btnOutline(clr(yellow));
+  }
+  &--orange {
+    @include btnOutline(clr(orange));
+  }
  }
 
-.btn--outline--green {
-  @include btnOutline(clr(green));
-}
+ .icon { 
+  @include iconSolid(clr(primary)); 
+  &--green {
+    @include iconSolid(clr(green));
+  }
+  &--red {
+    @include iconSolid(clr(red));
+  }
+  &--blue{
+    @include iconSolid(clr(blue));
+  }
+  &--yellow {
+    @include iconSolid(clr(yellow));
+  }
+  &--orange {
+    @include iconSolid(clr(orange));
+  }
+ }
 
-.btn--outline--red {
-  @include btnOutline(clr(red));
-}
+ .icon--outline {  
+  @include iconOutline(clr(primary));
+  &--green {
+    @include iconOutline(clr(green));
+  }
+  &--red {
+    @include iconOutline(clr(red));
+  }
+  &--blue{
+    @include iconOutline(clr(blue));
+  }
+  &--yellow {
+    @include iconOutline(clr(yellow));
+  }
+  &--orange {
+    @include iconOutline(clr(orange));
+  }
+ }
 
-.btn--outline--blue {
-  @include btnOutline(clr(blue));
-}
-
-.btn--outline--orange {
-  @include btnOutline(clr(orange));
-}
-
-.btn--outline--yellow {
-  @include btnOutline(clr(yellow));
-}
-
-.btn--outline--black {
-  @include btnOutline(clr(black));
-}

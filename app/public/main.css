@@ -281,8 +281,8 @@ a:active {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn {
-  border-radius: 8px;
+.btn--outline--orange, .btn--outline--yellow, .btn--outline--blue, .btn--outline--red, .btn--outline--green, .btn--outline, .btn--orange, .btn--yellow, .btn--blue, .btn--red, .btn--green, .btn {
+  border-radius: 4px;
   text-transform: uppercase;
   font-size: 0.65rem;
   line-height: 1;
@@ -290,6 +290,16 @@ a:active {
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
+}
+
+.icon--outline--orange, .icon--outline--yellow, .icon--outline--blue, .icon--outline--red, .icon--outline--green, .icon--outline, .icon--orange, .icon--yellow, .icon--blue, .icon--red, .icon--green, .icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.btn {
   background-color: #dcdcdc;
   color: #373737;
   transition-property: background-color, color;
@@ -299,16 +309,7 @@ a:active {
   background-color: #232323;
   color: #c8c8c8;
 }
-
 .btn--green {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   background-color: #004a2f;
   color: #bfd2cb;
   transition-property: background-color, color;
@@ -318,16 +319,7 @@ a:active {
   background-color: #ffb5d0;
   color: #402d34;
 }
-
 .btn--red {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   background-color: #f95959;
   color: #3e1616;
   transition-property: background-color, color;
@@ -337,16 +329,7 @@ a:active {
   background-color: #06a6a6;
   color: #c1e9e9;
 }
-
 .btn--blue {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   background-color: #455d7a;
   color: #d1d7de;
   transition-property: background-color, color;
@@ -356,16 +339,17 @@ a:active {
   background-color: #baa285;
   color: #2f2921;
 }
-
+.btn--yellow {
+  background-color: #ffa323;
+  color: #402909;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--yellow:hover {
+  background-color: #005cdc;
+  color: #bfd6f6;
+}
 .btn--orange {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   background-color: #ff6337;
   color: #40190e;
   transition-property: background-color, color;
@@ -376,56 +360,10 @@ a:active {
   color: #bfe6f1;
 }
 
-.btn--yellow {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
-  background-color: #ffa323;
-  color: #402909;
-  transition-property: background-color, color;
-  transition-duration: 0.26s;
-}
-.btn--yellow:hover {
-  background-color: #005cdc;
-  color: #bfd6f6;
-}
-
-.btn--black {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
-  background-color: #002f35;
-  color: #bfcbcd;
-  transition-property: background-color, color;
-  transition-duration: 0.26s;
-}
-.btn--black:hover {
-  background-color: #ffd0ca;
-  color: #403433;
-}
-
 .btn--outline {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   color: #6e6e6e;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #dcdcdc;
   transition-property: background-color, color;
@@ -435,19 +373,10 @@ a:active {
   background-color: #dcdcdc;
   color: #373737;
 }
-
 .btn--outline--green {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   color: #004a2f;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #004a2f;
   transition-property: background-color, color;
@@ -457,19 +386,10 @@ a:active {
   background-color: #004a2f;
   color: #bfd2cb;
 }
-
 .btn--outline--red {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   color: #7d2d2d;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #f95959;
   transition-property: background-color, color;
@@ -479,19 +399,10 @@ a:active {
   background-color: #f95959;
   color: #3e1616;
 }
-
 .btn--outline--blue {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   color: #455d7a;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #455d7a;
   transition-property: background-color, color;
@@ -501,19 +412,23 @@ a:active {
   background-color: #455d7a;
   color: #d1d7de;
 }
-
+.btn--outline--yellow {
+  color: #805212;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffa323;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--outline--yellow:hover {
+  background-color: #ffa323;
+  color: #402909;
+}
 .btn--outline--orange {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
   color: #80321c;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #ff6337;
   transition-property: background-color, color;
@@ -524,48 +439,144 @@ a:active {
   color: #40190e;
 }
 
-.btn--outline--yellow {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
+.icon {
+  background-color: #dcdcdc;
+  color: #373737;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon:hover {
+  background-color: #232323;
+  color: #c8c8c8;
+}
+.icon--green {
+  background-color: #004a2f;
+  color: #bfd2cb;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--green:hover {
+  background-color: #ffb5d0;
+  color: #402d34;
+}
+.icon--red {
+  background-color: #f95959;
+  color: #3e1616;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--red:hover {
+  background-color: #06a6a6;
+  color: #c1e9e9;
+}
+.icon--blue {
+  background-color: #455d7a;
+  color: #d1d7de;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--blue:hover {
+  background-color: #baa285;
+  color: #2f2921;
+}
+.icon--yellow {
+  background-color: #ffa323;
+  color: #402909;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--yellow:hover {
+  background-color: #005cdc;
+  color: #bfd6f6;
+}
+.icon--orange {
+  background-color: #ff6337;
+  color: #40190e;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--orange:hover {
+  background-color: #009cc8;
+  color: #bfe6f1;
+}
+
+.icon--outline {
+  color: #6e6e6e;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dcdcdc;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--outline:hover {
+  background-color: #dcdcdc;
+  color: #373737;
+}
+.icon--outline--green {
+  color: #004a2f;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #004a2f;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--outline--green:hover {
+  background-color: #004a2f;
+  color: #bfd2cb;
+}
+.icon--outline--red {
+  color: #7d2d2d;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f95959;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--outline--red:hover {
+  background-color: #f95959;
+  color: #3e1616;
+}
+.icon--outline--blue {
+  color: #455d7a;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #455d7a;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.icon--outline--blue:hover {
+  background-color: #455d7a;
+  color: #d1d7de;
+}
+.icon--outline--yellow {
   color: #805212;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: #ffa323;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--outline--yellow:hover {
+.icon--outline--yellow:hover {
   background-color: #ffa323;
   color: #402909;
 }
-
-.btn--outline--black {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  line-height: 1;
-  padding: 14px 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
-  color: #002f35;
+.icon--outline--orange {
+  color: #80321c;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
-  border-color: #002f35;
+  border-color: #ff6337;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--outline--black:hover {
-  background-color: #002f35;
-  color: #bfcbcd;
+.icon--outline--orange:hover {
+  background-color: #ff6337;
+  color: #40190e;
 }
 
 /* Lists
