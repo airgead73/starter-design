@@ -3,10 +3,10 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 @use './links.scss' as *;
+@use 'sass:color';
 
-.btn {
-  border-radius: 4px;
-  color: inherit;
+@mixin btnCommon() {
+  border-radius: 8px;
   text-transform: uppercase;
   font-size: .65rem;
   line-height: 1;
@@ -16,110 +16,88 @@
   vertical-align: baseline;
 }
 
-.btn--link {
-  @include setLinks();
-  text-transform: none;
-  border-radius: none;
-  padding: 0;
-  line-height: inherit;
-  font-size: inherit;
-}
-
-.btn--primary {
-  @include setBG(clr(primary));
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  }
+@mixin btnSolid($color: clr(primary)) {
+  @include btnCommon();
+  @include setBG($color);
+  transition-property: background-color, color;
+  transition-duration: .26s;
   &:hover {
-    @include setBG(clr(primary, darker));
+    @include setBG(color.invert($color))
   }
 }
 
-.btn--primary-outline {
-  border: {
-    width: 1px;
-    style: solid;
-    color: clr(primary);
+@mixin btnOutline($color: clr(primary)) {
+  $lightness: lightness($color);
+  @include btnCommon();
+  
+  @if($lightness > 50) {
+    color: mix(black, $color, 50%);
+  } @else {
+    color: $color;
   }
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  }
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $color;
+  transition-property: background-color, color;
+  transition-duration: .26s;
   &:hover {
-    @include setBG(clr(primary));
-  }
-
-}
-
-.btn--secondary {
-  @include setBG(clr(secondary));
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  }
-  &:hover {
-    @include setBG(clr(secondary, darker));
+    @include setBG($color);
   }
 }
 
-.btn--dark {
-  @include setBG(clr(secondary, darker));
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  }  
-  &:hover {
-    @include setBG(clr(secondary));
-  }
+.btn {
+  @include btnSolid(clr(primary));
+ }
+
+.btn--green {
+  @include btnSolid(clr(green));
 }
 
-.btn--light {
-  @include setBG(clr(secondary, lightest));
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  }  
-  &:hover {
-    @include setBG(clr(secondary, darker));
-  }
+.btn--red {
+  @include btnSolid(clr(red));
 }
 
-.btn--icon {
-  @include setBG(clr(primary));
-  font-size: 1rem;
-  line-height: 1;
-  padding: 12px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
-  border-radius: 50%;
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  } 
-  &:hover {
-    @include setBG(clr(primary, darker));
-  }
-
+.btn--blue {
+  @include btnSolid(clr(blue));
 }
 
-.btn--icon-outline {
-  font-size: 1rem;
-  line-height: 1;
-  padding: 12px;
-  white-space: nowrap;
-  cursor: pointer;
-  vertical-align: baseline;
-  border-radius: 50%;
-  border: 1px solid clr(primary);
-  color: inherit;
-  transition: {
-    property: background-color, color;
-    duration: .26s;
-  } 
-  &:hover {
-    @include setBG(clr(primary, darker));
-  }
+.btn--orange {
+  @include btnSolid(clr(orange));
+}
 
+.btn--yellow {
+  @include btnSolid(clr(yellow));
+}
+
+.btn--black {
+  @include btnSolid(clr(black));
+}
+
+.btn--outline {
+  @include btnOutline(clr(primary));
+ }
+
+.btn--outline--green {
+  @include btnOutline(clr(green));
+}
+
+.btn--outline--red {
+  @include btnOutline(clr(red));
+}
+
+.btn--outline--blue {
+  @include btnOutline(clr(blue));
+}
+
+.btn--outline--orange {
+  @include btnOutline(clr(orange));
+}
+
+.btn--outline--yellow {
+  @include btnOutline(clr(yellow));
+}
+
+.btn--outline--black {
+  @include btnOutline(clr(black));
 }

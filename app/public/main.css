@@ -282,8 +282,7 @@ a:active {
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .btn {
-  border-radius: 4px;
-  color: inherit;
+  border-radius: 8px;
   text-transform: uppercase;
   font-size: 0.65rem;
   line-height: 1;
@@ -291,129 +290,282 @@ a:active {
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
-}
-
-.btn--link {
-  text-transform: none;
-  border-radius: none;
-  padding: 0;
-  line-height: inherit;
-  font-size: inherit;
-}
-.btn--link:link {
-  color: inherit;
-  font-weight: 400;
-  text-decoration: none;
-}
-.btn--link:visited {
-  color: inherit;
-  outline: auto;
-}
-.btn--link:hover {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-.btn--link:focus {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  outline: none;
-}
-.btn--link:active {
-  -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
-  outline: none;
-}
-
-.btn--primary {
   background-color: #dcdcdc;
   color: #373737;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--primary:hover {
-  background-color: #6e6e6e;
-  color: #dbdbdb;
+.btn:hover {
+  background-color: #232323;
+  color: #c8c8c8;
 }
 
-.btn--primary-outline {
-  border-width: 1px;
+.btn--green {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #004a2f;
+  color: #bfd2cb;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--green:hover {
+  background-color: #ffb5d0;
+  color: #402d34;
+}
+
+.btn--red {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #f95959;
+  color: #3e1616;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--red:hover {
+  background-color: #06a6a6;
+  color: #c1e9e9;
+}
+
+.btn--blue {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #455d7a;
+  color: #d1d7de;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--blue:hover {
+  background-color: #baa285;
+  color: #2f2921;
+}
+
+.btn--orange {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #ff6337;
+  color: #40190e;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--orange:hover {
+  background-color: #009cc8;
+  color: #bfe6f1;
+}
+
+.btn--yellow {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #ffa323;
+  color: #402909;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--yellow:hover {
+  background-color: #005cdc;
+  color: #bfd6f6;
+}
+
+.btn--black {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-color: #002f35;
+  color: #bfcbcd;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--black:hover {
+  background-color: #ffd0ca;
+  color: #403433;
+}
+
+.btn--outline {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  color: #6e6e6e;
+  background-color: white;
+  border-width: 2px;
   border-style: solid;
   border-color: #dcdcdc;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--primary-outline:hover {
+.btn--outline:hover {
   background-color: #dcdcdc;
   color: #373737;
 }
 
-.btn--secondary {
-  background-color: #4682b4;
-  color: #d1e0ec;
-  transition-property: background-color, color;
-  transition-duration: 0.26s;
-}
-.btn--secondary:hover {
-  background-color: #23415a;
-  color: #c8d0d6;
-}
-
-.btn--dark {
-  background-color: #23415a;
-  color: #c8d0d6;
-  transition-property: background-color, color;
-  transition-duration: 0.26s;
-}
-.btn--dark:hover {
-  background-color: #4682b4;
-  color: #d1e0ec;
-}
-
-.btn--light {
-  background-color: #d1e0ec;
-  color: #34383b;
-  transition-property: background-color, color;
-  transition-duration: 0.26s;
-}
-.btn--light:hover {
-  background-color: #23415a;
-  color: #c8d0d6;
-}
-
-.btn--icon {
-  background-color: #dcdcdc;
-  color: #373737;
-  font-size: 1rem;
+.btn--outline--green {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
   line-height: 1;
-  padding: 12px;
+  padding: 14px 16px;
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
-  border-radius: 50%;
+  color: #004a2f;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #004a2f;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--icon:hover {
-  background-color: #6e6e6e;
-  color: #dbdbdb;
+.btn--outline--green:hover {
+  background-color: #004a2f;
+  color: #bfd2cb;
 }
 
-.btn--icon-outline {
-  font-size: 1rem;
+.btn--outline--red {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
   line-height: 1;
-  padding: 12px;
+  padding: 14px 16px;
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
-  border-radius: 50%;
-  border: 1px solid #dcdcdc;
-  color: inherit;
+  color: #7d2d2d;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f95959;
   transition-property: background-color, color;
   transition-duration: 0.26s;
 }
-.btn--icon-outline:hover {
-  background-color: #6e6e6e;
-  color: #dbdbdb;
+.btn--outline--red:hover {
+  background-color: #f95959;
+  color: #3e1616;
+}
+
+.btn--outline--blue {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  color: #455d7a;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #455d7a;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--outline--blue:hover {
+  background-color: #455d7a;
+  color: #d1d7de;
+}
+
+.btn--outline--orange {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  color: #80321c;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ff6337;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--outline--orange:hover {
+  background-color: #ff6337;
+  color: #40190e;
+}
+
+.btn--outline--yellow {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  color: #805212;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffa323;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--outline--yellow:hover {
+  background-color: #ffa323;
+  color: #402909;
+}
+
+.btn--outline--black {
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  line-height: 1;
+  padding: 14px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  color: #002f35;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #002f35;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+}
+.btn--outline--black:hover {
+  background-color: #002f35;
+  color: #bfcbcd;
 }
 
 /* Lists
