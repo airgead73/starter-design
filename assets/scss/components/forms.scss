@@ -1,16 +1,48 @@
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-legend,
-fieldset,
-select,
-textarea,
+@use '../abstracts/tools' as *;
+@use 'sass:color';
+
 label,
-input {
+input,
+select,
+textarea {
   appearance: none;
-  border: none;
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-  font-size: .8rem;
 }
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  &::before {
+    display: inline-block;
+    width: 18%;
+    content: attr(aria-label);
+    text-align: right;
+  }
+}
+
+input,
+select,
+textarea {
+  display: inline-block;
+  width: 80%;
+  border: none;
+  line-height: 2;
+  padding: 0 8px;
+  background-color: transparent;
+  color: clr(primary, darker);
+  border-bottom: 1px solid clr(primary, light);
+  transition-property: background-color;
+  transition-duration: .26s;
+  &:focus {
+    outline: none;
+    background-color: clr(primary, darker);
+    color: clr(primary, lightest);
+    border-bottom-color: transparent;
+    
+  }
+}
+
+
+
 

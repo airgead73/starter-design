@@ -207,58 +207,33 @@
       <article>
         <h2>forms</h2>
         <form action="">
-          <div class="form__control">
-            <label for="">first name</label>
-            <input name="name_first" id="name_first" type="text" placeholder="Enter first name...">
-          </div>
-          <div class="form__control">
-            <label for="name_last">last name</label>
-            <input name="name_last" id="name_last" type="text" placeholder="Enter last name...">
-          </div>
-          <div class="form__control">
-            <label for="email">email</label>
-            <input name="email" id="email" type="email" placeholder="Enter email...">
-          </div>
-          <div class="form__control">
-            <label for="phone">phone number</label>
-            <input name="phone" id="phone" type="tel" placeholder="Enter phone...">
-          </div>
+          <label class="control" data-control="name-first" aria-label="first name">
+            <input type="text" name="name-first">
+          </label>
+          <label class="control" data-control="name-last" aria-label="last name">
+            <input type="text" name="name-last">
+          </label>
+          <label class="control" data-control="email" aria-label="email">
+            <input type="email" name="email">
+          </label>
+          <label class="control" data-control="tel" aria-label="phone number">
+            <input type="tel" name="tel">
+          </label>
 
-          <div class="form__control">
-            <label for="age">age</label>
-            <input name="age" id="age" type="text" size="4">
-          </div>
-          <div class="form__control">
-            <label for="search">search</label>
-            <input name="search" id="search" type="search" placeholder="enter search terms...">
-          </div>
-          <div class="form__control">
-            <label for="language">favorite language</label>
+
+          <label class="control" data-control="language" aria-label="language">
             <select name="language" id="language">
+              <option value="" selected></option>
               <option value="english">english</option>
               <option value="french">french</option>
-              <option value="gaelic">gaelic</option>
-              <option value="italian">italian</option>
               <option value="german">german</option>
+              <option value="italian">italian</option>
             </select>
-          </div>
-          <div class="form__control">
-            <label for="message">message</label>
-            <textarea name="message" id="message" placeholder="message..."></textarea>
-          </div>
-          <fieldset>
-            <legend>
-              Are you a citizen?
-            </legend>
-            <input type="radio" name="citizen" id="citizen_yes" value="yes" />
-            <label for="citizen_yes">yes</label>
-            <input type="radio" name="citizen" id="citizen_no" value="no" />
-            <label for="citizen_yes">no</label>
-          </fieldset>
-          <div class="form__control">
-            <input name="newsletter" id="newsletter" type="checkbox" />
-            <label for="phone">Receive our newsletter?</label>
-          </div>
+          </label>
+          <label class="control" data-control="message" aria-label="message">
+            <textarea name="message" rows="1"></textarea>
+          </label>
+
         </form>
       </article>
       <aside>
