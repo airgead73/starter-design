@@ -22,7 +22,7 @@
   transition-property: background-color, color;
   transition-duration: .26s;
   &:hover {
-    @include setBG(color.invert($color))
+    @include setBG(mix(white, $color, 50%));
   }
 }
 
@@ -58,7 +58,7 @@
   transition-property: background-color, color;
   transition-duration: .26s;
   &:hover {
-    @include setBG(color.invert($color))
+    @include setBG(mix(white, $color, 50%));
   }  
 }
 
@@ -98,6 +98,9 @@
   &--orange {
     @include btnSolid(clr(orange));
   }
+  &--black {
+    @include btnSolid(clr(black));
+  }
  }
 
  .btn--outline { 
@@ -116,6 +119,9 @@
   }
   &--orange {
     @include btnOutline(clr(orange));
+  }
+  &--black {
+    @include btnOutline(clr(black));
   }
  }
 
