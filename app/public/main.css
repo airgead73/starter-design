@@ -602,6 +602,16 @@ a:active {
   color: #40190e;
 }
 
+button:disabled {
+  background-color: #f6f6f6;
+  color: #dcdcdc;
+  cursor: none;
+}
+button:disabled:hover {
+  background-color: #f6f6f6;
+  color: #dcdcdc;
+}
+
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .list {

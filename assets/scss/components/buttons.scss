@@ -52,6 +52,16 @@
   border-radius: 5px;
 }
 
+%disabled {
+  @include setBG(clr(primary, lightest));
+  cursor: none;
+  &:hover {
+    @include setBG(clr(primary, lightest));
+  }
+}
+
+
+
 @mixin iconSolid($color: clr(primary)) {
   @extend %iconCommon;
   @include setBG($color);
@@ -162,4 +172,14 @@
     @include iconOutline(clr(orange));
   }
  }
+
+ button:disabled {
+  background-color: clr(primary, lightest);
+  color: clr(primary);
+  cursor: none;
+  &:hover {
+    background-color: clr(primary, lightest);
+    color: clr(primary);    
+  } 
+}
 
