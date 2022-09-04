@@ -49,7 +49,7 @@
   display: inline-block;
   width: 35px;
   height: 35px;
-  border-radius: 5px;
+  border-radius: 50%;
 }
 
 %disabled {
@@ -175,6 +175,7 @@
 
  button:disabled {
   background-color: clr(primary, lightest);
+  border-color: clr(primary, lightest);
   color: clr(primary);
   cursor: none;
   &:hover {

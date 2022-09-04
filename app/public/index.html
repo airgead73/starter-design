@@ -145,14 +145,14 @@
           <button class="btn--blue">cancel</button>
           <button class="btn--orange">reset</button>
           <button class="btn--yellow">submit</button>
-          <button class="btn--black">read</button>
+          <button class="btn--black" disabled>read</button>
         </p>
 
         <p>
           <button class="btn--outline">button</button>
           <button class="btn--outline--green">start</button>
           <button class="btn--outline--red">add</button>
-          <button class="btn--outline--blue">cancel</button>
+          <button class="btn--outline--blue" disabled>cancel</button>
           <button class="btn--outline--orange">reset</button>
           <button class="btn--outline--yellow">submit</button>
           <button class="btn--outline--black">read</button>
@@ -163,8 +163,8 @@
 
         <p>
           <button class="icon"><i class="fa-thin fa-plus"></i></button>
-          <button class="icon--green"><i class="fa-solid fa-user"></i></button>
-          <button class="icon--blue"><i class="fa-thin fa-bars"></i></button>
+          <button class="icon--green" disabled><i class="fa-solid fa-user"></i></button>
+          <button class="icon--blue" disabled><i class="fa-thin fa-bars"></i></button>
           <button class="icon--yellow"><i class="fa-thin fa-minus"></i></button>
         </p>
 
@@ -206,20 +206,60 @@
     <section id="forms">
       <article>
         <h2>forms</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sunt numquam minima eum culpa illum tempora
-          quo velit commodi, esse, non ipsum suscipit accusantium quaerat natus laboriosam ipsa quia quidem enim officia
-          expedita facilis laudantium. Dolor omnis suscipit, fugit doloribus eius ut vitae. Nesciunt natus explicabo
-          quibusdam, aliquid magnam dolore sapiente eaque eius asperiores reiciendis illo ab eligendi repellat rerum, at
-          sint velit similique placeat officia ratione enim, cupiditate numquam eveniet! Dolore repudiandae neque ipsa
-          ut adipisci, officiis excepturi! Reiciendis excepturi expedita eius eum cupiditate, architecto itaque odio
-          fugiat vel. Magnam debitis enim consequuntur at. Dolore voluptate magni explicabo temporibus ratione modi
-          velit amet asperiores ab atque odit perspiciatis adipisci quam eveniet, veritatis vel autem praesentium minus
-          pariatur repudiandae! Illum sed quisquam corporis vitae, excepturi qui odio iste. Culpa laborum pariatur quas
-          reiciendis ipsum quasi, rerum consequatur odio recusandae, itaque molestias voluptatum cum impedit. Amet
-          harum, nulla at architecto quas vitae ea nihil, deserunt eaque, delectus id dolorem libero? Error dignissimos
-          ea recusandae quasi! Recusandae tenetur sit, quas nisi accusantium in cupiditate ipsam. Accusantium, corrupti
-          doloribus! Non quaerat eius quidem explicabo porro odit, voluptas animi sunt id neque accusantium, aut dicta
-          totam necessitatibus dolores quam. Facere voluptates tempora commodi numquam.</p>
+        <form action="">
+          <div class="form__control">
+            <label for="">first name</label>
+            <input name="name_first" id="name_first" type="text" placeholder="Enter first name...">
+          </div>
+          <div class="form__control">
+            <label for="name_last">last name</label>
+            <input name="name_last" id="name_last" type="text" placeholder="Enter last name...">
+          </div>
+          <div class="form__control">
+            <label for="email">email</label>
+            <input name="email" id="email" type="email" placeholder="Enter email...">
+          </div>
+          <div class="form__control">
+            <label for="phone">phone number</label>
+            <input name="phone" id="phone" type="tel" placeholder="Enter phone...">
+          </div>
+
+          <div class="form__control">
+            <label for="age">age</label>
+            <input name="age" id="age" type="text" size="4">
+          </div>
+          <div class="form__control">
+            <label for="search">search</label>
+            <input name="search" id="search" type="search" placeholder="enter search terms...">
+          </div>
+          <div class="form__control">
+            <label for="language">favorite language</label>
+            <select name="language" id="language">
+              <option value="english">english</option>
+              <option value="french">french</option>
+              <option value="gaelic">gaelic</option>
+              <option value="italian">italian</option>
+              <option value="german">german</option>
+            </select>
+          </div>
+          <div class="form__control">
+            <label for="message">message</label>
+            <textarea name="message" id="message" placeholder="message..."></textarea>
+          </div>
+          <fieldset>
+            <legend>
+              Are you a citizen?
+            </legend>
+            <input type="radio" name="citizen" id="citizen_yes" value="yes" />
+            <label for="citizen_yes">yes</label>
+            <input type="radio" name="citizen" id="citizen_no" value="no" />
+            <label for="citizen_yes">no</label>
+          </fieldset>
+          <div class="form__control">
+            <input name="newsletter" id="newsletter" type="checkbox" />
+            <label for="phone">Receive our newsletter?</label>
+          </div>
+        </form>
       </article>
       <aside>
         <h3>aside title</h3>
