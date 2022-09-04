@@ -3,46 +3,54 @@
 @use '../abstracts/tools' as *;
 @use 'sass:color';
 
-label,
+$labelText: 200px;
+
 input,
 select,
 textarea {
-  appearance: none;
-}
-
-label {
   display: block;
-  margin-bottom: 10px;
-  &::before {
-    display: inline-block;
-    width: 18%;
-    content: attr(aria-label);
-    text-align: right;
-  }
-}
-
-input,
-select,
-textarea {
-  display: inline-block;
-  width: 80%;
-  border: none;
+  width: 100%;
+  appearance: none;
+  margin: 0;
+  padding: 0;
   line-height: 2;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid clr(primary);
   padding: 0 8px;
-  background-color: transparent;
-  color: clr(primary, darker);
-  border-bottom: 1px solid clr(primary, light);
   transition-property: background-color;
   transition-duration: .26s;
   &:focus {
     outline: none;
-    background-color: clr(primary, darker);
-    color: clr(primary, lightest);
+    background: clr(primary, darker);
+    color: clr(primary, lighter);
     border-bottom-color: transparent;
-    
   }
 }
 
+label {
+  position: relative;
+  display: block;
+  padding-left: $labelText;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  &::before {
+    position: absolute;
+    width: $labelText;
+    left: 0;
+    display: block;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 1rem;
+    content: attr(aria-label);
+    line-height: 2;
+  }
+}
 
+.control[data-control="age"] {
+  width: 50%;
+}
 
-
+.control[data-control="tel"] {
+  width: 50%;
+}

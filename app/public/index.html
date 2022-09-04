@@ -208,21 +208,22 @@
         <h2>forms</h2>
         <form action="">
           <label class="control" data-control="name-first" aria-label="first name">
-            <input type="text" name="name-first">
+            <input type="text" name="name-first" class="control__input">
           </label>
           <label class="control" data-control="name-last" aria-label="last name">
-            <input type="text" name="name-last">
+            <input type="text" name="name-last" class="control__input">
           </label>
-          <label class="control" data-control="email" aria-label="email">
-            <input type="email" name="email">
+          <label class="control" data-control="age" aria-label="age">
+            <input type="number" name="age" class="control__input">
           </label>
-          <label class="control" data-control="tel" aria-label="phone number">
-            <input type="tel" name="tel">
+          <label class="control" data-control="tel" aria-label="tel">
+            <input type="tel" name="tel" class="control__input">
           </label>
-
-
+          <label class="control" data-control="date" aria-label="date">
+            <input type="datetime-local" name="date" class="control__input">
+          </label>
           <label class="control" data-control="language" aria-label="language">
-            <select name="language" id="language">
+            <select name="language" id="language" class="control__select">
               <option value="" selected></option>
               <option value="english">english</option>
               <option value="french">french</option>

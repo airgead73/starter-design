@@ -632,36 +632,20 @@ button:disabled:hover {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-label,
 input,
 select,
 textarea {
+  display: block;
+  width: 100%;
   -webkit-appearance: none;
           appearance: none;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-label::before {
-  display: inline-block;
-  width: 18%;
-  content: attr(aria-label);
-  text-align: right;
-}
-
-input,
-select,
-textarea {
-  display: inline-block;
-  width: 80%;
-  border: none;
+  margin: 0;
+  padding: 0;
   line-height: 2;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
   padding: 0 8px;
-  background-color: transparent;
-  color: #6e6e6e;
-  border-bottom: 1px solid #e5e5e5;
   transition-property: background-color;
   transition-duration: 0.26s;
 }
@@ -669,9 +653,36 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  background-color: #6e6e6e;
-  color: #f6f6f6;
+  background: #6e6e6e;
+  color: #eeeeee;
   border-bottom-color: transparent;
+}
+
+label {
+  position: relative;
+  display: block;
+  padding-left: 200px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+label::before {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  display: block;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 1rem;
+  content: attr(aria-label);
+  line-height: 2;
+}
+
+.control[data-control=age] {
+  width: 50%;
+}
+
+.control[data-control=tel] {
+  width: 50%;
 }
 
 /* Figures
