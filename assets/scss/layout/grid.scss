@@ -46,12 +46,11 @@
   }
 }
 
-// .row li {
-//   @include flag(red);
-// }
-
-ul.row {
-  @include flag(green);
+.img {
+  display: block;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .col {
