@@ -206,34 +206,67 @@
     <section id="forms">
       <article>
         <h2>forms</h2>
-        <form action="">
-          <label class="control" data-control="name-first" aria-label="first name">
-            <input type="text" name="name-first" class="control__input">
-          </label>
-          <label class="control" data-control="name-last" aria-label="last name">
-            <input type="text" name="name-last" class="control__input">
-          </label>
-          <label class="control" data-control="age" aria-label="age">
-            <input type="number" name="age" class="control__input">
-          </label>
-          <label class="control" data-control="tel" aria-label="tel">
-            <input type="tel" name="tel" class="control__input">
-          </label>
-          <label class="control" data-control="date" aria-label="date">
-            <input type="datetime-local" name="date" class="control__input">
-          </label>
-          <label class="control" data-control="language" aria-label="language">
-            <select name="language" id="language" class="control__select">
-              <option value="" selected></option>
-              <option value="english">english</option>
-              <option value="french">french</option>
-              <option value="german">german</option>
-              <option value="italian">italian</option>
-            </select>
-          </label>
-          <label class="control" data-control="message" aria-label="message">
-            <textarea name="message" rows="1"></textarea>
-          </label>
+        <!-- <form class="form">
+          <h3 class="form__title">signup form</h3>
+          <fieldset class="_65">
+            <label class="control" data-control="name-first" aria-label="first name">
+              <input type="text" name="name-first" class="control__input">
+            </label>
+            <label class="control" data-control="name-last" aria-label="last name">
+              <input type="text" name="name-last" class="control__input">
+            </label>
+            <label class="control" data-control="email" aria-label="email">
+              <input type="email" name="email" class="control__input">
+            </label>
+            <label class="control" data-control="message" aria-label="message">
+              <textarea name="message" rows="1" class="control__textarea"></textarea>
+            </label>
+          </fieldset>
+          <fieldset class="_35">
+            <label class="control" data-control="age" aria-label="age">
+              <input type="floor" name="age" class="control__input">
+            </label>
+            <label class="control" data-control="language" aria-label="language">
+              <select name="language" class="control__select">
+                <option value="" selected></option>
+                <option value="english">english</option>
+                <option value="french">french</option>
+                <option value="italian">italian</option>
+              </select>
+            </label>
+          </fieldset>
+        </form> -->
+
+        <form class="form">
+          <h3 class="form__title _100">start shift</h3>
+          <fieldset class="_65">
+            <label class="control" data-control="date" aria-label="date">
+              <input type="datetime-local" name="date" class="control__input">
+            </label>
+            <label class="control" data-control="comments" aria-label="comments">
+              <textarea name="comments" rows="2" class="control__textarea"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="_35">
+            <label class="control" data-control="hours" aria-label="hours">
+              <input type="number" name="hours" class="control__input">
+            </label>
+            <label class="control" data-control="floor" aria-label="floor">
+              <select name="floor" class="control__select">
+                <option value="" selected></option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__controls _100">
+            <button type="submit" class="btn">start</button>
+            <button type="reset" class="btn">reset</button>
+          </fieldset>
 
         </form>
       </article>

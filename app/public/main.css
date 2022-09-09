@@ -170,6 +170,83 @@ section, .row {
   text-align: center;
 }
 
+._100 {
+  width: 100%;
+  flex-basis: auto;
+}
+
+._65 {
+  flex: 6.5;
+}
+
+._95 {
+  flex: 9.5;
+}
+
+._90 {
+  flex: 9;
+}
+
+._85 {
+  flex: 8.5;
+}
+
+._80 {
+  flex: 8;
+}
+
+._75 {
+  flex: 75;
+}
+
+._70 {
+  flex: 7;
+}
+
+._65 {
+  flex: 6.5;
+}
+
+._55 {
+  flex: 5.5;
+}
+
+._50 {
+  flex: 5;
+}
+
+._45 {
+  flex: 4.5;
+}
+
+._40 {
+  flex: 4;
+}
+
+._35 {
+  flex: 3.5;
+}
+
+._30 {
+  flex: 3;
+}
+
+._25 {
+  flex: 2.5;
+}
+
+._20 {
+  flex: 2;
+}
+
+._15 {
+  flex: 1.5;
+}
+
+._10 {
+  flex: 1;
+}
+
 /* header */
 header {
   position: fixed;
@@ -632,57 +709,74 @@ button:disabled:hover {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+label,
 input,
 select,
-textarea {
+textarea,
+fieldset {
   display: block;
-  width: 100%;
+  padding: 0;
+  margin: 0;
   -webkit-appearance: none;
           appearance: none;
-  margin: 0;
-  padding: 0;
-  line-height: 2;
-  font-size: 1rem;
   border: none;
-  border-bottom: 1px solid #dcdcdc;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 30px;
+  border: 4px solid #a5a5a5;
+}
+
+.form__controls {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.form__title {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 100px;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.control::before {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  display: block;
+  content: attr(aria-label);
+  text-align: right;
+  padding-right: 8px;
+  line-height: inherit;
+}
+
+.control__input,
+.control__textarea,
+.control__select {
+  width: 100%;
+  line-height: inherit;
   padding: 0 8px;
   transition-property: background-color;
   transition-duration: 0.26s;
+  border-bottom: 2px solid #eeeeee;
 }
-input:focus,
-select:focus,
-textarea:focus {
+.control__input:focus,
+.control__textarea:focus,
+.control__select:focus {
   outline: none;
-  background: #6e6e6e;
-  color: #eeeeee;
+  background-color: #6e6e6e;
   border-bottom-color: transparent;
-}
-
-label {
-  position: relative;
-  display: block;
-  padding-left: 200px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-label::before {
-  position: absolute;
-  width: 200px;
-  left: 0;
-  display: block;
-  text-align: right;
-  padding-right: 5px;
-  font-size: 1rem;
-  content: attr(aria-label);
-  line-height: 2;
-}
-
-.control[data-control=age] {
-  width: 50%;
-}
-
-.control[data-control=tel] {
-  width: 50%;
+  color: #eeeeee;
 }
 
 /* Figures
