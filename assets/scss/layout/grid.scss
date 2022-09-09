@@ -2,6 +2,25 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+div {
+  flex: 1;
+}
+
+div {
+  background-color: clr(primary);
+  .p & {
+    padding: 30px;
+  }
+}
+
 ._100 {
   width: 100%;
   flex-basis: auto;

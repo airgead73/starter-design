@@ -10,5 +10,9 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;;
+  min-height: 100vh;
+  padding: {
+    left: 12px;
+    right: 12px;
+  }
 }
