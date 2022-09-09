@@ -11,10 +11,130 @@ fieldset {
   appearance: none;
   display: block;
   width: 100%;
+  line-height: 2;
+  font-size: .95rem;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
-.input::before {
+.input,
+.select {
+  margin: 0;
+  padding: 12px;
+}
+
+.input__label,
+.select__label {
+  position: relative;
+  width: 100%;
+}
+
+.input__field,
+.select__field {
+  border: 1px solid clr(primary, light); 
+  padding: 8px 12px;
+  &:focus {
+    outline: none;
+    background-color: clr(primary, lighter);
+    border-color: clr(primary, lighter);
+    color: clr(primary, darkest);
+  }
+}
+
+.input__label::before,
+.select__label::before {
   display: block;
-  content: attr(aria-label)
+  content: attr(aria-label) ":";
 }
 
+.form__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  & ._100 {
+    width: 100%;
+    flex-basis: auto;
+  }
+  & ._95 {
+    width: 95%;
+    flex-basis: auto;
+  }  
+  & ._90 {
+    width: 90%;
+    flex-basis: auto;
+  } 
+  & ._85 {
+    width: 85%;
+    flex-basis: auto;
+  } 
+  & ._80 {
+    width: 80%;
+    flex-basis: auto;
+  }  
+  & ._75 {
+    width: 75%;
+    flex-basis: auto;
+  } 
+  & ._70 {
+    width: 70%;
+    flex-basis: auto;
+  } 
+  & ._65 {
+    width: 65%;
+    flex-basis: auto;
+  } 
+  & ._60 {
+    width: 60%;
+    flex-basis: auto;
+  }
+  & ._55 {
+    width: 55%;
+    flex-basis: auto;
+  }
+  & ._50 {
+    width: 50%;
+    flex-basis: auto;
+  } 
+  & ._45 {
+    width: 45%;
+    flex-basis: auto;
+  } 
+  & ._40 {
+    width: 40%;
+    flex-basis: auto;
+  } 
+  & ._35 {
+    width: 35%;
+    flex-basis: auto;
+  } 
+  & ._30 {
+    width: 30%;
+    flex-basis: auto;
+  } 
+  & ._25 {
+    width: 25%;
+    flex-basis: auto;
+  } 
+  & ._20 {
+    width: 20%;
+    flex-basis: auto;
+  } 
+  & ._15 {
+    width: 15%;
+    flex-basis: auto;
+  }  
+  & ._10 {
+    width: 10%;
+    flex-basis: auto;
+  } 
+  & ._third {
+    width: 33.33%;
+    flex-basis: auto;    
+  } 
+  & ._quarter {
+    width: 25%;
+    flex-basis: auto;
+  }      
+}
