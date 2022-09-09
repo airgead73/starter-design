@@ -32,83 +32,33 @@
 
   </header>
   <main class="main" id="back-to-top">
-    <a id="grid"></a>
-    <!-- <section class="row a-end">
-      <div class="col">
-        <h2>column 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti neque qui facere magni excepturi esse illum
-          aliquid, eum repudiandae. Magni.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, exercitationem repellendus incidunt
-          corrupti aliquid minus. Nostrum repellendus voluptates perspiciatis libero ipsum rerum eveniet obcaecati
-          facilis temporibus adipisci minima itaque quaerat laudantium architecto, aspernatur nobis totam distinctio?
-          Possimus porro fugit nulla quos a molestiae consequuntur, nisi quis. Dicta odit deleniti fugiat.</p>
-      </div>
-      <div class="col">
-        <h2>column 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum excepturi non odit temporibus odio ipsam
-          quasi harum blanditiis perferendis quia obcaecati dolores iusto voluptatum aspernatur vero officiis, beatae
-          corrupti dolor molestiae hic amet facere aliquam nemo eligendi. Perspiciatis quo quas soluta doloribus animi
-          quae? Eius quasi quo molestias in recusandae beatae ipsa necessitatibus incidunt odio fugiat aliquid tenetur
-          dolores, repellendus eum natus doloribus voluptates ut, rerum temporibus quaerat quas? Minima sint reiciendis
-          quaerat rerum nesciunt!</p>
-      </div>
-      <div class="col">
-        <h2>column 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta eos cumque pariatur nesciunt
-          consequatur velit modi labore. Deleniti ullam veniam quidem quis recusandae et?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi delectus dolore dignissimos.
-          Blanditiis asperiores illo porro cupiditate temporibus in, libero fugiat quae similique iste.</p>
-      </div>
-      <div class="col">
-        <h3>column 4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus id, ipsam earum, voluptatibus ad
-          repudiandae pariatur reiciendis eius culpa perferendis, porro ea est! Tempora repudiandae in quibusdam autem
-          delectus nesciunt, dolorem illo debitis illum, aspernatur quaerat commodi nostrum quae optio mollitia qui ab
-          error assumenda vitae doloremque minus earum repellat possimus suscipit. Ad voluptatum laudantium facere
-          deserunt distinctio inventore non sint. Numquam dicta odio, repellendus, sequi tempora tempore sit tenetur
-          explicabo dolores nostrum iste voluptates illum deleniti veritatis velit aspernatur mollitia? Maiores facere
-          magni quae et odit consequuntur illo non enim dolor libero aspernatur atque, ducimus nemo corrupti vero
-          cupiditate omnis. Nam ullam repellendus asperiores beatae excepturi doloribus iure perferendis nostrum aut
-          aliquam molestiae hic, mollitia quidem at quos impedit repudiandae libero, expedita reprehenderit?</p>
-      </div>
-    </section>
-    <ul class="row j-center">
-      <li>one</li>
-      <li>two</li>
-      <li>third</li>
-      <li>fourth</li>
-      <li>fifth</li>
-    </ul> -->
-    <!-- <ul class="row">
-      <li><img src="https://via.placeholder.com/200" alt="placeholder image"></li>
-      <li><img src="https://via.placeholder.com/150" alt="placeholder image"></li>
-      <li><img src="https://via.placeholder.com/300" alt="placeholder image"></li>
-      <li><img src="https://via.placeholder.com/150" alt="placeholder image"></li>
-      <li><img src="https://via.placeholder.com/75" alt="placeholder image"></li>
-    </ul> -->
-    <ul class="row a-end">
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649960082/folio-development/q60iysev9cie6s6zgtif.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649949481/folio-development/jh1glphmp7q2dfsfklqx.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649236384/portfolio/grntyig7mc53lux0ktif.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649233753/portfolio/agmhcapnr2g6m8bf08o7.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649233688/portfolio/qccf05a7hdcxmmbgdenr.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649229406/dev_setup/ae98v9rqez04bdhffppw.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-      <li><img class="img"
-          src="https://res.cloudinary.com/dpm/image/upload/v1649229881/dev_setup/efxbik7bjevkmcwlg3om.jpg"
-          alt="placeholder image" title="placeholder image"></li>
-    </ul>
+    <a id="form"></a>
+
+    <form class="form">
+      <ul class="form__controls">
+        <li class="form__control">
+          <label class="input" aria-label="first name">
+            <input class="input__field" type="text" name="name_first" id="name_first">
+          </label>
+        </li>
+        <li class="form__control">
+          <label class="input" aria-label="last name">
+            <input class="input__field" type="text" name="name_last" id="name_last">
+          </label>
+        </li>
+        <li class="form__control">
+          <label class="input" aria-label="email">
+            <input class="input__field" type="email" name="email" id="email">
+          </label>
+        </li>
+        <li class="form__control">
+          <label class="input" aria-label="date">
+            <input class="input__field" type="datetime-local" name="date" id="date">
+          </label>
+        </li>
+      </ul>
+    </form>
+
   </main>
   <footer class="footer">
     <p class="footer__text container"><small>&copy; 2022</small></p>

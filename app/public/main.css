@@ -679,6 +679,22 @@ button:disabled:hover {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+label,
+input,
+select,
+textarea,
+fieldset {
+  -webkit-appearance: none;
+          appearance: none;
+  display: block;
+  width: 100%;
+}
+
+.input::before {
+  display: block;
+  content: attr(aria-label);
+}
+
 /* Figures
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Tables

@@ -7,5 +7,14 @@ label,
 input,
 select,
 textarea,
-fieldset {}
+fieldset {
+  appearance: none;
+  display: block;
+  width: 100%;
+}
+
+.input::before {
+  display: block;
+  content: attr(aria-label)
+}
 
