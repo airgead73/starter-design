@@ -149,23 +149,55 @@ body {
 }
 
 /* grid */
-section {
+.row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
   margin-bottom: 20px;
+  gap: 5px;
 }
 
-div {
+.a-start {
+  align-items: flex-start;
+}
+.a-end {
+  align-items: flex-end;
+}
+.a-center {
+  align-items: center;
+}
+.a-baseline {
+  align-items: baseline;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+.j-end {
+  justify-content: flex-end;
+}
+.j-center {
+  justify-content: center;
+}
+.j-between {
+  justify-content: space-between;
+}
+.j-around {
+  justify-content: space-around;
+}
+.j-even {
+  justify-content: space-evenly;
+}
+
+ul.row {
+  border-width: 4px;
+  border-style: solid;
+  border-color: green;
+}
+
+.col {
   flex: 1;
-}
-
-div {
-  background-color: #dcdcdc;
-}
-.p div {
-  padding: 30px;
+  padding: 0 30px;
 }
 
 ._100 {

@@ -2,23 +2,62 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-section {
+.row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
   margin-bottom: 20px;
+  gap: 5px;
 }
 
-div {
-  flex: 1;
-}
-
-div {
-  background-color: clr(primary);
-  .p & {
-    padding: 30px;
+.a {
+  &-start {
+    align-items: flex-start;
   }
+  &-end {
+    align-items: flex-end;
+  }
+  &-center {
+    align-items: center;
+  }
+  &-baseline {
+    align-items: baseline;
+  }
+}
+
+.j {
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-even {
+    justify-content: space-evenly;
+  }
+}
+
+// .row li {
+//   @include flag(red);
+// }
+
+ul.row {
+  @include flag(green);
+}
+
+.col {
+  flex: 1;
+  padding: 0 30px;
+  
 }
 
 ._100 {
