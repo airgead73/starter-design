@@ -2,25 +2,6 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-div, .container {
-  @include container(3000px);
-}
-
-section, .row {
-  @include row();
-  position: relative;
-  gap: 50px;
-  min-height: 100vh;
-}
-
-.btt {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-}
-
 ._100 {
   width: 100%;
   flex-basis: auto;

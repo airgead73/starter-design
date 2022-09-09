@@ -2,15 +2,6 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: r.$rootLeftBar;
-  & * {
-    margin: 0;
-  }
-}
+header {}
 
 

@@ -2,12 +2,4 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @use '../abstracts/tools' as *;
 
-.header { 
-  @include setBG(clr(primary, lightest)); 
-  &__title {
-    @include setBG(clr(primary, darkest));
-    text-align: center;
-    padding: 5px 0;
-    font-size: 1.25rem;
-  }
-}
+.header {}
