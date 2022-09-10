@@ -35,39 +35,15 @@
     <a id="form"></a>
 
     <form class="form">
-      <ul class="form__row">
-        <li class="input _50">
-          <label class="input__label" aria-label="first name">
-            <input class="input__field" type="text" name="name_first" id="name_first">
-          </label>
-        </li>
-        <li class="input _50">
-          <label class="input__label" aria-label="last name">
-            <input class="input__field" type="text" name="name_last" id="name_last">
-          </label>
-        </li>
-        <li class="input _40">
-          <label class="input__label" aria-label="email">
-            <input class="input__field" type="email" name="email" id="email">
-          </label>
-        </li>
-        <li class="input _40">
-          <label class="input__label" aria-label="date">
-            <input class="input__field" type="datetime-local" name="date" id="date">
-          </label>
-        </li>
-        <li class="select _20">
-          <label class="select__label" aria-label="language">
-            <select class="select__field" name="language" id="language">
-              <option value="" selected></option>
-              <option value="english">english</option>
-              <option value="french">french</option>
-              <option value="german">german</option>
-              <option value="italian">italian</option>
-            </select>
-          </label>
+      <h2 class="form__title">start new shift</h2>
+      <ul class="form__controls">
+        <li class="control">
+          <label for="name_first">first name</label>
+          <input type="text" name="name_first" id="name_first" aria-invalid="true" aria-describedby="name_first_error">
+          <p class="error_message" id="name_first_error">Provide a first name.</p>
         </li>
       </ul>
+      <button type="submit" class="btn">start</button>
     </form>
 
   </main>

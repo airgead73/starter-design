@@ -622,42 +622,6 @@ fieldset {
           appearance: none;
   display: block;
   width: 100%;
-  line-height: 2;
-  font-size: 0.95rem;
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
-.input,
-.select {
-  margin: 0;
-  padding: 12px;
-}
-
-.input__label,
-.select__label {
-  position: relative;
-  width: 100%;
-}
-
-.input__field,
-.select__field {
-  border: 1px solid #e5e5e5;
-  padding: 8px 12px;
-}
-.input__field:focus,
-.select__field:focus {
-  outline: none;
-  background-color: #eeeeee;
-  border-color: #eeeeee;
-  color: #373737;
-}
-
-.input__label::before,
-.select__label::before {
-  display: block;
-  content: attr(aria-label) ":";
 }
 
 .form__row {
@@ -749,6 +713,18 @@ fieldset {
 .form__row ._quarter {
   width: 25%;
   flex-basis: auto;
+}
+
+input[aria-invalid=true] {
+  border-color: #f95959;
+}
+
+input[aria-invalid=true] ~ label {
+  color: #f95959;
+}
+
+input[aria-invalid=true] + p {
+  color: #f95959;
 }
 
 /* Figures
