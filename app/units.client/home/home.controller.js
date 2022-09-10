@@ -11,16 +11,17 @@ exports.home = asyncHandler(async (req, res, next) => {
 
   console.log(req.query.template);
 
-  const view = req.query.template !== undefined ? req.query.template : 'dashboard';
+  const partial = req.query.template !== undefined ? req.query.template : 'dashboard';
 
-  const viewPath = `pages/${view}`;
+  const partialPath = `../partials/${partial}`;
 
   return res
     .status(200)
-    .render(viewPath, {
+    .render('pages/home', {
       title: 'starter',
       development: isDev,
-      test: isTest
+      test: isTest,
+      partialPath
   });
 
 });
