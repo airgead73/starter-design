@@ -213,9 +213,33 @@ body {
 }
 
 /* header */
+header {
+  position: relative;
+}
+
 /* navigation */
 .nav__btn {
   display: block;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  width: 35px;
+  height: 35px;
+  background-color: #002f35;
+  color: #bfcbcd;
+  transition-property: background-color, color;
+  transition-duration: 0.26s;
+  z-index: 11;
+}
+.nav__btn:hover {
+  background-color: #bfcbcd;
+  color: #303333;
 }
 @media screen and (min-width: 768px) {
   .nav__btn {
@@ -224,7 +248,15 @@ body {
 }
 
 .nav__list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
   display: none;
+  background-color: white;
+  border-left: 1px solid #dcdcdc;
+  z-index: 10;
 }
 .nav__list.show {
   display: block;

@@ -3,14 +3,41 @@
 @use '../abstracts/variables/root' as r;
 
 .nav__btn {
+  $dimension: 35px;
   display: block;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1;  
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  width: $dimension;
+  height: $dimension;
+  @include setBG(clr(black));
+  transition-property: background-color, color;
+  transition-duration: .26s;
+  z-index: 11;
+  &:hover {
+    @include setBG(clr(black, lightest));
+  }  
   @include screen(md) {
     display: none;
   }
 }
 
 .nav__list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
   display: none;
+  background-color: white;
+  border-left: 1px solid clr(primary);
+  z-index: 10;
   &.show {
     display: block;
   }
