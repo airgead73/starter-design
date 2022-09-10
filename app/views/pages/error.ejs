@@ -1,5 +1,41 @@
-<%- include ('../partials/head') %>
-  <%- include ('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if(development) { %>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <script src="/bundle.js" defer></script>
+    <% } else if(test) { %>
+      <link rel="stylesheet" href="/main.test.css" type="text/css">
+      <script src="/bundle.test.js" defer></script>
+      <% } else { %>
+        <link rel="stylesheet" href="/main.min.css" type="text/css">
+        <script src="/bundle.min.js" defer></script>
+        <% } %>
+          <title>
+            <%= typeof title !='undefined' ? title : 'Page Title' %>
+          </title>
+</head>
+
+<body>
+
+  <header id="top-of-page">
+    <h1><a href="/">starter</a></h1>
+    <nav class="side-navigation">
+      <button id="nav__btn" type="button">menu</button>
+      <ul id="nav__list">
+        <li><a href="/authors">authors</a></li>
+        <li><a href="/books">books</a></li>
+        <li><a href="/templates">templates</a></li>
+        <li><a href="/logout">logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
     <article>
       <h2>Something Went Wrong</h2>
       <p><code><%= status %></code>
@@ -7,8 +43,8 @@
       </p>
     </article>
     <aside>
-      <h3>right bar</h3>
+      <h3></h3>
     </aside>
 
 
-    <%- include('../partials/footer') %>
+    <main class="main">

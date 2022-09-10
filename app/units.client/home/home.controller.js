@@ -9,9 +9,15 @@ const { isDev, isTest } = require('../../config/env');
 
 exports.home = asyncHandler(async (req, res, next) => {
 
+  console.log(req.query.template);
+
+  const view = req.query.template !== undefined ? req.query.template : 'dashboard';
+
+  const viewPath = `pages/${view}`;
+
   return res
     .status(200)
-    .render('pages/dashboard', {
+    .render(viewPath, {
       title: 'starter',
       development: isDev,
       test: isTest

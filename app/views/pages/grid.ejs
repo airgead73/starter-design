@@ -1,8 +1,48 @@
-<%- include ('../partials/head') %>
-  <%- include ('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if(development) { %>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <script src="/bundle.js" defer></script>
+    <% } else if(test) { %>
+      <link rel="stylesheet" href="/main.test.css" type="text/css">
+      <script src="/bundle.test.js" defer></script>
+      <% } else { %>
+        <link rel="stylesheet" href="/main.min.css" type="text/css">
+        <script src="/bundle.min.js" defer></script>
+        <% } %>
+          <title>
+            <%= typeof title !='undefined' ? title : 'Page Title' %>
+          </title>
+</head>
+
+<body>
+
+  <header id="top-of-page">
+    <h1><a href="/">starter</a></h1>
+    <nav class="side-navigation">
+      <button id="nav__btn" type="button">menu</button>
+      <ul id="nav__list">
+        <li class="nav__item"><a class="nav__link" href="?template=grid">grid</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=links">links</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=lists">lists</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=buttons">buttons</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=forms">forms</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=figures">figures</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=tables">tables</a></li>
+        <li class="nav__item"><a class="nav__link" href="?template=video">video</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
 
     <article>
-      <h2>dashboard</h2>
+      <h2>grid</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores quis odit voluptate enim aliquid
         voluptatem quo distinctio cupiditate atque!</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint explicabo necessitatibus omnis? Obcaecati quod
@@ -18,7 +58,7 @@
         culpa.</p>
     </article>
     <aside>
-      <h3 class="h5">right bar</h3>
+      <h3 class="h3">right bar</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloremque qui repellendus hic soluta, eius
         debitis, itaque fugit libero reiciendis perferendis dolores minus, officiis sunt voluptates! Necessitatibus amet
         quia, cumque labore dolore quasi suscipit, iste, cupiditate molestias quis aliquid placeat officiis impedit.
@@ -31,4 +71,12 @@
         molestiae!</p>
     </aside>
 
-    <%- include('../partials/footer') %>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__credit"><small>starter &copy; 2022 <a href="#top-of-page">back to top</a></small></p>
+  </footer>
+
+</body>
+
+</html>
