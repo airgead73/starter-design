@@ -2,7 +2,7 @@
 'use strict';
 
 const initMenu = () => {
-  const navBtn = document.getElementById('nav__menu');
+  const navBtn = document.getElementById('nav__btn');
   const navList = document.getElementById('nav__list');
   const navIcon = document.getElementById('nav__icon');
 

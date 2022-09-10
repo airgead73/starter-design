@@ -2,3 +2,19 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
+.nav__btn {
+  display: block;
+  @include screen(md) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: none;
+  &.show {
+    display: block;
+  }
+  @include screen(md) {
+    display: block;
+  }
+}
