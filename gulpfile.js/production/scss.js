@@ -13,7 +13,7 @@ function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer(), combinemq(), cssnano()])) 
-    .pipe(purgecss({ content: C.CONTENT}))
+    .pipe(purgecss({ content: C.CONTENT, fontFace: true, safeList: ['fa-xmark']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }

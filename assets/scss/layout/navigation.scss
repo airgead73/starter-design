@@ -33,4 +33,7 @@
   .open & {
     display: block;
   }
+  @include screen(md) {
+    display: block;
+  }
 }
