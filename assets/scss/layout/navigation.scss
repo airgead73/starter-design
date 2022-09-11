@@ -13,6 +13,7 @@
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
+  z-index: 11;
   @include screen(md) {
     display: none;
   }
@@ -27,4 +28,28 @@
 
 .side-navigation.open {
   display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-left: 25%;
+  height: 100%;
+  z-index: 10;
+  @include screen(md) {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: 0;
+    padding-left: 0;
+    height: auto;
+  }
+}
+
+.open .nav__list {
+  background-color: white;
+  height: 100%;
+  box-shadow: -2px 0 3px 10px rgba(0,0,0,0.1);
+  @include screen(md) {
+    box-shadow: none;
+  }
 }
