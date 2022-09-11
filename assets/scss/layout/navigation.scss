@@ -2,38 +2,13 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-.nav__btn {
-  $dimension: 35px;
-  display: block;
-  position: absolute;
-  top: 8px;
-  right: 0;
+.header__menu-btn {
+  @include setBG(clr(black));
   border-radius: 4px;
-  font-size: 1rem;
-  line-height: 1;  
+  font-size: .85rem;
+  line-height: 1;
+  padding: 12px;
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
-  width: $dimension;
-  height: $dimension;
-  @include setBG(clr(black));
-  transition-property: background-color, color;
-  transition-duration: .26s;
-  z-index: 11;
-  &:hover {
-    @include setBG(clr(black, lightest));
-  }  
-  @include screen(md) {
-    display: none;
-  }
-}
-
-.nav__list {
-  display: none;
-  .open & {
-    display: block;
-  }
-  @include screen(md) {
-    display: block;
-  }
 }
