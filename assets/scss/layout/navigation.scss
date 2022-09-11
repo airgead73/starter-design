@@ -35,7 +35,7 @@
   padding-left: 25%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7);
   @include screen(md) {
     position: relative;
     top: auto;
@@ -62,11 +62,10 @@
     }
   }
   & .nav__item {
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 3;
   }
 }
-
-
 
 .nav__list {
   @include screen(md) {

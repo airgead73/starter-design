@@ -9,8 +9,6 @@ const { isDev, isTest } = require('../../config/env');
 
 exports.home = asyncHandler(async (req, res, next) => {
 
-  console.log(req.query.template);
-
   const partial = req.query.template !== undefined ? req.query.template : 'dashboard';
 
   const partialPath = `../partials/${partial}`;

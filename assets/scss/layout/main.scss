@@ -6,6 +6,7 @@ main {
   flex: 1;
   @include screen(md) {
     padding-top: 40px;
+    width: 98%;
     max-width: 1200px;
     margin: {
       left: auto;
