@@ -339,14 +339,6 @@ readers do not read off random characters that represent icons */
   --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
 }
 
-@font-face {
-  font-family: "Font Awesome 6 Brands";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("/icons/fa/fa-brands-400.woff2") format("woff2"), url("/icons/fa/fa-brands-400.ttf") format("truetype");
-}
-
 /*!
  * Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
@@ -429,17 +421,12 @@ readers do not read off random characters that represent icons */
   --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
 }
 
-@font-face {
-  font-family: "Font Awesome 6 Duotone";
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("/icons/fa/fa-duotone-900.woff2") format("woff2"), url("/icons/fa/fa-duotone-900.ttf") format("truetype");
-}
-
 @media screen and (min-width: 768px){
   .nav__btn {
     display: none;
+  }
+  .nav__list {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.test.css.map */
