@@ -2,6 +2,15 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
+.header {
+  @include screen(md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .header__title {
   display: flex;
   flex-direction: row;

@@ -53,3 +53,12 @@
     box-shadow: none;
   }
 }
+
+.nav__list {
+  @include screen(md) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
