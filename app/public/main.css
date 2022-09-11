@@ -289,11 +289,18 @@ body {
   background-color: white;
   height: 100%;
   box-shadow: -2px 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media screen and (min-width: 768px) {
   .open .nav__list {
+    padding: 0;
     box-shadow: none;
   }
+}
+.open .nav__item {
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -312,7 +319,7 @@ main {
 @media screen and (min-width: 768px) {
   main {
     padding-top: 40px;
-    max-width: 960px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -321,6 +328,10 @@ main {
 /* article */
 /* aside */
 /* footer */
+footer {
+  text-align: center;
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Navigation

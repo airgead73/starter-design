@@ -45,14 +45,27 @@
   }
 }
 
-.open .nav__list {
-  background-color: white;
-  height: 100%;
-  box-shadow: -2px 0 3px 10px rgba(0,0,0,0.1);
-  @include screen(md) {
-    box-shadow: none;
+.open {
+  & .nav__list {
+    background-color: white;
+    height: 100%;
+    box-shadow: -2px 0 3px 10px rgba(0,0,0,0.1);
+    padding: {
+      top: 75px;
+      left: 10px;
+      right: 10px;
+    }    
+    @include screen(md) {
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+  & .nav__item {
+    margin-bottom: 20px;
   }
 }
+
+
 
 .nav__list {
   @include screen(md) {
