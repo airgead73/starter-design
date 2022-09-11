@@ -15,4 +15,7 @@ body {
     left: 12px;
     right: 12px;
   }
+  @include screen(md) {
+    padding: 0;
+  }
 }

@@ -4,4 +4,12 @@
 
 main {
   flex: 1;
+  @include screen(md) {
+    padding-top: 40px;
+    max-width: 2000px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
 }

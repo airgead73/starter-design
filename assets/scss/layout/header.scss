@@ -5,9 +5,10 @@
 .header {
   @include screen(md) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,0.1);
   }
 }
 
