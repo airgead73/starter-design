@@ -29,19 +29,8 @@
 }
 
 .nav__list {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 25%;
-  height: 100%;
   display: none;
-  background-color: white;
-  border-left: 1px solid clr(primary);
-  z-index: 10;
-  &.show {
-    display: block;
-  }
-  @include screen(md) {
+  .open & {
     display: block;
   }
 }

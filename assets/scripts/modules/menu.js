@@ -1,7 +1,7 @@
 const initMenu = () => {
   const navBtn = document.getElementById('nav__btn');
-  const navList = document.getElementById('nav__list');
   const navIcon = document.getElementById('nav__icon');
+  const sideNavigation = document.getElementById('side-navigation');
 
   const toggleMenuIcon = () => {
     const isHamburger = navIcon.classList.contains('fa-bars');
@@ -16,7 +16,7 @@ const initMenu = () => {
   
   navBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    navList.classList.toggle('show');
+    sideNavigation.classList.toggle('open');
     toggleMenuIcon();
   });
   
