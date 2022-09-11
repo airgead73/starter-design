@@ -3,11 +3,13 @@
 @use '../abstracts/variables/root' as r;
 
 .header__menu-btn {
+  $dimension: 35px;
   @include setBG(clr(black));
   border-radius: 4px;
   font-size: .85rem;
   line-height: 1;
-  padding: 12px;
+  width: $dimension;
+  height: $dimension;
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
