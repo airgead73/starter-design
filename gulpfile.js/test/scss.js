@@ -13,7 +13,7 @@ function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer(), combinemq()])) 
-    .pipe(purgecss({ content: C.CONTENT, fontFace: true, safelist: ['fa-xmark', '[hidden]']}))
+    .pipe(purgecss({ content: C.CONTENT safelist: ['fa-xmark']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
