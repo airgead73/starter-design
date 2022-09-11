@@ -251,7 +251,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  width: 75%;
+  left: 25%;
   height: 100%;
   display: none;
   background-color: white;
