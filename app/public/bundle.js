@@ -1,3 +1,6 @@
+(function () {
+'use strict';
+
 const initMenu = () => {
 
   const menuBtn = document.getElementById('menu__btn');
@@ -9,7 +12,7 @@ const initMenu = () => {
 
     sideNav.classList.toggle('open');
 
-  }
+  };
 
   const toggleBtn = ($isOpen) => {   
 
@@ -23,7 +26,7 @@ const initMenu = () => {
       menuIcon.classList.add('fa-xmark');
     }
 
-  }
+  };
 
   const toggle = ($isOpen) => {
 
@@ -33,13 +36,16 @@ const initMenu = () => {
     toggleBtn($isOpen);
     toggleNav();
 
-  }
+  };
 
   menuBtn.addEventListener('click', function(e) {
     const isOpen = menuBtn.getAttribute('aria-expanded') === "true" ? true : false;
     toggle(isOpen);
-  })
+  });
   
-}
+};
 
-export default initMenu;
+initMenu();
+
+}());
+//# sourceMappingURL=bundle.js.map
