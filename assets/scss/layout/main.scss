@@ -2,21 +2,13 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-// main {
-//   flex: 1;
-//   @include screen(md) {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 60px;
-//     padding-top: 40px;
-//     width: 98%;
-//     max-width: 1200px;
-//     margin: {
-//       left: auto;
-//       right: auto;
-//     }
-//   }
-// }
+// main classes
+// - .main 
+//
+// helper
+// - .main--rule
+// - .main--border
+// - .main--bg
 
 main {
   flex: 1;

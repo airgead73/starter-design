@@ -2,7 +2,21 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-article {
+.main article {
   max-width: 75ch;
+}
+
+.main--border article {
+  padding-top: 0;
+  @include screen(md) {
+    padding-top: 30px;
+  }
+}
+
+.main--background article {
+  padding-top: 0;
+  @include screen(md) {
+    padding-top: 30px;
+  }
 }
 

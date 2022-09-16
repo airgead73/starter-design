@@ -409,17 +409,34 @@ main {
 }
 
 /* article */
-article {
+.main article {
   max-width: 75ch;
 }
 
-/* aside */
-aside {
-  max-width: 75ch;
-  /* single border */
-  /* full border */
+.main--border article {
+  padding-top: 0;
 }
-.main-a aside {
+@media screen and (min-width: 768px) {
+  .main--border article {
+    padding-top: 30px;
+  }
+}
+
+.main--background article {
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .main--background article {
+    padding-top: 30px;
+  }
+}
+
+/* aside */
+.main aside {
+  max-width: 75ch;
+}
+
+.main--rule aside {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #dcdcdc;
@@ -427,29 +444,42 @@ aside {
   margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  .main-a aside {
+  .main--rule aside {
     border-top: none;
-    margin-top: 0;
-    padding-top: 0;
-    padding-left: 30px;
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: #dcdcdc;
+    padding-top: 0;
+    padding-left: 30px;
+    margin-top: 0;
   }
 }
-.main-b aside {
+
+.main--border aside {
   border-width: 1px;
   border-style: solid;
   border-color: #dcdcdc;
   padding: 30px;
+  margin-top: 30px;
 }
-.main-c aside {
-  background-color: #003823;
-  color: #f2f5f4;
-  padding: 30px;
+@media screen and (min-width: 768px) {
+  .main--border aside {
+    margin-top: 0;
+  }
 }
 
-/* left border */
+.main--background aside {
+  padding: 30px;
+  margin-top: 30px;
+  background-color: #003823;
+  color: #f2f5f4;
+}
+@media screen and (min-width: 768px) {
+  .main--background aside {
+    margin-top: 0;
+  }
+}
+
 /* footer */
 footer {
   text-align: center;

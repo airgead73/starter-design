@@ -2,52 +2,51 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-aside {
+.main aside {
   max-width: 75ch;
-  /* single border */
-  .main-a & {    
-    border-top: {
+}
+
+.main--rule aside {
+  border-top: {
+    width: 1px;
+    style: solid;
+    color: clr(primary);
+  }
+  padding-top: 30px;
+  margin-top: 30px;
+  @include screen(md) {
+    border-top: none;
+    border-left: {
       width: 1px;
       style: solid;
       color: clr(primary);
     }
-    padding-top: 30px;
-    margin-top: 30px;
-    @include screen(md) {
-      border-top: none;
-      margin-top: 0;
-      padding-top: 0;
-      padding-left: 30px;
-      border-left: {
-        width: 1px;
-        style: solid;
-        color: clr(primary);
-      }
+    padding: {
+      top: 0;
+      left: 30px;
     }
-  }
-  /* full border */
-  .main-b & {
-    border: {
-      width: 1px;
-      style: solid;
-      color: clr(primary);
-    }
-    padding: 30px;
-  }
-  .main-c & {
-    @include setBG(clr(green, dark));
-    //background-color: clr(green, dark);
-    //color: clr(green, lightest);
-    padding: 30px;
+    margin-top: 0;
   }
 }
 
-/* left border */
-// .aside-a {
-//   border-left: {
-//     width: 1px;
-//     style: solid;
-//     color: clr(primary);    
-//   }
-//   padding-left: 30px;
-// }
+.main--border aside {
+  border: {
+    width: 1px;
+    style: solid;
+    color: clr(primary);
+  }
+  padding: 30px;
+  margin-top: 30px;
+  @include screen(md) {
+    margin-top: 0;
+  }
+}
+
+.main--background aside {
+  padding: 30px;
+  margin-top: 30px;
+  @include setBG(clr(green, dark));
+  @include screen(md) {
+    margin-top: 0;
+  }
+}
