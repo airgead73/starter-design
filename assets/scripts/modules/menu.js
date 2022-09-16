@@ -2,12 +2,12 @@ const initMenu = () => {
 
   const menuBtn = document.getElementById('menu__btn');
   const menuIcon = document.getElementById('menu__icon');
-  const sideNav = document.getElementById('side-navigation');
+  const nav = document.querySelector('[role="navigation"]');
 
 
   const toggleNav = () => {
 
-    sideNav.classList.toggle('open');
+    nav.classList.toggle('open');
 
   }
 

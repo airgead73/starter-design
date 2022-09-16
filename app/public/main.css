@@ -212,9 +212,72 @@ body {
   flex-basis: auto;
 }
 
+._95 {
+  flex: 9.5;
+}
+
+._90 {
+  flex: 9;
+}
+
+._85 {
+  flex: 8.5;
+}
+
+._80 {
+  flex: 8;
+}
+
+._75 {
+  flex: 75;
+}
+
+._70 {
+  flex: 7;
+}
+
+._65 {
+  flex: 6.5;
+}
+
+._55 {
+  flex: 5.5;
+}
+
 ._50 {
-  width: 50%;
-  flex-basis: auto;
+  flex: 5;
+}
+
+._45 {
+  flex: 4.5;
+}
+
+._40 {
+  flex: 4;
+}
+
+._35 {
+  flex: 3.5;
+}
+
+._30 {
+  flex: 3;
+}
+
+._25 {
+  flex: 2.5;
+}
+
+._20 {
+  flex: 2;
+}
+
+._15 {
+  flex: 1.5;
+}
+
+._10 {
+  flex: 1;
 }
 
 /* header */
@@ -323,17 +386,25 @@ body {
 /* main */
 main {
   flex: 1;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   main {
-    display: flex;
+    padding-top: 40px;
+    max-width: 1200px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .main {
     flex-direction: row;
     gap: 60px;
-    padding-top: 40px;
-    width: 98%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
