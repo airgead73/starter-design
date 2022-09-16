@@ -19,14 +19,14 @@
   }
 }
 
-.side-navigation {
+.top-navigation {
   display: none;
   @include screen(md) {
     display: block;
   } 
 }
 
-.side-navigation.open {
+.top-navigation.open {
   display: block;
   position: fixed;
   top: 0;
@@ -40,7 +40,7 @@
     position: relative;
     top: auto;
     right: auto;
-    left: 0;
+    left: auto;
     padding-left: 0;
     height: auto;
   }

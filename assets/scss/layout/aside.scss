@@ -2,4 +2,16 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-aside {}
+aside {
+  max-width: 75ch;;
+}
+
+/* left border */
+.aside-a {
+  border-left: {
+    width: 1px;
+    style: solid;
+    color: clr(primary);    
+  }
+  padding-left: 30px;
+}
