@@ -13,8 +13,8 @@
 @function contrastText($color) {
   $lightness: lightness($color);
   @if($lightness < 50) {
-    @return mix(white, $color, 75%);
+    @return mix(white, $color, 95%);
   } @else {
-    @return mix(black, $color, 75%);
+    @return mix(black, $color, 95%);
   }
 }
