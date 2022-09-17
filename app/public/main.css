@@ -167,6 +167,16 @@ body {
     gap: 20px;
   }
 }
+.row.row--green .col {
+  background-color: #004a2f;
+  color: #f2f6f5;
+  padding: 30px;
+}
+.row.row--red .col {
+  background-color: #bb4343;
+  color: #fcf6f6;
+  padding: 30px;
+}
 
 .a-start {
   align-items: flex-start;
@@ -202,7 +212,21 @@ body {
 
 .col {
   flex: 1;
-  padding: 0 30px;
+}
+.col.col--red {
+  background-color: #bb4343;
+  color: #fcf6f6;
+  padding: 30px;
+}
+.col.col--green {
+  background-color: #003823;
+  color: #f2f5f4;
+  padding: 30px;
+}
+.col.col--orange {
+  background-color: #ffd8cd;
+  color: #0d0b0a;
+  padding: 30px;
 }
 
 ._third {

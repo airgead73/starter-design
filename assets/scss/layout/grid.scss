@@ -12,6 +12,14 @@
     flex-direction: row;
     gap: 20px;
   }
+  &.row--green .col {
+    @include setBG(clr(green));
+    padding: 30px;
+  }
+  &.row--red .col {
+    @include setBG(clr(red, dark));
+    padding: 30px;
+  }
 }
 
 .a {
@@ -52,8 +60,18 @@
 
 .col {
   flex: 1;
-  padding: 0 30px;
-  
+  &.col--red {
+    @include setBG(clr(red, dark));
+    padding: 30px;
+  } 
+  &.col--green {
+    @include setBG(clr(green, dark));
+    padding: 30px;
+  } 
+  &.col--orange {
+    @include setBG(clr(orange, lightest));
+    padding: 30px;
+  }      
 }
 
 ._third {
