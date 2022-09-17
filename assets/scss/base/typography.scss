@@ -10,7 +10,7 @@
 }
 
 %headingShared {
-  font-weight: r.$rootHeavy;
+  font-weight: r.$heavy;
   margin-bottom: 1rem;
   letter-spacing: -.075pt;
 }
@@ -25,32 +25,32 @@ p, ol, ul {
 
 h1, .h1 {
   @extend %headingShared;
-  font-size: r.$rootSize * 2;
+  font-size: r.$size * 2;
 }
 
 h2, .h2 {
   @extend %headingShared;
-  font-size: r.$rootSize * 1.5;
+  font-size: r.$size * 1.5;
 }
 
 h3, .h3 {
   @extend %headingShared;
-  font-size: r.$rootSize * 1.17;
+  font-size: r.$size * 1.17;
 }
 
 h4, .h4 {
   @extend %headingShared;
-  font-size: r.$rootSize;
+  font-size: r.$size;
 }
 
 h5, .h5 {
   @extend %headingShared;
-  font-size: r.$rootSize * .83;
+  font-size: r.$size * .83;
 }
 
 h6, .h6 {
   @extend %headingShared;
-  font-size: r.$rootSize * .67;
+  font-size: r.$size * .67;
 }
 
 th, .th, caption, .caption {

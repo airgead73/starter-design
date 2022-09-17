@@ -2,27 +2,24 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-$borderThickess: 1px;
-$radius: 4px;
-
 .main aside {
   max-width: 75ch;
 }
 
 .main--rule aside {
   border-top: {
-    width: r.$rootBorder;
+    width: r.$border;
     style: solid;
-    color: r.$rootColor;
+    color: r.$color;
   }
   padding-top: 30px;
   margin-top: 30px;
   @include screen(md) {
     border-top: none;
     border-left: {
-      width: r.$rootBorder;
+      width: r.$border;
       style: solid;
-      color: r.$rootColor;
+      color: r.$color;
     }
     padding: {
       top: 0;
@@ -34,10 +31,10 @@ $radius: 4px;
 
 .main--border aside {
   border: {
-    width: r.$rootBorder;
+    width: r.$border;
     style: solid;
-    color: r.$rootColor;
-    radius: r.$rootRadius;
+    color: r.$color;
+    radius: r.$radius;
   }
   padding: 30px;
   margin-top: 30px;
@@ -49,8 +46,8 @@ $radius: 4px;
 .main--background aside {
   padding: 30px;
   margin-top: 30px;
-  border-radius: r.$rootRadius;
-  @include setBG(r.$rootColor);
+  border-radius: r.$radius;
+  @include setBG(r.$color);
   @include screen(md) {
     margin-top: 0;
   }
