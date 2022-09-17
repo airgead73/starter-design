@@ -11,7 +11,6 @@ function icons() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe()
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
