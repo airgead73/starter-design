@@ -5,7 +5,7 @@
 .header__menu-btn {
   $dimension: 35px;
   @include setBG(r.$color);
-  border-radius: 4px;
+  border-radius: r.$radius;
   font-size: .85rem;
   line-height: 1;
   width: $dimension;
