@@ -4,14 +4,13 @@
   "description": "fullstack application starter using node, express, mongodb, auth0, and gulp. Used for creating design templates.",
   "main": "index.js",
   "scripts": {
-    "start": "gulp && node index.js",
+    "start": "node index.js",
     "server": "NODE_ENV=development nodemon -r dotenv/config index.js",
     "public": "gulp dev",
     "test": "gulp test",
     "watch": "concurrently \"npm:public\" \"npm:server \"",
     "stage": "concurrently \"npm:test\" \"NODE_ENV=test nodemon -r dotenv/config index.js \"",
     "build": "gulp",
-    "heroku-postbuild": "echo Skip builds on Heroku",
     "deploy": "git push heroku v6:main",
     "log": "heroku logs --tail"
   },
