@@ -4,10 +4,6 @@
 
 .main article {
   max-width: 75ch;
-  padding-top: 0;
-  @include screen(md) {
-    padding-top: 30px;
-  }
 }
 
 .main--border article {
