@@ -13,7 +13,7 @@ const DEVELOPMENT_SCSS = {
   DEST: 'app/public'
 };
 const DEVELOPMENT_WATCH = {
-  ARRAY: ['assets/scss/index.scss','assets/scss/**/*.scss', 'assets/scripts/**/*.js']
+  ARRAY: ['assets/scss/index.scss','assets/scss/**/*.scss', 'assets/icons/index.scss', 'assets/icons/**/*.scss', 'assets/scripts/**/*.js']
 };
 
 module.exports = {

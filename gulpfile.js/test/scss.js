@@ -1,6 +1,5 @@
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const cssnano = require('cssnano');
 const combinemq = require('postcss-combine-media-query');
 const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
