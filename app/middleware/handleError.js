@@ -31,7 +31,6 @@ const handleError = (err, req, res, next) => {
       .status(statusCode)
       .json(errorObject);
   }
-
   
 }
 

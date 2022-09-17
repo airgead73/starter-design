@@ -1,6 +1,7 @@
 /**
  * external imports
  */
+
  const express = require('express');
  const { auth } = require('express-openid-connect');
  const path = require('path');
@@ -11,6 +12,7 @@
  const mongoSanitize = require('express-mongo-sanitize');
  const session = require('express-session');
  const xss = require('xss-clean');
+
 /**
  * internal imports
  */
@@ -23,6 +25,7 @@ const apiRouter = require('./units.api/router.api');
 /**
  * app activation
  */
+
 const app = express();
 connectDB();
 app.use(auth(authConfig));
@@ -30,6 +33,7 @@ app.use(auth(authConfig));
 /**
  * security
  */
+
  app.use(helmet({ crossOriginEmbedderPolicy: false }));
  app.use(helmet.contentSecurityPolicy(helmetPolicies));
  app.use(xss());
@@ -41,6 +45,7 @@ app.use(auth(authConfig));
 /**
  * middleware
  */
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
@@ -52,6 +57,7 @@ app.set('view engine', 'ejs');
 /**
  * locals
  */
+
  app.use(function (req, res, next) {
   res.locals.isAuthenticated = req.oidc.isAuthenticated();
   next();
@@ -60,12 +66,14 @@ app.set('view engine', 'ejs');
 /**
  * routes
  */
+
 app.use('/api', apiRouter);
 app.use('/', clientRouter);
 
 /**
  * error handling
  */
+
  app.use(function(req, res, next) {
   const error = new Error('Path not found.');
   error.status = 404;
@@ -78,4 +86,5 @@ app.use(handleError);
 /**
  * export app
  */
+
 module.exports = app;
