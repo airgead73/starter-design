@@ -6,11 +6,17 @@ resources/fonts
 resources/loremipsum.txt
 
 # gulp output
-*/bundle.js
-*/bundle.js.map
-*/bundle.min.js
-*/bundle.min.js.map
-*/main.css
-*/main.css.map
-*/main.min.css
-*/main.min.css.map
+app/public/bundle.js
+app/public/bundle.js.map
+app/public/bundle.min.js
+app/public/bundle.min.js.map
+app/public/main.css
+app/public/main.css.map
+app/public/main.min.css
+app/public/main.min.css.map
+app/public/icons.css
+app/public/icons.css.map
+app/public/icons.test.css
+app/public/icons.test.css.map
+app/public/icons.min.css
+app/public/icons.min.css.map
