@@ -306,8 +306,8 @@ body {
 
 /* navigation */
 .header__menu-btn {
-  background-color: #bb4343;
-  color: #fcf6f6;
+  background-color: #34465c;
+  color: #f5f6f7;
   border-radius: 4px;
   font-size: 0.85rem;
   line-height: 1;
@@ -439,7 +439,7 @@ main {
 .main--rule aside {
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #dcdcdc;
+  border-top-color: #34465c;
   padding-top: 30px;
   margin-top: 30px;
 }
@@ -448,7 +448,7 @@ main {
     border-top: none;
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: #dcdcdc;
+    border-left-color: #34465c;
     padding-top: 0;
     padding-left: 30px;
     margin-top: 0;
@@ -458,7 +458,8 @@ main {
 .main--border aside {
   border-width: 1px;
   border-style: solid;
-  border-color: #dcdcdc;
+  border-color: #34465c;
+  border-radius: 4px;
   padding: 30px;
   margin-top: 30px;
 }
@@ -471,8 +472,9 @@ main {
 .main--background aside {
   padding: 30px;
   margin-top: 30px;
-  background-color: #bb4343;
-  color: #fcf6f6;
+  border-radius: 4px;
+  background-color: #34465c;
+  color: #f5f6f7;
 }
 @media screen and (min-width: 768px) {
   .main--background aside {
