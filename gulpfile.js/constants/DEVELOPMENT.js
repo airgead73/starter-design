@@ -12,6 +12,12 @@ const DEVELOPMENT_SCSS = {
   MAP: 'main.css.map',
   DEST: 'app/public'
 };
+const DEVELOPMENT_ICONS = {
+  SRC: 'assets/icons/index.scss',
+  OUTPUT: 'icons.css',
+  MAP: 'icon.css.map',
+  DEST: 'app/public'
+};
 const DEVELOPMENT_WATCH = {
   ARRAY: ['assets/scss/index.scss','assets/scss/**/*.scss', 'assets/icons/index.scss', 'assets/icons/**/*.scss', 'assets/scripts/**/*.js']
 };
@@ -19,5 +25,6 @@ const DEVELOPMENT_WATCH = {
 module.exports = {
   DEVELOPMENT_JS,
   DEVELOPMENT_SCSS,
+  DEVELOPMENT_ICONS,
   DEVELOPMENT_WATCH
 }

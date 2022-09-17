@@ -4,12 +4,15 @@ const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 
+// constants
+const { PRODUCTION_ICONS: C } = require('../constants');
+
 function icons() {
-  return (src('assets/icons/index.scss', { sourcemaps: true }))
+  return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(rename('icons.min.css'))
-    .pipe(dest('app/public', { sourcemaps: '.'}))
+    .pipe(rename(C.OUTPUT))
+    .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
 
 module.exports = icons;

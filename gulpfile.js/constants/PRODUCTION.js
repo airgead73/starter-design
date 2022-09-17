@@ -11,10 +11,18 @@ const PRODUCTION_SCSS = {
   CONTENT: ['./app/views/**/*.ejs'],
   OUTPUT: 'main.min.css',
   DEST: 'app/public'
-}
+};
+
+const PRODUCTION_ICONS = {
+  SRC: 'assets/icons/index.scss',
+  OUTPUT: 'icons.min.css',
+  MAP: 'icon.min.css.map',
+  DEST: 'app/public'
+};
 
 module.exports = {
   PRODUCTION_JS,
-  PRODUCTION_SCSS
+  PRODUCTION_SCSS,
+  PRODUCTION_ICONS
 }
 

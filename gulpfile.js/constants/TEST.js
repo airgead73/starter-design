@@ -11,10 +11,18 @@ const TEST_SCSS = {
   CONTENT: ['./app/views/**/*.ejs'],
   OUTPUT: 'main.test.css',
   DEST: 'app/public'
-}
+};
+
+const TEST_ICONS = {
+  SRC: 'assets/icons/index.scss',
+  OUTPUT: 'icons.test.css',
+  MAP: 'icon.test.css.map',
+  DEST: 'app/public'
+};
 
 module.exports = {
   TEST_JS,
-  TEST_SCSS
+  TEST_SCSS,
+  TEST_ICONS
 }
 
