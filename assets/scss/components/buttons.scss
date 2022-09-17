@@ -52,15 +52,14 @@
   border-radius: 50%;
 }
 
-%disabled {
+@mixin btnDisabled {
   @include setBG(clr(primary, lightest));
+  border: none;
   cursor: none;
   &:hover {
     @include setBG(clr(primary, lightest));
   }
 }
-
-
 
 @mixin iconSolid($color: clr(primary)) {
   @extend %iconCommon;
@@ -92,7 +91,7 @@
 }
 
 .btn {  
-  @include btnSolid(clr(primary));
+  @include btnSolid(clr(primary, darker));
   &--green {
     @include btnSolid(clr(green));
   }
@@ -114,7 +113,7 @@
  }
 
  .btn--outline { 
-  @include btnOutline(clr(primary));
+  @include btnOutline(clr(primary, darker));
   &--green {
     @include btnOutline(clr(green));
   }
@@ -133,6 +132,10 @@
   &--black {
     @include btnOutline(clr(black));
   }
+ }
+
+ button:disabled {
+  @include btnDisabled();
  }
 
  .icon { 
