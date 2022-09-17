@@ -45,7 +45,7 @@
 .main--background aside {
   padding: 30px;
   margin-top: 30px;
-  @include setBG(clr(green, dark));
+  @include setBG(clr(red, dark));
   @include screen(md) {
     margin-top: 0;
   }
