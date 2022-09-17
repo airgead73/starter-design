@@ -12,7 +12,7 @@ function scss() {
   return (src(C.SRC, { sourcemaps: true }))
     .pipe(sass())
     .pipe(postcss([autoprefixer(), combinemq()])) 
-    .pipe(purgecss({ content: C.CONTENT, safelist: ['fa-xmark', 'open']}))
+    .pipe(purgecss({ content: C.CONTENT, safelist: ['open']}))
     .pipe(rename(C.OUTPUT))
     .pipe(dest(C.DEST, { sourcemaps: '.'}))
 }
