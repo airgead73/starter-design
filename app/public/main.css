@@ -411,6 +411,12 @@ main {
 /* article */
 .main article {
   max-width: 75ch;
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .main article {
+    padding-top: 30px;
+  }
 }
 
 .main--border article {
@@ -449,7 +455,6 @@ main {
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: #34465c;
-    padding-top: 0;
     padding-left: 30px;
     margin-top: 0;
   }
