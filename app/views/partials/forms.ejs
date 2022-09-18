@@ -2,40 +2,43 @@
   <form class="form">
     <h2 class="form__title">signup</h2>
     <ul class="form__controls">
-      <li class="control">
+      <li class="control _45">
         <label for="nameFirst" class="control__label">
           first name
         </label>
         <input type="text" name="nameFirst" id="nameFirst" class="control__field" aria-describedby="errorNameFirst">
         <p class="control__error" id="errorNameFirst">First name is required.</p>
       </li>
-      <li class="control">
+      <li class="control _10">
         <label for="nameMI" class="control__label">
           m.i.
         </label>
         <input type="text" name="nameMI" id="nameMI" class="control__field" aria-describedby="errorNameMI">
         <p class="control__error" id="errorNameMI">Incorrect.</p>
       </li>
-      <li class="control">
+      <li class="control _45">
         <label for="nameLast" class="control__label">
           last name
         </label>
         <input type="text" name="nameLast" id="nameLast" class="control__field" aria-describedby="errorNameLast">
         <p class="control__error" id="errorNameLast">Last name is required.</p>
       </li>
-      <li class="control">
+      <li class="control _100">
         <label for="email" class="control__label">
           email
         </label>
         <input type="email" name="email" id="email" class="control__field" aria-describedby="errorEmail">
         <p class="control__error" id="errorEmail">Properly formatted email is required.</p>
       </li>
-      <li class="control">
+      <li class="control _100">
         <label for="comments" class="control__label">
           comments
         </label>
         <textarea name="comments" id="comments" class="control__field" aria-describedby="errorComments"></textarea>
         <p class="control__error" id="errorComments">Comments cannot exceed 500 characters.</p>
+      </li>
+      <li class="control control--form _100 j-end">
+        <button class="btn">submit</button>
       </li>
     </ul>
   </form>

@@ -1,8 +1,48 @@
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @use '../abstracts/tools' as *;
+@use '../abstracts/variables/root' as r;
 @use 'sass:color';
 
-.control {
-  @include flag(red);
+label,
+input,
+select,
+textarea {
+  appearance: none;
+  display: block;
+  width: 100%;
+}
+
+.form {
+  border: 1px solid clr(primary);
+  padding: 30px;
+}
+
+.form__controls {
+  @include row($gap: 10px);
+  flex-wrap: wrap;
+}
+
+// .control {
+//   @include flag(red);
+// }
+
+#nameMI {
+  max-width: 30px;
+  @include screen(md) {
+    max-width: none;
+  }
+}
+
+.control__label {
+  font-size: .75rem;
+  font-weight: r.$heavy;
+}
+
+.control__error {
+  font-size: .75rem;
+}
+
+.control--form {
+  display: flex;
 }

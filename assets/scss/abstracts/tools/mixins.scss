@@ -91,14 +91,14 @@ $media: (
 ////////////////////////////
 /// ROW
 ////////////////////////////
-@mixin row($gap: none) {
+@mixin row($gap: none, $rowGap: none) {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   gap: $gap;
+  row-gap: $rowGap;
   @include screen(md) {
     flex-direction: row;
-  }
+  }  
 }
 
 ////////////////////////////
