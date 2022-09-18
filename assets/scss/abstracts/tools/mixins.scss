@@ -78,14 +78,6 @@ $media: (
 }
 
 ////////////////////////////
-/// ROW
-////////////////////////////
-@mixin row() {
-  display: flex;
-  flex-direction: row;
-}
-
-////////////////////////////
 /// FLAG BORDER
 ////////////////////////////
 @mixin flag($color) {
@@ -94,4 +86,24 @@ $media: (
     style: solid;
     color: $color;
   }
+}
+
+////////////////////////////
+/// ROW
+////////////////////////////
+@mixin row($gap: none) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: $gap;
+  @include screen(md) {
+    flex-direction: row;
+  }
+}
+
+////////////////////////////
+/// COLUMN
+////////////////////////////
+@mixin column() {
+  flex: 1;
 }

@@ -10,7 +10,7 @@
   margin-bottom: 20px;
   @include screen(md) {
     flex-direction: row;
-    gap: 20px;
+    // gap: 20px;
   }
   &.row--green .col {
     @include setBG(clr(green));

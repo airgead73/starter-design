@@ -2,14 +2,6 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-// main classes
-// - .main 
-//
-// helper
-// - .main--rule
-// - .main--border
-// - .main--bg
-
 main {
   flex: 1;
   width: 98%;

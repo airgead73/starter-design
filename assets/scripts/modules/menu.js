@@ -1,7 +1,7 @@
 const initMenu = () => {
 
-  const menuBtn = document.getElementById('menu__btn');
-  const menuIcon = document.getElementById('menu__icon');
+  const menuBtn = document.getElementById('menuBtn');
+  const menuIcon = document.getElementById('menuIcon');
   const nav = document.querySelector('[role="navigation"]');
 
 
