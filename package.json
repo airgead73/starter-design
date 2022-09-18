@@ -11,7 +11,7 @@
     "watch": "concurrently \"npm:public\" \"npm:server \"",
     "stage": "concurrently \"npm:test\" \"NODE_ENV=test nodemon -r dotenv/config index.js \"",
     "build": "gulp",
-    "deploy": "git push heroku v6:main",
+    "deploy": "git push heroku v7:main",
     "log": "heroku logs --tail"
   },
   "repository": {
