@@ -8,7 +8,7 @@ const handleDetail = ($model) => async (req, res, next) => {
     
     res.results = {
       success: false,
-      message: 'Item not found.',
+      message: 'Item cannot be found.',
       data: null
     }
 
@@ -21,7 +21,7 @@ const handleDetail = ($model) => async (req, res, next) => {
   if(!data) {
     res.results = {
       success: false,
-      message: 'Item not found.',
+      message: 'Item cannot be found.',
       data: null
     }
 

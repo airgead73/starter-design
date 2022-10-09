@@ -18,7 +18,7 @@ authorRouter
 authorRouter
   .route('/:id')
   .get(handleDetail(Author), detail)
-  .put(update)
+  .patch(update)
   .delete(remove);
 
 // export

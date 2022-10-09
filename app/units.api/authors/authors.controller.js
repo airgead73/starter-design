@@ -69,7 +69,7 @@ exports.create = asyncHandler(async (req, res, next) => {
   return res
     .status(200)
     .json({
-      success: true,
+      success,
       message,
       author
     });
@@ -78,17 +78,26 @@ exports.create = asyncHandler(async (req, res, next) => {
 
 /**
  * @desc Update author
- * @route PUT - /api/authors/:id
+ * @route PATCH - /api/authors/:id
  * @access Private
  * */
 
  exports.update = asyncHandler(async (req, res, next) => {
 
+  const { success, message, data: author } = res.results;
+
+  let updatedAuthor;
+
+  if(success) {
+    updatedAuthor = await Author.findByIdAndUpdate(author.id, req.body, { new: true });
+  }
+
   return res
     .status(200)
     .json({
-      success: true,
-      message: 'PUT author'
+      success,
+      message,
+      author: updatedAuthor || null
     });
 
 });
