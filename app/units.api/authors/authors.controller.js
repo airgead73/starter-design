@@ -9,6 +9,8 @@ const Author = require('./author');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
+  console.log(req.body);
+
   const { success, errors } = res.val_results;
 
   if(success) {

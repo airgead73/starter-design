@@ -13,35 +13,40 @@ const getBody = ($target) => {
     body[property] = value;
   });
 
+  console.log(body);
+
   body = JSON.stringify(body);
 
-  console.log(body);
+  return body;
+
 }
 
 const buildRequest = ($target) => {
 
-  const { action, method }= getAttrs($target);
+  const { action: url, method }= getAttrs($target);
 
-  const fetchRequest = new Request(action);
-  const fetchHeaders = new Headers();
+  const options = {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: getBody($target)
+  }
 
-  fetchHeaders.append('Content-type', 'application/json');
+  const request = new Request(url, options);
+  //const request = {url: url, options: options};
 
-  fetchRequest.method = method;
-  fetchRequest.headers = fetchHeaders;
-  fetchRequest.body = getBody($target);
-
-  return fetchRequest;
+  return request;
 
 }
 
+const apiFetch = async($target) => {
 
-
-const apiFetch = ($target) => {
-
-  const { action, method }= getAttrs($target);
-
-  console.log(method)
+  const request = buildRequest($target);
+  const response = await fetch(request);
+  const json = await response.json();
+  console.log(json);
 
 }
 
