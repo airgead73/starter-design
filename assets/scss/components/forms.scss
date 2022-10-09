@@ -58,3 +58,15 @@ textarea {
 .control--form {
   display: flex;
 }
+
+/* toggle error */
+.control__error {
+  display: none;
+}
+
+.control__field[aria-invalid] {
+  border-color: red;
+  & + .control__error {
+    display: block;
+  }
+}
