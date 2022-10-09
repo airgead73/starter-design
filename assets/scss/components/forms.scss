@@ -11,27 +11,28 @@ textarea {
   appearance: none;
   display: block;
   width: 100%;
+  border: none;
 }
 
 .form {
-  border: 1px solid clr(primary);
+  border: 1px solid clr(primary, dark);
   padding: 30px;
 }
 
 .form__controls {
-  @include row($gap: 10px);
+  @include row($gap: 12px);
   flex-wrap: wrap;
 }
 
-// .control {
-//   @include flag(red);
-// }
-
 #nameMI {
-  max-width: 30px;
+  max-width: 50px;
   @include screen(md) {
     max-width: none;
   }
+}
+
+.control {
+  position: relative;
 }
 
 .control__label {
@@ -39,8 +40,19 @@ textarea {
   font-weight: r.$heavy;
 }
 
+.control__field {
+  border: 1px solid clr(primary);
+  line-height: 3;
+  padding: 0 12px;
+}
+
 .control__error {
+  position: absolute;
+  top: -2px;
+  right: 0;
   font-size: .75rem;
+  font-weight: r.$heavy;
+  color: Red;
 }
 
 .control--form {

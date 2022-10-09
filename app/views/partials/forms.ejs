@@ -6,7 +6,8 @@
         <label for="nameFirst" class="control__label">
           first name
         </label>
-        <input type="text" name="nameFirst" id="nameFirst" class="control__field" aria-describedby="errorNameFirst">
+        <input type="text" name="nameFirst" id="nameFirst" class="control__field" aria-describedby="errorNameFirst"
+          aria-invalid>
         <p class="control__error" id="errorNameFirst">First name is required.</p>
       </li>
       <li class="control _10">
@@ -30,6 +31,8 @@
         <input type="email" name="email" id="email" class="control__field" aria-describedby="errorEmail">
         <p class="control__error" id="errorEmail">Properly formatted email is required.</p>
       </li>
+
+
       <li class="control _100">
         <label for="comments" class="control__label">
           comments
