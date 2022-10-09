@@ -18,6 +18,23 @@ const getBody = ($target) => {
   console.log(body);
 }
 
+const buildRequest = ($target) => {
+
+  const { action, method }= getAttrs($target);
+
+  const fetchRequest = new Request(action);
+  const fetchHeaders = new Headers();
+
+  fetchHeaders.append('Content-type', 'application/json');
+
+  fetchRequest.method = method;
+  fetchRequest.headers = fetchHeaders;
+  fetchRequest.body = getBody($target);
+
+  return fetchRequest;
+
+}
+
 
 
 const apiFetch = ($target) => {
