@@ -19,7 +19,7 @@ authorRouter
   .route('/:id')
   .get(handleDetail(Author), detail)
   .patch(handleDetail(Author), update)
-  .delete(remove);
+  .delete(handleDetail(Author), remove);
 
 // export
 module.exports = authorRouter;

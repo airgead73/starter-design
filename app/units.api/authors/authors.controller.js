@@ -110,11 +110,20 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.remove = asyncHandler(async (req, res, next) => {
 
+  const { success, message, data: author } = res.results;
+  let successMessage = null;
+
+  if(success) {
+    successMessage = `Author has been removed: ${author.lname}, ${author.fname}.`
+    author.remove();
+  }
+
   return res
     .status(200)
     .json({
-      success: true,
-      message: 'DELETE author'
+      success,
+      message: successMessage || message,
+      author
     });
 
 });
