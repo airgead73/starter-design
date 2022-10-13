@@ -13,8 +13,6 @@ const getBody = ($target) => {
     body[property] = value;
   });
 
-  console.log(body);
-
   body = JSON.stringify(body);
 
   return body;
@@ -35,7 +33,6 @@ const buildRequest = ($target) => {
   }
 
   const request = new Request(url, options);
-  //const request = {url: url, options: options};
 
   return request;
 
