@@ -15,7 +15,6 @@ const handleSuccess = ($message) => {
 const handleBadRequest = ($errors) => {
   $errors.forEach($error => {
     const errorField = document.getElementById($error.param);
-    console.log($error.param);
     errorField.setAttribute('aria-invalid', 'true');
   });
 }
