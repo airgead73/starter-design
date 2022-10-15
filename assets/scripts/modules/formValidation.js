@@ -1,4 +1,4 @@
-const formValidate = ($form) => {
+const validateForm = ($form) => {
 
   const fieldsArray = Array.from($form.querySelectorAll('.control__field'));
 
@@ -22,15 +22,13 @@ const initFields = ($form) => {
 }
 
 const checkAllFields = ($form) => {
-  let isValid = false;
   const invalidFields = Array.from($form.querySelectorAll('.control__field[aria-invalid]'));
 
-  if(!invalidFields.length) {
-    isValid = true;
-  }
-
-  return isValid;
-
+  if(invalidFields.length) {  
+    return false;   
+  } else {
+    return true;    
+  }  
 
 }
 
@@ -44,9 +42,10 @@ const checkField = ($field) => {
     $field.removeAttribute('aria-invalid');
   } 
 
+
 }
 
 export {
-  formValidate,
+  validateForm,
   initFields
 };

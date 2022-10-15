@@ -1,5 +1,5 @@
 import apiFetch from './fetch';
-import { formValidate, initFields } from './formValidate';
+import { validateForm, initFields } from './formValidation';
 
 const initForms = ($formsArr) => {
 
@@ -7,12 +7,13 @@ const initForms = ($formsArr) => {
     $form.addEventListener('submit', function(e) {
       e.preventDefault();
       initFields(e.target);
-      const isValid = formValidate(e.target);
-      if(isValid) {
-        apiFetch(e.target);
-      } else {
-        return;
-      }
+
+      const isValid = validateForm(e.target);
+
+      if(isValid) return apiFetch(e.target);
+
+      return;
+
     });
   });
   
