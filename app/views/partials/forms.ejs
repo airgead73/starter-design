@@ -1,39 +1,41 @@
 <main>
-  <form class="form" action="/api/authors" method="POST">
+  <form class="form" id="addAuthor" action="/api/authors" method="POST" novalidate>
     <h2 class="form__title">add author</h2>
     <ul class="form__controls">
       <li class="control _50">
         <label for="fname" class="control__label">
           first name
         </label>
-        <input type="text" name="fname" id="fname" class="control__field" aria-describedby="errorfname">
+        <input type="text" name="fname" id="fname" class="control__field" aria-describedby="errorfname" form="addAuthor"
+          required>
         <p class="control__error" id="errorfname">First name is required.</p>
       </li>
       <li class="control _50">
         <label for="lname" class="control__label">
           last name
         </label>
-        <input type="text" name="lname" id="lname" class="control__field" aria-describedby="errorlname">
+        <input type="text" name="lname" id="lname" class="control__field" aria-describedby="errorlname" form="addAuthor"
+          required>
         <p class="control__error" id="errorlname">Last name is required.</p>
       </li>
       <li class="control _100">
         <label for="dob" class="control__label">
           dob
         </label>
-        <input type="date" name="dob" id="dob" class="control__field" aria-describedby="errorDob">
+        <input type="date" name="dob" id="dob" class="control__field" aria-describedby="errorDob" form="addAuthor"
+          required>
         <p class="control__error" id="errorDob">Properly formatted dob is required.</p>
       </li>
-
-
       <li class="control _100">
         <label for="comments" class="control__label">
           comments
         </label>
-        <textarea name="comments" id="comments" class="control__field" aria-describedby="errorComments"></textarea>
+        <textarea name="comments" id="comments" class="control__field" aria-describedby="errorComments"
+          form="addAuthor"></textarea>
         <p class="control__error" id="errorComments">Comments cannot exceed 500 characters.</p>
       </li>
       <li class="control control--form _100 j-end">
-        <button class="btn">submit</button>
+        <button class="btn" form="addAuthor" type="submit">submit</button>
       </li>
     </ul>
   </form>

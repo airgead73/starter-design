@@ -51,14 +51,20 @@ authorSchema.pre("save", function(next) {
 
 });
 
-// authorSchema.virtual('display').get(function() {
-
-//   const displayFirst = this.fname
-
-// });
-
 authorSchema.virtual('dob_formatted').get(function() {
   return format(this.dob, 'MMMM d, yyyy')
+});
+
+authorSchema.virtual('fullname').get(function() {
+  const firstName = (this.fname).charAt(0).toUpperCase() + (this.fname).slice(1);
+  const lastName = (this.lname).charAt(0).toUpperCase() + (this.lname).slice(1);
+  return `${firstName} ${lastName}`;
+});
+
+authorSchema.virtual('listname').get(function() {
+  const firstName = (this.fname).charAt(0).toUpperCase() + (this.fname).slice(1);
+  const lastName = (this.lname).charAt(0).toUpperCase() + (this.lname).slice(1);
+  return `${lastName}, ${firstName}`;
 });
 
 module.exports = mongoose.model('Author', authorSchema);

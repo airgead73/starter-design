@@ -9,8 +9,6 @@ const Author = require('./author');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
-  console.log(req.body);
-
   const { success, errors } = res.val_results;
 
   if(success) {
@@ -21,18 +19,20 @@ exports.create = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({
       success: true,
-      message: `Author created: ${author.fname} ${author.lname}.`,
+      message: `Success: author ${author.fullname} has been created.`,
       author
     });
 
   } else {
 
+    const { errors: responseErrors } = errors;
+
     return res
     .status(400)
     .json({
       success: false,
-      message: 'Something went wrong.',
-      errors
+      message: 'Error: Something went wrong.',
+      errors: responseErrors
     });
   }
 

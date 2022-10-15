@@ -1,4 +1,5 @@
 import { getAttrs } from './utils';
+import { handleBadRequest, handleSuccess, handleError } from './handleResponse';
 
 const getBody = ($target) => {
   let body = new Object;
@@ -40,10 +41,26 @@ const buildRequest = ($target) => {
 
 const apiFetch = async($target) => {
 
-  const request = buildRequest($target);
-  const response = await fetch(request);
-  const json = await response.json();
-  console.log(json);
+  try {
+
+    const request = buildRequest($target);
+    const response = await fetch(request);
+    const json = await response.json();
+
+    if(!response.ok) {
+      const { errors } = json;
+      return handleBadRequest(errors)
+    } 
+
+    handleSuccess(json.message);  
+
+  } catch(error) {
+
+    console.log(error);
+
+  }
+
+ 
 
 }
 
