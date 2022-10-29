@@ -19,7 +19,7 @@ exports.create = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({
       success: true,
-      message: `Success: author ${author.fullname} has been created.`,
+      message: `Author ${author.fullname} has been created.`,
       author
     });
 

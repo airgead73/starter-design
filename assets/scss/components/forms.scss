@@ -70,3 +70,39 @@ textarea {
     display: block;
   }
 }
+
+.success {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1;
+}
+
+.success__container {
+  position: relative;
+  background-color: white;
+  padding: 50px 30px;
+}
+
+.success__title {
+  text-align: center;
+}
+
+.success__message {
+  text-align: center;
+}
+
+.success__dismiss {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* toggle success */
+.success.show {
+  display: block;
+}

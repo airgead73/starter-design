@@ -52,6 +52,7 @@ const apiFetch = async($target) => {
       return handleBadRequest(errors)
     } 
 
+    $target.reset();
     handleSuccess(json.message);  
 
   } catch(error) {

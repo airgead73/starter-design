@@ -10,8 +10,20 @@ const handleError = () => {
 
 const handleSuccess = ($message) => {
 
+  const successControl = document.getElementById('successControl');
+  const successMessage = successControl.querySelector('.success__message');
+  const successDismiss = successControl.querySelector('.success__dismiss');
+
+  successDismiss.addEventListener('click', function() {
+    successControl.classList.remove('show');
+    successMessage.textContent = ' ';    
+  })
+
+  successMessage.textContent = $message;
+  successControl.classList.add('show');
+
   console.log($message);
-  
+
 }
 
 const handleBadRequest = ($errors) => {
