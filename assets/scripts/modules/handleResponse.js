@@ -9,7 +9,9 @@ const handleError = () => {
 }
 
 const handleSuccess = ($message) => {
+
   console.log($message);
+  
 }
 
 const handleBadRequest = ($errors) => {
