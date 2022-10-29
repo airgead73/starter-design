@@ -9,7 +9,7 @@ const validateForm = ($form) => {
     });
 
     checkField(field);
-    
+
   });
 
   return checkAllFields($form);
@@ -36,7 +36,6 @@ const checkField = ($field) => {
   } else {
     $field.removeAttribute('aria-invalid');
   } 
-
 
 }
 
