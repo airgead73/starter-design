@@ -1,6 +1,37 @@
 <main>
   <article>
     <h2>authors</h2>
+    <p>count: <%= count %>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th colspan="2">birthday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% authors.forEach(author=> { %>
+
+          <tr>
+            <td>
+              <%= author.fullname %>
+            </td>
+            <td>
+              <%= author.dob_formatted %>
+            </td>
+            <td>
+              <button class="btn--blue" data-method="delete" data-action="/api/authors/<%= author.id %>"
+                data-message="Do you want to delete <%= author.fullname %>?">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+
+          <% }) %>
+      </tbody>
+    </table>
 
   </article>
   <aside>

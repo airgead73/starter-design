@@ -90,6 +90,10 @@
   }
 }
 
+button * {
+  pointer-events: none;
+}
+
 .btn {  
   @include btnSolid(clr(primary, darker));
   &--green {
