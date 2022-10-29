@@ -18,13 +18,14 @@ const handleError = (err, req, res, next) => {
   if(err.response === 'html') {
     return res
       .status(statusCode)
-      .render('pages/error', {
+      .render('pages/home', {
         success: false,
         status: statusCode,
         message: err.message,
         title: 'Error',
         main: 'main--error',
-        development: isDev
+        development: isDev,
+        partialPath: '../partials/error'
       })
   } else {
     return res

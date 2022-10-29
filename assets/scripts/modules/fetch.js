@@ -56,7 +56,8 @@ const apiFetch = async($target) => {
 
   } catch(error) {
 
-    console.log(error);
+    //console.log(error);
+    handleError();
 
   }
 
