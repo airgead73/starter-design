@@ -23,3 +23,16 @@ exports.home = asyncHandler(async (req, res, next) => {
   });
 
 });
+
+exports.authors = asyncHandler(async (req, res, next) => {  
+
+  return res
+    .status(200)
+    .render('pages/home', {
+      title: 'starter',
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/tables'
+  });
+
+});
