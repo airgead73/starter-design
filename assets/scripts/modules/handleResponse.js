@@ -1,3 +1,5 @@
+import { openSuccess } from './modals';
+
 const handleError = () => {
 
   function redirectTo404() {
@@ -8,21 +10,10 @@ const handleError = () => {
 
 }
 
-const handleSuccess = ($message) => {
+const handleSuccess = ($target, $message) => {
 
-  const successControl = document.getElementById('successControl');
-  const successMessage = successControl.querySelector('.success__message');
-  const successDismiss = successControl.querySelector('.success__dismiss');
-
-  successDismiss.addEventListener('click', function() {
-    successControl.classList.remove('show');
-    successMessage.textContent = ' ';    
-  })
-
-  successMessage.textContent = $message;
-  successControl.classList.add('show');
-
-  console.log($message);
+  $target.reset();
+  openSuccess($message);
 
 }
 

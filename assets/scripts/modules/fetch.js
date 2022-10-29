@@ -1,5 +1,6 @@
 import { getAttrs } from './utils';
-import { handleBadRequest, handleSuccess, handleError } from './handleResponse';
+import { handleSuccess, handleBadRequest, handleError } from './handleResponse';
+
 
 const getBody = ($target) => {
   let body = new Object;
@@ -52,8 +53,7 @@ const apiFetch = async($target) => {
       return handleBadRequest(errors)
     } 
 
-    $target.reset();
-    handleSuccess(json.message);  
+    handleSuccess($target,json.message);  
 
   } catch(error) {
 

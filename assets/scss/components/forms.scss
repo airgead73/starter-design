@@ -88,21 +88,3 @@ textarea {
   padding: 50px 30px;
 }
 
-.success__title {
-  text-align: center;
-}
-
-.success__message {
-  text-align: center;
-}
-
-.success__dismiss {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-/* toggle success */
-.success.show {
-  display: block;
-}
