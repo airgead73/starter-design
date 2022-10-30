@@ -1,3 +1,13 @@
+const openSuccess = ($message) => {
+
+  const success = document.getElementById('modalSuccess');
+  const message = success.querySelector('.modal__message');
+  message.textContent = $message;
+  success.setAttribute('data-status', 'open');
+  console.log(success);
+
+}
+
 const toggleModal = ($targetId) => {
 
   const target = document.getElementById($targetId);
@@ -49,5 +59,6 @@ const initTriggers = () => {
 }
 
 export {
-  initTriggers
+  initTriggers,
+  openSuccess
 }
