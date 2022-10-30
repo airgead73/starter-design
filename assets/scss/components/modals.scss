@@ -4,15 +4,3 @@
 @use '../abstracts/variables/root' as r;
 @use 'sass:color';
 
-.modal {}
-
-.modal__content {}
-
-.modal__dismiss {}
-
-.modal__title {}
-
-.modal__message {}
-
-/* toggle modal */
-.modal.open {}
