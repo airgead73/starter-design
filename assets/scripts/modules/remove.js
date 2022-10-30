@@ -1,5 +1,5 @@
 import { getAttrs } from './utils';
-import { openSuccess, openError } from './modals';
+import { openSuccess, openError, openAlert } from './modals';
 
 const buildRequest = ($url) => {
 
@@ -28,14 +28,18 @@ const apiRemove = async($url) => {
     const { success, message } = json;
 
     if(success) {
-      openSuccess(message, true);
+
+      openAlert('success', message, true);
+
     } else {
-      openError(message);
+
+      openAlert('error', message);
+      
     }
 
   } catch(error) {
 
-    openError(error);
+    openError('error', error);
 
   }
 

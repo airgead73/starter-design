@@ -1,52 +1,51 @@
-<%- include ('./modalSuccess') %>
-  <%- include ('./modalError') %>
-    <main>
-      <article>
-        <h2>authors</h2>
-        <p>count: <%= count %>
-        </p>
+<%- include ('./modalAlert') %>
+  <main>
+    <article>
+      <h2>authors</h2>
+      <p>count: <%= count %>
+      </p>
 
-        <table>
-          <thead>
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th colspan="2">birthday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Test Name</td>
+            <td>Test Date</td>
+            <td>
+              <button class="btn--blue" data-method="delete" data-action="/api/authors/7342c4040cb2a7c32e1d8d71"
+                data-message="Do you want to delete Test Name?">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+          <% authors.forEach(author=> { %>
+
             <tr>
-              <th>name</th>
-              <th colspan="2">birthday</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Test Name</td>
-              <td>Test Date</td>
               <td>
-                <button class="btn--blue" data-method="delete" data-action="/api/authors/7342c4040cb2a7c32e1d8d71"
-                  data-message="Do you want to delete Test Name?">
+                <%= author.fullname %>
+              </td>
+              <td>
+                <%= author.dob_formatted %>
+              </td>
+              <td>
+                <button class="btn--blue" data-method="delete" data-action="/api/authors/<%= author.id %>"
+                  data-message="Do you want to delete <%= author.fullname %>?">
                   <i class="fa-sharp fa-solid fa-xmark"></i>
                 </button>
               </td>
             </tr>
-            <% authors.forEach(author=> { %>
 
-              <tr>
-                <td>
-                  <%= author.fullname %>
-                </td>
-                <td>
-                  <%= author.dob_formatted %>
-                </td>
-                <td>
-                  <button class="btn--blue" data-method="delete" data-action="/api/authors/<%= author.id %>"
-                    data-message="Do you want to delete <%= author.fullname %>?">
-                    <i class="fa-sharp fa-solid fa-xmark"></i>
-                  </button>
-                </td>
-              </tr>
+            <% }) %>
+        </tbody>
+      </table>
 
-              <% }) %>
-          </tbody>
-        </table>
-
-      </article>
-      <aside>
-        <h3 class="h3"></h3>
-      </aside>
-    </main>
+    </article>
+    <aside>
+      <h3 class="h3"></h3>
+    </aside>
+  </main>

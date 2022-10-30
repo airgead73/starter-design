@@ -1,4 +1,4 @@
-import { openSuccess } from './modals';
+import { openAlert } from './modals';
 
 const handleError = () => {
 
@@ -13,7 +13,7 @@ const handleError = () => {
 const handleSuccess = ($target, $message) => {
 
   $target.reset();
-  openSuccess($message);
+  openAlert('success', $message);
 
 }
 

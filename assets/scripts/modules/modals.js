@@ -1,26 +1,31 @@
-const openSuccess = ($message, $reload = false) => {
+const openAlert = ($type, $message, $reload = false) => {
 
-  const success = document.getElementById('modalSuccess');
-  const message = success.querySelector('.modal__message');
+  const alertModal = document.getElementById('modalAlert');
+  const message = alertModal.querySelector('.modal__message');
+  const title = alertModal.querySelector('.modal__title');
+
   message.textContent = $message;
-  success.setAttribute('data-status', 'open');
+
   if($reload) {
-    const closeBtn = success.querySelector('.modal__close');
+    const closeBtn = alertModal.querySelector('.modal__close');
     closeBtn.setAttribute('data-reload', 'true');
   }
 
-}
-
-const openError = ($message, $reload = false) => {
-
-  const error = document.getElementById('modalError');
-  const message = error.querySelector('.modal__message');
-  message.textContent = $message;
-  error.setAttribute('data-status', 'open');
-  if($reload) {
-    const closeBtn = success.querySelector('.modal__close');
-    closeBtn.setAttribute('data-reload', 'true');
+  switch($type) {
+    case 'success':
+      alertModal.setAttribute('data-alert', 'success');
+      title.textContent = 'Success!';
+      break;
+    case 'error':
+      alertModal.setAttribute('data-alert', 'error');
+      title.textContent = 'Error!';
+      break;
+    default:
+      alertModal.setAttribute('data-alert', 'information'); 
+      title.textContent = 'Information';
   }
+
+  alertModal.setAttribute('data-status', 'open');
 
 }
 
@@ -82,6 +87,5 @@ const initTriggers = () => {
 
 export {
   initTriggers,
-  openSuccess,
-  openError
+  openAlert
 }
