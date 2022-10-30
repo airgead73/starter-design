@@ -1,3 +1,11 @@
-<main>
-  <h2>modals</h2>
-</main>
+<%- include ('./modalSuccess') %>
+  <%- include ('./modalError') %>
+    <%- include ('./modalInformation') %>
+      <main>
+        <h2>modals</h2>
+        <p><button class="btn--green" type="button" data-toggle="modal" data-target="modalSuccess">success</button></p>
+        <p><button class="btn--red" type="button" data-toggle="modal" data-target="modalError">error</button></p>
+        <p><button class="btn--blue" type="button" data-toggle="modal"
+            data-target="modalInformation">information</button>
+        </p>
+      </main>

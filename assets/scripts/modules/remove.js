@@ -47,7 +47,11 @@ const handleRemove = ($target) => {
 
 }
 
-const initRemove = ($btns) => {
+const initRemove = () => {
+  const $btns = Array.from(document.querySelectorAll('button[data-method="delete"]'));
+
+  if(!$btns.length) return;
+  
   $btns.forEach($btn => {
     $btn.addEventListener('click', function(e) {
       handleRemove(e.target);      

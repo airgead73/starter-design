@@ -1,7 +1,11 @@
-import { initMenu, initForms, initRemove } from './modules/index';
-
-const removeBtns = Array.from(document.querySelectorAll('button[data-method="delete"]'));
+import { 
+  initMenu,  
+  initForms, 
+  initRemove,
+  initTriggers 
+} from './modules/index';
 
 initMenu();
 initForms();
-if(removeBtns) initRemove(removeBtns);
+initRemove();
+initTriggers();
