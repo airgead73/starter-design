@@ -4,46 +4,15 @@
 @use '../abstracts/variables/root' as r;
 @use 'sass:color';
 
-.modal {
-  position: fixed;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-color: rgba(0,0,0,.7);
-  z-index: 1;
-}
+.modal {}
 
-.modal__content {
-  position: relative;
-  background-color: white;
-  padding: 40px;
-  width: 400px;
-}
+.modal__content {}
 
-.modal__dismiss {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
+.modal__dismiss {}
 
-.modal__title {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  color: clr(green);
-  border-bottom: 1px solid clr(green, lightest);
-}
+.modal__title {}
 
-.modal__message {
-  text-align: center;
-}
+.modal__message {}
 
 /* toggle modal */
-.modal.open {
-  display: flex;
-}
+.modal.open {}
