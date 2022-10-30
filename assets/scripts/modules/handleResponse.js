@@ -1,5 +1,3 @@
-import { openSuccess } from './modals';
-
 const handleError = () => {
 
   function redirectTo404() {
@@ -13,7 +11,7 @@ const handleError = () => {
 const handleSuccess = ($target, $message) => {
 
   $target.reset();
-  openSuccess($message);
+  console.log($message);
 
 }
 
