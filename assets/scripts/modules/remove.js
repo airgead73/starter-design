@@ -1,5 +1,5 @@
 import { getAttrs } from './utils';
-import { openSuccess, openError, openAlert } from './modals';
+import { openAlert } from './modals';
 
 const buildRequest = ($url) => {
 
@@ -34,7 +34,7 @@ const apiRemove = async($url) => {
     } else {
 
       openAlert('error', message);
-      
+
     }
 
   } catch(error) {
