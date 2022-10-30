@@ -1,28 +1,19 @@
 <%- include ('./modalAlert') %>
   <main>
     <article>
-      <h2>authors</h2>
-      <p>count: <%= count %>
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>name</th>
-            <th colspan="2">birthday</th>
+      <table class="table">
+        <caption class="h2">authors <small>(<%= count %>)</small>
+        </caption>
+        <thead class="thead">
+          <tr class="dark">
+            <th class="h3">name <small><a href="/authors?sort=lname"><i class="fa-solid fa-arrow-up"></i></a> <a
+                  href="/authors?sort=-lname"><i class="fa-solid fa-arrow-down"></i></a></small></th>
+            <th class="h3" colspan="2">birthday <small><a href="/authors?sort=dob"><i
+                    class="fa-solid fa-arrow-up"></i></a> <a href="/authors?sort=-dob"><i
+                    class="fa-solid fa-arrow-down"></i></a></small></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Test Name</td>
-            <td>Test Date</td>
-            <td>
-              <button class="btn--blue" data-method="delete" data-action="/api/authors/7342c4040cb2a7c32e1d8d71"
-                data-message="Do you want to delete Test Name?">
-                <i class="fa-sharp fa-solid fa-xmark"></i>
-              </button>
-            </td>
-          </tr>
+        <tbody class="tbody">
           <% authors.forEach(author=> { %>
 
             <tr>
@@ -32,10 +23,10 @@
               <td>
                 <%= author.dob_formatted %>
               </td>
-              <td>
-                <button class="btn--blue" data-method="delete" data-action="/api/authors/<%= author.id %>"
+              <td width="20px">
+                <button data-method="delete" data-action="/api/authors/<%= author.id %>"
                   data-message="Do you want to delete <%= author.fullname %>?">
-                  <i class="fa-sharp fa-solid fa-xmark"></i>
+                  <i class="fa-solid fa-trash"></i>
                 </button>
               </td>
             </tr>
