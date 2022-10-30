@@ -70,7 +70,7 @@ const initClose = () => {
       const reloadPage = btnTarget.querySelector('[data-reload]');
       
       btnTarget.setAttribute('data-status', 'close');
-      if(reloadPage) location.reload() ;
+      if(reloadPage) location.reload();
 
     });
 
