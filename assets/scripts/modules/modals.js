@@ -1,10 +1,26 @@
-const openSuccess = ($message) => {
+const openSuccess = ($message, $reload = false) => {
 
   const success = document.getElementById('modalSuccess');
   const message = success.querySelector('.modal__message');
   message.textContent = $message;
   success.setAttribute('data-status', 'open');
-  console.log(success);
+  if($reload) {
+    const closeBtn = success.querySelector('.modal__close');
+    closeBtn.setAttribute('data-reload', 'true');
+  }
+
+}
+
+const openError = ($message, $reload = false) => {
+
+  const error = document.getElementById('modalError');
+  const message = error.querySelector('.modal__message');
+  message.textContent = $message;
+  error.setAttribute('data-status', 'open');
+  if($reload) {
+    const closeBtn = success.querySelector('.modal__close');
+    closeBtn.setAttribute('data-reload', 'true');
+  }
 
 }
 
@@ -44,9 +60,15 @@ const initClose = () => {
 
   closeBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
+
       const btnTarget = document.querySelector('.modal[data-status="open"]');
+      const reloadPage = btnTarget.querySelector('[data-reload]');
+      
       btnTarget.setAttribute('data-status', 'close');
+      if(reloadPage) location.reload() ;
+
     });
+
   });  
 
 }
@@ -60,5 +82,6 @@ const initTriggers = () => {
 
 export {
   initTriggers,
-  openSuccess
+  openSuccess,
+  openError
 }
