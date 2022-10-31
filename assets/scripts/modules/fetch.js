@@ -51,6 +51,7 @@ const apiFetch = async($target) => {
     if(!response.ok) {
       const { errors } = json;
       return handleBadRequest(errors)
+      
     } 
 
     handleSuccess($target,json.message);  
@@ -59,9 +60,7 @@ const apiFetch = async($target) => {
 
     handleError();
 
-  }
-
- 
+  } 
 
 }
 
