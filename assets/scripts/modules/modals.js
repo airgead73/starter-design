@@ -1,3 +1,21 @@
+const openPreview = ($src, $reload = false) => {
+
+  const previewModal = document.getElementById('modalPreview');
+  const image = previewModal.querySelector('.modal__image');
+
+  image.setAttribute('src', $src);
+
+  if($reload) {
+    const closeBtn = alertModal.querySelector('.modal__close');
+    closeBtn.setAttribute('data-reload', 'true');
+  }
+
+  previewModal.setAttribute('data-status', 'open');
+
+  return;
+
+}
+
 const openAlert = ($type, $message, $reload = false) => {
 
   const alertModal = document.getElementById('modalAlert');
@@ -87,5 +105,6 @@ const initTriggers = () => {
 
 export {
   initTriggers,
-  openAlert
+  openAlert,
+  openPreview
 }

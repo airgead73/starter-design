@@ -2,10 +2,12 @@ import {
   initMenu,  
   initForms, 
   initRemove,
-  initTriggers 
+  initTriggers,
+  initPhoto
 } from './modules/index';
 
 initMenu();
 initForms();
 initRemove();
 initTriggers();
+initPhoto();

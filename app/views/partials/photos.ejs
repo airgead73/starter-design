@@ -1,19 +1,20 @@
-<%- include ('./modalAlert') %>
-  <main>
-    <form class="form" id="addPhoto" action="/api/photos" method="POST" novalidate>
-      <h2 class="form__title">add photo</h2>
-      <ul class="form__controls">
-        <li class="control _50">
-          <label for="photo" class="control__label">
-            select photo
-          </label>
-          <input type="file" name="photo" id="photo" class="control__field" aria-describedby="errorphoto"
-            form="addPhoto" required>
-          <p class="control__error" id="errorphoto">Photo is required.</p>
-        </li>
-        <li class="control control--form _100 j-end">
-          <button class="btn" form="addPhoto" type="submit">submit</button>
-        </li>
-      </ul>
-    </form>
-  </main>
+<%- include ('./modalPreview') %>
+  <%- include ('./modalAlert') %>
+    <main>
+      <form class="form" id="addPhoto" action="/api/photos" method="POST" novalidate>
+        <h2 class="form__title">add photo</h2>
+        <ul class="form__controls">
+          <li class="control _50">
+            <label for="photo" class="control__label">
+              select photo
+            </label>
+            <input type="file" name="photo" id="photo" class="control__field" aria-describedby="errorphoto"
+              form="addPhoto" required>
+            <p class="control__error" id="errorphoto">Photo is required.</p>
+          </li>
+          <li class="control control--form _100 j-end">
+            <button class="btn" form="addPhoto" type="submit">submit</button>
+          </li>
+        </ul>
+      </form>
+    </main>
