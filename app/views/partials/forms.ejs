@@ -1,5 +1,22 @@
 <%- include ('./modalAlert') %>
   <main>
+    <form class="form" id="addPhoto" action="/api/photos" method="POST" novalidate>
+      <h2 class="form__title">add photo</h2>
+      <ul class="form__controls">
+
+        <li class="control _100">
+          <label for="image" class="control__label">
+            select a photo
+          </label>
+          <input type="file" name="photo" id="photo" class="control__field" aria-describedby="errorPhoto"
+            form="addPhoto" required>
+          <p class="control__error" id="errorPhoto">Properly formatted image is required.</p>
+        </li>
+        <li class="control control--form _100 j-end">
+          <button class="btn" form="addAuthor" type="submit">submit</button>
+        </li>
+      </ul>
+    </form>
     <form class="form" id="addAuthor" action="/api/authors" method="POST" novalidate>
       <h2 class="form__title">add author</h2>
       <ul class="form__controls">

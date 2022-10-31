@@ -8,7 +8,7 @@ const handleDetail = ($model) => async (req, res, next) => {
     
     res.results = {
       success: false,
-      message: 'Item cannot be found.',
+      message: 'ID is not valid.',
       data: null
     }
 
