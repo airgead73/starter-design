@@ -1,12 +1,10 @@
 import { openPreview } from './modals';
 
 let currentPhoto;
-function Photo($src, $tag) {
+function Photo($src) {
   this.src = $src,
-  this.tag = $tag,
   this.display = function() {
     openPreview(this.src);
-    return;
   }
   this.log = function() {
     console.log("photo:", this.src);
@@ -15,14 +13,46 @@ function Photo($src, $tag) {
 
 const previewFile = ($file) => {
 
-  const selectedPhoto = document.getElementById('selectedPhoto');
-
   const reader = new FileReader();
   reader.readAsDataURL($file);
   reader.onloadend = () => {
-    currentPhoto = new Photo(reader.result, selectedPhoto);
+    currentPhoto = new Photo(reader.result);
+    currentPhoto.file = $file.name;
     currentPhoto.display();
-    currentPhoto.log();
+  }
+
+}
+
+const uploadPhoto = async() => {
+
+  try {
+
+    const response = await fetch('/api/photos', {
+      method: 'POST',
+      body: JSON.stringify(
+        { 
+          data: currentPhoto.src,
+          file: currentPhoto.file 
+        }
+      ),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    });
+
+    const json = await response.json();
+
+    //const { photo } = json;
+
+    //openPreview(photo.secure_url);
+
+    console.log(json);
+
+  } catch(error) {
+
+    console.error(error);
+
   }
 
 }
@@ -37,6 +67,12 @@ const initPhoto = () => {
 
   fileInput.addEventListener('change', function(e) {
     previewFile((e.target).files[0]);
+  });
+
+  photoForm.addEventListener('submit', function(e) {
+
+    uploadPhoto();
+
   });
 
 }
