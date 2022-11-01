@@ -28,7 +28,7 @@ exports.authors = asyncHandler(async (req, res, next) => {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/dashboard'
+      partialPath: '../partials/authors'
   });
 
 });
@@ -41,7 +41,7 @@ exports.photos = asyncHandler(async (req, res, next) => {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/dashboard'
+      partialPath: '../partials/photos'
   });
 
 });
@@ -54,7 +54,7 @@ exports.books = asyncHandler(async (req, res, next) => {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/dashboard'
+      partialPath: '../partials/books'
   });
 
 });
