@@ -12,7 +12,7 @@ const previewFile = ($target) => {
 
 }
 
-const compileBody = async($target) => {
+const compileBody = ($target) => {
 
   let body = new Object;
 
@@ -37,11 +37,7 @@ const compileBody = async($target) => {
 
   });
 
-  console.log(body);
-
   body = JSON.stringify(body);
-
-  console.log(body);
 
   return body;
   
@@ -61,7 +57,9 @@ const compileRequest = ($target) => {
     }
   }
 
-  if(needsBody) compileBody($target);
+  if(needsBody) options.body = compileBody($target);
+
+  console.log(options);
 
   const request = new Request(url, options);
 
@@ -71,8 +69,23 @@ const compileRequest = ($target) => {
 
 const apiFetch = async($target) => {
 
-  compileRequest($target);
-  
+  try {
+
+    const request = compileRequest($target);
+    const response = await fetch(request);
+    const json = await response.json();
+
+    console.log(json);
+
+  } catch(err) {
+
+    console.error(err);
+
+  }
+
+  // compileRequest($target);
+  // return;
+
 }
 
 export {

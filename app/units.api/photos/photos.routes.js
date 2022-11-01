@@ -8,7 +8,7 @@ const { create, read, detail, update, remove } = require('./photos.controller');
 const { handleCloudinary } = require('../../middleware');
 
 // routes
-photoRouter.route('/').get(read).post(create);
+photoRouter.route('/').get(read).post(handleCloudinary,create);
 photoRouter.route('/:id').get(detail).put(update).delete(remove);
 
 // export
