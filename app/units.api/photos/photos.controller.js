@@ -31,11 +31,14 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.read = asyncHandler(async (req, res, next) => {
 
+  const { success, count, data: photos } = res.results;
+
   return res
     .status(200)
     .json({
-      success: true,
-      message: 'GET photos'
+      success,
+      count,
+      photos      
     });
 
 });

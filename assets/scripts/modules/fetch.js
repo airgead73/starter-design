@@ -59,8 +59,6 @@ const compileRequest = ($target) => {
 
   if(needsBody) options.body = compileBody($target);
 
-  console.log(options);
-
   const request = new Request(url, options);
 
   return request;
@@ -82,9 +80,6 @@ const apiFetch = async($target) => {
     console.error(err);
 
   }
-
-  // compileRequest($target);
-  // return;
 
 }
 

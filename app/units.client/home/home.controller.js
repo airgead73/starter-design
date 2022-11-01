@@ -43,7 +43,7 @@ exports.authors = asyncHandler(async (req, res, next) => {
 
 exports.photos = asyncHandler(async (req, res, next) => {  
 
-  //const { success, count, data: photos } = res.results;
+  const { success, count, data: photos } = res.results;
 
   return res
     .status(200)
@@ -51,7 +51,9 @@ exports.photos = asyncHandler(async (req, res, next) => {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/photos'
+      partialPath: '../partials/tables',
+      count,
+      photos
   });
 
 });
