@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Photo = require('./photo');
 //const { cloudinary } = require('../../config');
 
 /**
@@ -9,12 +10,15 @@ const asyncHandler = require('express-async-handler');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
+  const photo = new Photo(res.results);
+  await photo.save();
+
   return res
     .status(200)
     .json({
       success: true,
-      message: 'POST photo',
-      data: res.results
+      message: `Photo ${photo.work} has been created.`,
+      photo
     });
 
 });

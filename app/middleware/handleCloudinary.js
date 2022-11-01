@@ -42,15 +42,14 @@ const handleCloudinary = asyncHandler(async (req,res,next) => {
   const w800 = eager[2];
 
   res.results = {
-    success: true,
     work,
     title,
     width,
     height,
-    original: secure_url,
-    w800: w800.secure_url,
-    thumbnail: thumbnail.secure_url,
-    copyright: copyright.secure_url
+    url_original: secure_url,
+    url_w800: w800.secure_url,
+    url_thumbnail: thumbnail.secure_url,
+    url_copyright: copyright.secure_url
   }
 
   next();
