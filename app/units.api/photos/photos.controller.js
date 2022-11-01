@@ -13,8 +13,7 @@ exports.create = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({
       success: true,
-      message: 'POST photo',
-      data: res.results 
+      message: 'POST photo'
     });
 
 });

@@ -1,13 +1,9 @@
 import { 
   initMenu,  
   initForms, 
-  initRemove,
-  initTriggers,
-  initPhoto
+  initTriggers
 } from './modules/index';
 
 initMenu();
 initForms();
-initRemove();
 initTriggers();
-initPhoto();
