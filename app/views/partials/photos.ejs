@@ -5,6 +5,22 @@
         <h2 class="form__title">add photo</h2>
         <ul class="form__controls">
           <li class="control _50">
+            <label for="work" class="control__label">
+              work
+            </label>
+            <input type="text" name="work" id="work" class="control__field" aria-describedby="errorwork" form="addPhoto"
+              required>
+            <p class="control__error" id="errorwork">Work is required.</p>
+          </li>
+          <li class="control _50">
+            <label for="title" class="control__label">
+              title
+            </label>
+            <input type="text" name="title" id="title" class="control__field" aria-describedby="errortitle"
+              form="addPhoto" required>
+            <p class="control__error" id="errortitle">Title is required.</p>
+          </li>
+          <li class="control _100">
             <label for="photo" class="control__label">
               select photo
             </label>

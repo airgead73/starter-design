@@ -23,7 +23,7 @@ const previewFile = ($file) => {
 
 }
 
-const uploadPhoto = async() => {
+const uploadPhoto = async($form) => {
 
   try {
 
@@ -71,7 +71,7 @@ const initPhoto = () => {
 
   photoForm.addEventListener('submit', function(e) {
 
-    uploadPhoto();
+    uploadPhoto(e.target);
 
   });
 
