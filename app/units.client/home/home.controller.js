@@ -9,41 +9,44 @@ const { isDev, isTest } = require('../../config/env');
 
 exports.home = asyncHandler(async (req, res, next) => {
 
-  const partial = req.query.template !== undefined ? req.query.template : 'dashboard';
-
-  const partialPath = `../partials/${partial}`;
-
   return res
     .status(200)
     .render('pages/home', {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath
+      partialPath: '../partials/dashboard',
   });
 
 });
 
 exports.authors = asyncHandler(async (req, res, next) => {  
 
-  const { success, count, data: authors } = res.results;
-
   return res
     .status(200)
     .render('pages/home', {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/tables',
-      count,
-      authors
+      partialPath: '../partials/dashboard'
   });
 
 });
 
 exports.photos = asyncHandler(async (req, res, next) => {  
 
-  const { success, count, data: photos } = res.results;
+  return res
+    .status(200)
+    .render('pages/home', {
+      title: 'starter',
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/dashboard'
+  });
+
+});
+
+exports.books = asyncHandler(async (req, res, next) => {  
 
   return res
     .status(200)
@@ -51,9 +54,7 @@ exports.photos = asyncHandler(async (req, res, next) => {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/tables',
-      count,
-      photos
+      partialPath: '../partials/dashboard'
   });
 
 });
