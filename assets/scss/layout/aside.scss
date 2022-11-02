@@ -3,7 +3,11 @@
 @use '../abstracts/variables/root' as r;
 
 .main aside {
-  flex: 4.5;
+  flex: 3.5;
+  margin-top: 20px;
+  @include screen(md) {
+    margin-top: 0;
+  }
 }
 
 .main--rule aside {

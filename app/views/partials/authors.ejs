@@ -1,5 +1,8 @@
 <article>
-  <h2>author dashboard</h2>
+  <h2 class="h2 article__title">
+    <span class="h2">article dashboard</span>
+    <span class="h5">count: <%= count%></span>
+  </h2>
   <% if(count < 1) { %>
     <p>no authors</p>
     <% } %>
@@ -11,7 +14,7 @@
   <form class="form" id="addAuthor" action="/api/authors" method="POST" novalidate>
     <h2 class="form__title">add author</h2>
     <ul class="form__controls">
-      <li class="control _50">
+      <li class="control _100">
         <label for="fname" class="control__label">
           first name
         </label>
@@ -19,7 +22,7 @@
           required>
         <p class="control__error" id="errorfname">First name is required.</p>
       </li>
-      <li class="control _50">
+      <li class="control _100">
         <label for="lname" class="control__label">
           last name
         </label>

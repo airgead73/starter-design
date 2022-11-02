@@ -3,7 +3,11 @@
 @use '../abstracts/variables/root' as r;
 
 .main article {
-  flex: 5.5;
+  flex: 6.5;
+  margin-top: 20px;
+  @include screen(md) {
+    margin-top: 0;
+  }
 }
 
 .main--border article {
@@ -18,5 +22,12 @@
   @include screen(md) {
     padding-top: 30px;
   }
+}
+
+.article__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
