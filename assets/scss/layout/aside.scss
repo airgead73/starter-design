@@ -3,7 +3,7 @@
 @use '../abstracts/variables/root' as r;
 
 .main aside {
-  max-width: 75ch;
+  flex: 4.5;
 }
 
 .main--rule aside {

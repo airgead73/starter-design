@@ -3,7 +3,7 @@
 @use '../abstracts/variables/root' as r;
 
 .main article {
-  max-width: 75ch;
+  flex: 5.5;
 }
 
 .main--border article {

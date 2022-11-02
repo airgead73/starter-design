@@ -11,7 +11,7 @@ const { handleQuery } = require('../../middleware');
 
 // routes
 homeRouter.route('/').get(home);
-homeRouter.route('/authors').get(authors);
+homeRouter.route('/authors').get(handleQuery(Author), authors);
 homeRouter.route('/books').get(books)
 homeRouter.route('/photos').get(photos);
 

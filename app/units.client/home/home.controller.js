@@ -22,13 +22,19 @@ exports.home = asyncHandler(async (req, res, next) => {
 
 exports.authors = asyncHandler(async (req, res, next) => {  
 
+  const { success, count, data: authors } = res.results;
+
   return res
     .status(200)
     .render('pages/home', {
       title: 'starter',
       development: isDev,
       test: isTest,
-      partialPath: '../partials/authors'
+      partialPath: '../partials/authors',
+      success,
+      count,
+      authors
+
   });
 
 });
