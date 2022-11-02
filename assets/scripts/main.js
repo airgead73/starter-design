@@ -1,9 +1,9 @@
 import { 
   initMenu,  
-  initForms, 
+  initAPIs, 
   initTriggers
 } from './modules/index';
 
 initMenu();
-initForms();
+initAPIs();
 initTriggers();

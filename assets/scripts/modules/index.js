@@ -1,9 +1,9 @@
 import initMenu from './menu';
-import initForms from './forms';
+import initAPIs from './apis';
 import { initTriggers } from './modals';
 
 export {
   initMenu,
-  initForms,
+  initAPIs,
   initTriggers
 }

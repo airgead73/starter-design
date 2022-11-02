@@ -15,6 +15,23 @@ const initFileInput = ($form) => {
 
 }
 
+const initApiBtns = () => {
+
+  const $apiBtnsArr = Array.from(document.querySelectorAll('[data-api]'));
+
+  if(!$apiBtnsArr.length) return;
+
+  $apiBtnsArr.forEach($btn => {
+
+    $btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      apiFetch(e.target);
+    });
+
+  });
+
+}
+
 const initForms = () => {
 
   const $formsArr = Array.from(document.querySelectorAll('.form'));
@@ -40,4 +57,11 @@ const initForms = () => {
   
 }
 
-export default initForms;
+const initAPIs = () => {
+
+  initForms();
+  initApiBtns();
+
+}
+
+export default initAPIs;

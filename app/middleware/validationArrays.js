@@ -19,7 +19,6 @@ const authorArray = [
   .escape(),
 ];
 
-
 module.exports = {
   authorArray
 }
