@@ -1,5 +1,6 @@
 import { getAttrs } from './utils';
 import { openAlert } from './modals';
+import { checkField } from './formValidation';
 
 const previewFile = ($target) => {
 
@@ -74,17 +75,38 @@ const apiFetch = async($target) => {
     const response = await fetch(request);
     const json = await response.json();
 
-    const { success, message } = json;
+    const { message } = json;
 
-    if(success) {
-      console.log('success')
-      openAlert('success', message);
+    if(!response.ok) {
+
+      const { errors } = json;      
+      let messageStr;
+
+      errors.forEach((error, index) => {
+        const field = $target.querySelector(`[name="${error.param}"]`);
+        field.setAttribute('aria-invalid', 'true');
+        field.addEventListener('blur', function(e) {
+          checkField(e.target);
+        });
+        if(index === 0) {
+          messageStr = error.msg;
+        } else {
+          messageStr = messageStr + ' ' + error.msg;
+        }
+
+      });
+
+      openAlert('error', messageStr);           
+
+    } else {
+
+      openAlert('success', message, true);
+
     }
-
 
   } catch(err) {
 
-    console.error(err);
+    openAlert('error', 'Resource not found.')
 
   }
 

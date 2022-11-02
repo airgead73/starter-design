@@ -40,5 +40,6 @@ const checkField = ($field) => {
 }
 
 export {
-  validateForm
+  validateForm,
+  checkField
 };
