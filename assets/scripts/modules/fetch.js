@@ -1,4 +1,5 @@
 import { getAttrs } from './utils';
+import { openAlert } from './modals';
 
 const previewFile = ($target) => {
 
@@ -73,7 +74,13 @@ const apiFetch = async($target) => {
     const response = await fetch(request);
     const json = await response.json();
 
-    console.log(json);
+    const { success, message } = json;
+
+    if(success) {
+      console.log('success')
+      openAlert('success', message);
+    }
+
 
   } catch(err) {
 

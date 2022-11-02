@@ -91,8 +91,11 @@
   }
 }
 
-button * {
-  pointer-events: none;
+button {
+  cursor: pointer;
+  & * {
+    pointer-events: none;
+  }
 }
 
 .btn {  

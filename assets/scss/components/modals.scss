@@ -24,35 +24,20 @@
   display: none;
 }
 
+.modal__content {
+  background-color: white;
+  width: 95%;
+  max-width: 600px;
+  padding: 30px;
+}
 .modal__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid clr(green, lightest);
-  margin-bottom: 40px;
-}
-
-.modal__content {
-  position: relative;
-  background-color: white;
-  width: 95%;
-  max-width: 800px;
-  padding: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .modal__message {
   text-align: center;
-}
-
-.modal__footer {
-  border-top: 1px solid clr(green, lightest);
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.modal__image {
-  display: block;
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
 }
