@@ -1,39 +1,7 @@
 <%- include ('./modalPreview') %>
   <article>
     <h2>photo dashboard</h2>
-    <table class="table">
-      <thead class="thead">
-        <tr class="dark">
-          <th class="h3">thumbnail</th>
-          <th class="h3">work</th>
-          <th class="h3" colspan="2">title</th>
-        </tr>
-      </thead>
-      <tbody class="tbody">
-        <% photos.forEach(photo=> { %>
-          <tr>
-            <td width="100px">
-              <img src="<%= photo.url_thumbnail %>" alt="<%= photo.work %> title=" width="100px" <%=photo.work %>">
-            </td>
-            <td>
-              <%= photo.work %>
-            </td>
-            <td>
-              <%= photo.title %>
-            </td>
-            <td width="20px">
-              <button data-api data-method="delete" data-action="/api/photos/<%= photo.id %>"
-                data-message="Do you want to delete <%= photo.work %>?">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </td>
-
-
-          </tr>
-
-          <% }) %>
-      </tbody>
-    </table>
+    <%- include ('./photosTable') %>
   </article>
   <aside>
     <form class="form" id="addPhoto" action="/api/photos" method="POST" novalidate>

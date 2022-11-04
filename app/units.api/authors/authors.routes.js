@@ -6,8 +6,7 @@ const Author = require('./author');
 const { create, read, detail, update, remove } = require('./authors.controller');
 
 // middleware
-const { validationRules, validate } = require('../../middleware');
-const { handleQuery, handleDetail } = require('../../middleware');
+const { handleQuery, handleDetail, validationRules, validate } = require('../../middleware');
 
 // routes
 authorRouter

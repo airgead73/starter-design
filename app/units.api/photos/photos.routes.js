@@ -9,8 +9,16 @@ const { create, read, detail, update, remove } = require('./photos.controller');
 const { handleCloudinary, validationRules, validate, handleQuery } = require('../../middleware');
 
 // routes
-photoRouter.route('/').get(handleQuery(Photo), read).post(handleCloudinary,create);
-photoRouter.route('/:id').get(detail).put(update).delete(remove);
+photoRouter
+  .route('/')
+  .get(handleQuery(Photo), read)
+  .post(validationRules('createPhoto'), validate, handleCloudinary, create);
+
+photoRouter
+  .route('/:id')
+  .get(detail)
+  .put(update)
+  .delete(remove);
 
 // export
 module.exports = photoRouter;
