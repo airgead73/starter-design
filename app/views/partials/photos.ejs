@@ -1,25 +1,45 @@
 <%- include ('./modalPreview') %>
   <article>
     <h2>photo dashboard</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores quis odit voluptate enim aliquid
-      voluptatem quo distinctio cupiditate atque!</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint explicabo necessitatibus omnis? Obcaecati quod
-      excepturi suscipit mollitia nostrum vel beatae quia, eum temporibus quisquam asperiores. Ad cum consectetur qui
-      obcaecati debitis. Quasi, voluptas culpa maiores assumenda sed aperiam unde. Quisquam quae possimus repellendus.
-      Atque enim itaque dolores, totam consequatur eaque ratione magnam fugiat quo ad animi maiores aspernatur iste
-      eum doloribus aut sint laudantium perspiciatis soluta dignissimos saepe inventore? Assumenda debitis nemo et,
-      iusto provident eveniet ratione, mollitia, sequi ab consectetur quia error. Assumenda distinctio nihil enim sit.
-      Amet hic, nobis enim fuga deserunt dolore similique iure assumenda animi mollitia nihil laudantium, sint
-      pariatur harum maiores quisquam ipsam. At dignissimos eius laboriosam odit dicta? Minus debitis ab distinctio,
-      atque laudantium repudiandae autem aliquid eveniet, voluptas nulla quos omnis velit vitae obcaecati id veniam
-      rem est dicta tenetur! Repellat molestiae non maiores aperiam, quis, velit sint cum possimus dicta repudiandae
-      culpa.</p>
+    <table class="table">
+      <thead class="thead">
+        <tr class="dark">
+          <th class="h3">thumbnail</th>
+          <th class="h3">work</th>
+          <th class="h3" colspan="2">title</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <% photos.forEach(photo=> { %>
+          <tr>
+            <td width="100px">
+              <img src="<%= photo.url_thumbnail %>" alt="<%= photo.work %> title=" width="100px" <%=photo.work %>">
+            </td>
+            <td>
+              <%= photo.work %>
+            </td>
+            <td>
+              <%= photo.title %>
+            </td>
+            <td width="20px">
+              <button data-api data-method="delete" data-action="/api/photos/<%= photo.id %>"
+                data-message="Do you want to delete <%= photo.work %>?">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+
+
+          </tr>
+
+          <% }) %>
+      </tbody>
+    </table>
   </article>
   <aside>
     <form class="form" id="addPhoto" action="/api/photos" method="POST" novalidate>
       <h2 class="form__title">add photo</h2>
       <ul class="form__controls">
-        <li class="control _50">
+        <li class="control _100">
           <label for="work" class="control__label">
             work
           </label>
@@ -27,7 +47,7 @@
             required>
           <p class="control__error" id="errorwork">Work is required.</p>
         </li>
-        <li class="control _50">
+        <li class="control _100">
           <label for="title" class="control__label">
             title
           </label>

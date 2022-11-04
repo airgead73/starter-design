@@ -9,8 +9,9 @@ const previewFile = ($target) => {
   const reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onloadend = () => {
-    $target.setAttribute('data-photo', reader.result);
-    openPreview(reader.result, false);
+    const src = reader.result;
+    $target.setAttribute('data-photo', src);
+    openPreview(src, false);
   }
 
 }

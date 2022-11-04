@@ -13,7 +13,7 @@ const { handleQuery } = require('../../middleware');
 homeRouter.route('/').get(home);
 homeRouter.route('/authors').get(handleQuery(Author), authors);
 homeRouter.route('/books').get(books)
-homeRouter.route('/photos').get(photos);
+homeRouter.route('/photos').get(handleQuery(Photo), photos);
 
 // export
 module.exports = homeRouter;
