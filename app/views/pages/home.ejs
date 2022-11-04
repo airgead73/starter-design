@@ -5,10 +5,11 @@
   <body>
     <%- include ('../partials/header') %>
       <%- include ('../partials/modalAlert') %>
-        <main class="main">
-          <%- include (partialPath) %>
-        </main>
-        <%- include ('../partials/footer') %>
+        <%- include ('../partials/modalSpinner') %>
+          <main class="main">
+            <%- include (partialPath) %>
+          </main>
+          <%- include ('../partials/footer') %>
   </body>
 
 </html>

@@ -1,5 +1,5 @@
 import { getAttrs } from './utils';
-import { openAlert } from './modals';
+import { openAlert, openPreview, toggleSpinner } from './modals';
 import { checkField } from './formValidation';
 
 const previewFile = ($target) => {
@@ -10,6 +10,7 @@ const previewFile = ($target) => {
   reader.readAsDataURL(file);
   reader.onloadend = () => {
     $target.setAttribute('data-photo', reader.result);
+    openPreview(reader.result, false);
   }
 
 }
@@ -47,7 +48,18 @@ const compileBody = ($target) => {
 
 const compileRequest = ($target) => {
 
-  const { action: url, method } = getAttrs($target);
+  const attrs = getAttrs($target);
+  let url, method;
+
+  if($target.tagName === 'FORM') {
+    url = attrs.action;
+    method = attrs.method;
+  } else if($target.tagName === 'BUTTON') {
+    url = attrs["data-action"];
+    method = attrs["data-method"];
+  } else {
+    console.error('attribute error');
+  }
 
   const needsBody = method === 'POST' || method === 'PUT' || method === 'PATCH';
 
@@ -71,11 +83,15 @@ const apiFetch = async($target) => {
 
   try {
 
+    toggleSpinner('open');
+
     const request = compileRequest($target);
     const response = await fetch(request);
     const json = await response.json();
 
     const { message } = json;
+
+    toggleSpinner('close');
 
     if(!response.ok) {
 

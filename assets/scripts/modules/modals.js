@@ -47,6 +47,15 @@ const openAlert = ($type, $message, $reload = false) => {
 
 }
 
+const toggleSpinner = ($status) => {
+
+  const spinner = document.getElementById('modalSpinner');
+  spinner.setAttribute('data-status', $status);
+
+  return;
+
+}
+
 const toggleModal = ($targetId) => {
 
   const target = document.getElementById($targetId);
@@ -106,5 +115,6 @@ const initTriggers = () => {
 export {
   initTriggers,
   openAlert,
-  openPreview
+  openPreview,
+  toggleSpinner
 }

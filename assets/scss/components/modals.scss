@@ -29,7 +29,12 @@
   width: 95%;
   max-width: 600px;
   padding: 30px;
+  [data-modal="spinner"] & {
+    background-color: transparent;
+    color: white;
+  }
 }
+
 .modal__header {
   display: flex;
   flex-direction: row;
@@ -40,4 +45,22 @@
 
 .modal__message {
   text-align: center;
+  [data-modal="spinner"] & {
+    font-weight: r.$heavy;
+    letter-spacing: -.075pt;
+    font-size: r.$size * 5;
+  }
+
+}
+
+.modal__image {
+  display: block;
+  width: 95%;
+  max-width: 300px;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+    left: auto;
+    right: auto;
+  }
 }
