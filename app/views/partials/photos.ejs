@@ -1,7 +1,16 @@
 <%- include ('./modalPreview') %>
   <article>
-    <h2>photo dashboard</h2>
-    <%- include ('./photosTable') %>
+    <h2 class="h2 article__title">
+      <span class="h2">photo dashboard</span>
+      <span class="h5">count: <%= count %></span>
+    </h2>
+    <% if (count < 0) { %>
+      <p>no photos</p>
+      <% } %>
+        <% if (count> 0) { %>
+          <%- include ('./photosTable') %>
+            <% } %>
+
   </article>
   <aside>
     <h3 class="h2">add photo</h3>

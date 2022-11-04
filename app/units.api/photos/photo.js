@@ -15,6 +15,10 @@ const photoSchema = mongoose.Schema({
     lowercase: true,
     trim: true
   },
+  books: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Book'
+  }],
   url_original: {
     type: String
   },
