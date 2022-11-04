@@ -19,6 +19,22 @@ const authorArray = [
   .escape(),
 ];
 
+const photoArray = [
+  body('work')
+    .not().isEmpty()
+    .withMessage('Provide a work.')
+    .isLength({ max: 50 })
+    .trim()
+    .escape(),
+  body('title')
+    .not().isEmpty()
+    .withMessage('Provide a title.')
+    .isLength({ max: 50 })    
+    .trim()
+    .escape(),
+];
+
 module.exports = {
-  authorArray
+  authorArray,
+  photoArray
 }

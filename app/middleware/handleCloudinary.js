@@ -2,7 +2,14 @@ const asyncHandler = require('express-async-handler');
 const { cloudinary } = require('../config');
 
 const handleCloudinary = asyncHandler(async (req,res,next) => {
-  //const fileStr = req.body.data;
+
+  const { success } = res.val_results;
+
+  if(!success) {
+    next();
+  }
+
+
   const { work, title, photo: fileStr } = req.body
 
   const uploadedResponse = await cloudinary.uploader.upload(fileStr, {

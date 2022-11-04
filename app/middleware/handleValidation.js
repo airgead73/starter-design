@@ -1,5 +1,5 @@
 const { body, validationResult } = require('express-validator');
-const { authorArray } = require('./validationArrays');
+const { authorArray, photoArray } = require('./validationArrays');
  
 const validationRules = ($method) => {
 
@@ -11,7 +11,7 @@ const validationRules = ($method) => {
       return [];
       break;
     case 'createPhoto':
-      return [];
+      return photoArray;
       break;
   }
 
