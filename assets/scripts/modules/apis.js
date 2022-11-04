@@ -45,9 +45,9 @@ const initForms = () => {
     $form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const isValid = validateForm(e.target);
+      //const isValid = validateForm(e.target);
 
-      if(!isValid) return;     
+      //if(!isValid) return;     
        
       apiFetch(e.target);  
 

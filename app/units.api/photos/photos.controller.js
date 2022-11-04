@@ -10,6 +10,19 @@ const Photo = require('./photo');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
+  const { success, errors } = res.val_results;
+
+  if(!success) {
+    const { errors: responseErrors } = errors;
+    return res
+    .status(400)
+    .json({
+      success: false,
+      message: 'Error: Something went wrong.',
+      errors: responseErrors
+    });
+  }
+
   const photo = new Photo(res.results);
   await photo.save();
 

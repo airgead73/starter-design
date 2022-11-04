@@ -11,19 +11,7 @@ exports.create = asyncHandler(async (req, res, next) => {
 
   const { success, errors } = res.val_results;
 
-  if(success) {
-    const author = new Author(req.body);
-    await author.save();
-
-    return res
-    .status(200)
-    .json({
-      success: true,
-      message: `Author ${author.fullname} has been created.`,
-      author
-    });
-
-  } else {
+  if(!success) {
 
     const { errors: responseErrors } = errors;
 
@@ -34,7 +22,19 @@ exports.create = asyncHandler(async (req, res, next) => {
       message: 'Error: Something went wrong.',
       errors: responseErrors
     });
+
   }
+
+  const author = new Author(req.body);
+  await author.save();
+
+  return res
+  .status(200)
+  .json({
+    success: true,
+    message: `Author ${author.fullname} has been created.`,
+    author
+  });
 
 });
 

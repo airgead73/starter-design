@@ -45,10 +45,12 @@ const openAlert = ($type, $message, $reload = false) => {
 
   alertModal.setAttribute('data-status', 'open');
 
-  setTimeout(() => {
-    alertModal.setAttribute('data-status', 'close');
-    location.reload();
-  }, "4000");
+  if($reload) {
+    setTimeout(() => {
+      alertModal.setAttribute('data-status', 'close');
+      location.reload();
+    }, "4000");
+  }
 
 }
 
