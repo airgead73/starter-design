@@ -4,10 +4,13 @@ const bookRouter = Router();
 // controllers
 const { create, read, detail, update, remove, drop } = require('./book.controller');
 
+// middleware
+const { validationRules, validate } = require('../../middleware');
+
 // routes
 bookRouter
   .route('/')
-  .post(create)
+  .post(validationRules('createAuthor'), validate, create)
   .get(read)
   .delete(drop);
 

@@ -9,19 +9,30 @@ const Author = require('./author');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
+  const { success, errors } = res.val_results;
+
+  if(!success) {
+
+    const { errors: responseErrors } = errors;
+
+    return res
+      .status(400)
+      .json({
+        success: false,
+        message: 'Error: something went wrong.',
+        errors: responseErrors
+      });
+
+  }
+
   const author = new Author(req.body);
   await author.save();
-
-  const { dates_formatted } = author;
-  
-  const dob = dates_formatted.dob;
 
   return res
   .status(200)
   .json({
     success: true,
     message: `${author.fullname} as been created.`,
-    dob,
     data: author
   });
 
@@ -56,6 +67,17 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.detail = asyncHandler(async (req, res, next) => {
 
+  const { success, message } = res.results;
+
+  if(!success) {
+    return res
+      .status(400)
+      .json({
+        success,
+        message
+      });
+  }
+
   const author = await Author.findById({ _id: req.params.id }).populate('books', 'year comments');
 
   return res
@@ -76,6 +98,17 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.update = asyncHandler(async (req, res, next) => {
 
+  const { success, message } = res.results;
+
+  if(!success) {
+    return res
+      .status(400)
+      .json({
+        success,
+        message
+      });
+  }
+
   const updatedAuthor = await Author.findOneAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
 
   return res
@@ -95,6 +128,17 @@ exports.create = asyncHandler(async (req, res, next) => {
  * */
 
  exports.remove = asyncHandler(async (req, res, next) => {
+
+  const { success, message } = res.results;
+
+  if(!success) {
+    return res
+      .status(400)
+      .json({
+        success,
+        message
+      });
+  }
 
   const author = await Author.findById({ _id: req.params.id });
   author.remove();

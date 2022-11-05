@@ -5,7 +5,7 @@ const slugify = require('slugify');
 const bookSchema = mongoose.Schema({
   title: {
     type: String,
-    required: [true, ['Please, add title.']],
+    required: [true, 'Please, add title.'],
     maxlength: 200,
     trim: true
   },

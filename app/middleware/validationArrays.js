@@ -15,20 +15,20 @@ const authorArray = [
     .escape(),
   body('dob')
   .not().isEmpty()
-  .withMessage('Provide a last dob.')
+  .withMessage('Provide a dob.')
   .escape(),
 ];
 
-const photoArray = [
-  body('work')
-    .not().isEmpty()
-    .withMessage('Provide a work.')
-    .isLength({ max: 50 })
-    .trim()
-    .escape(),
+const bookArray = [
   body('title')
     .not().isEmpty()
     .withMessage('Provide a title.')
+    .isLength({ max: 50 })
+    .trim()
+    .escape(),
+  body('author')
+    .not().isEmpty()
+    .withMessage('Provide an author.')
     .isLength({ max: 50 })    
     .trim()
     .escape(),
@@ -36,5 +36,5 @@ const photoArray = [
 
 module.exports = {
   authorArray,
-  photoArray
+  bookArray
 }
