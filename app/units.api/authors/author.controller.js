@@ -88,17 +88,6 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.update = asyncHandler(async (req, res, next) => {
 
-  // const { success, message } = res.results;
-
-  // if(!success) {
-  //   return res
-  //     .status(400)
-  //     .json({
-  //       success,
-  //       message
-  //     });
-  // }
-
   const updatedAuthor = await Author.findOneAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
 
   return res
@@ -118,17 +107,6 @@ exports.create = asyncHandler(async (req, res, next) => {
  * */
 
  exports.remove = asyncHandler(async (req, res, next) => {
-
-  // const { success, message } = res.results;
-
-  // if(!success) {
-  //   return res
-  //     .status(400)
-  //     .json({
-  //       success,
-  //       message
-  //     });
-  // }
 
   const author = await Author.findById({ _id: req.params.id });
   author.remove();

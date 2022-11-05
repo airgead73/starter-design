@@ -7,8 +7,7 @@ const { create, read, detail, update, remove, drop } = require('./author.control
 
 // middleware
 const { checkID, validationRules, validate } = require('../../middleware');
-
-// route /:id middleware
+// for route /:id
 authorRouter.use('/:id', checkID(Author));
 
 // routes

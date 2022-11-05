@@ -1,16 +1,19 @@
 const { Router } = require('express');
 const bookRouter = Router();
+const Book = require('./book');
 
 // controllers
 const { create, read, detail, update, remove, drop } = require('./book.controller');
 
 // middleware
-const { validationRules, validate } = require('../../middleware');
+const { checkID, validationRules, validate } = require('../../middleware');
+// for route /:id
+bookRouter.use('/:id', checkID(Book));
 
 // routes
 bookRouter
   .route('/')
-  .post(validationRules('createAuthor'), validate, create)
+  .post(validationRules('createBook'), validate, create)
   .get(read)
   .delete(drop);
 
