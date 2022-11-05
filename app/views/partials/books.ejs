@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if(development) { %>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <link rel="stylesheet" href="/icons.css" type="text/css">
+    <script src="/bundle.js" defer></script>
+    <% } else if(test) { %>
+      <link rel="stylesheet" href="/main.test.css" type="text/css">
+      <link rel="stylesheet" href="/icons.test.css" type="text/css">
+      <script src="/bundle.test.js" defer></script>
+      <% } else { %>
+        <link rel="stylesheet" href="/main.min.css" type="text/css">
+        <link rel="stylesheet" href="/icons.min.css" type="text/css">
+        <script src="/bundle.min.js" defer></script>
+        <% } %>
+          <title>
+            <%= typeof title !='undefined' ? title : 'Page Title' %>
+          </title>
+</head>
+
+<body>
+
+  <header class="header" id="topOfPage">
+    <h1 class="header__title">
+      <a href="/">starter</a>
+      <button id="menuBtn" class="header__menu-btn" type="button" aria-controls="topNavigation" aria-expanded="false"><i
+          id="menuIcon" class="fa-solid fa-bars"></i></button>
+    </h1>
+    <nav class="top-navigation" id="topNavigation" role="navigation">
+      <ul id="navList" class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="/">home</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=grid">grid</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=links">links</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=lists">lists</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=buttons">buttons</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=forms">forms</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=figures">figures</a></li>
+        <li class="nav__item"><a class="nav__link" href="/authors?sort=lname">tables</a></li>
+        <li class="nav__item"><a class="nav__link" href="/photos">photos</a></li>
+        <li class="nav__item"><a class="nav__link" href="/?template=modals">modals</a></li>
+        <li class="nav__item"><a class="nav__link" href="/logout">logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <%- include (partialPath) %>
+
+    <footer class="footer">
+      <p class="footer__credit"><small>starter &copy; 2022 <a href="#topOfPage">back to top</a></small></p>
+    </footer>
+
+</body>
+
+</html>
