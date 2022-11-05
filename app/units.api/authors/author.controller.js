@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Author = require('./author');
 
 /**
  * @desc Create author
@@ -8,11 +9,20 @@ const asyncHandler = require('express-async-handler');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
+  const author = new Author(req.body);
+  await author.save();
+
+  const { dates_formatted } = author;
+  
+  const dob = dates_formatted.dob;
+
   return res
   .status(200)
   .json({
     success: true,
-    message: 'Author has been created.'
+    message: `${author.fullname} as been created.`,
+    dob,
+    data: author
   });
 
 });
@@ -25,11 +35,15 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.read = asyncHandler(async (req, res, next) => {
 
+  const authors = await Author.find().populate('books');
+
   return res
   .status(200)
   .json({
     success: true,
-    message: 'Read multiple authors.'
+    message: 'Read multiple authors.',
+    count: authors.length,
+    data: authors
   });
 
 });
@@ -42,11 +56,14 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.detail = asyncHandler(async (req, res, next) => {
 
+  const author = await Author.findById({ _id: req.params.id }).populate('books', 'year comments');
+
   return res
   .status(200)
   .json({
     success: true,
-    message: 'Read single author.'
+    message: 'Read single author.',
+    data: author
   });
 
 });
@@ -59,11 +76,14 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.update = asyncHandler(async (req, res, next) => {
 
+  const updatedAuthor = await Author.findOneAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+
   return res
   .status(200)
   .json({
     success: true,
-    message: 'Update single author.'
+    message: 'Update single author.',
+    data: updatedAuthor
   });
 
 });
@@ -76,11 +96,14 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.remove = asyncHandler(async (req, res, next) => {
 
+  const author = await Author.findById({ _id: req.params.id });
+  author.remove();
+
   return res
   .status(200)
   .json({
     success: true,
-    message: 'Remove single author.'
+    message: `${author.fullname} has been deleted.`
   });
 
 });
@@ -92,6 +115,8 @@ exports.create = asyncHandler(async (req, res, next) => {
  * */
 
  exports.drop = asyncHandler(async (req, res, next) => {
+
+  await Author.collection.drop();
 
   return res
   .status(200)
