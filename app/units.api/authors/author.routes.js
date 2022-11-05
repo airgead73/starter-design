@@ -6,10 +6,10 @@ const Author = require('./author');
 const { create, read, detail, update, remove, drop } = require('./author.controller');
 
 // middleware
-const { validationRules, validate } = require('../../middleware');
+const { checkID, validationRules, validate } = require('../../middleware');
 
-// /:id middleware
-//authorRouter.use('/:id', isMongooseID);
+// route /:id middleware
+authorRouter.use('/:id', checkID(Author));
 
 // routes
 authorRouter

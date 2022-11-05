@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const mongoose = require('mongoose');
 const Author = require('./author');
 
 /**
@@ -66,17 +67,6 @@ exports.create = asyncHandler(async (req, res, next) => {
  * */
 
  exports.detail = asyncHandler(async (req, res, next) => {
-
-  // const { success, message } = res.results;
-
-  // if(!success) {
-  //   return res
-  //     .status(400)
-  //     .json({
-  //       success,
-  //       message
-  //     });
-  // }
 
   const author = await Author.findById({ _id: req.params.id }).populate('books', 'year comments');
 
