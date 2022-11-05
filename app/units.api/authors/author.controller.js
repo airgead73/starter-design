@@ -68,7 +68,7 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.detail = asyncHandler(async (req, res, next) => {
 
-  const author = await Author.findById({ _id: req.params.id }).populate('books', 'year comments');
+  const author = await Author.findById({ _id: req.params.id }).populate('books');
 
   return res
   .status(200)
