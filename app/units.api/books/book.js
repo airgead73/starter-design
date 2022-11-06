@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const format = require('date-fns/format');
 const slugify = require('slugify');
+const Author = require('../authors');
 
 const bookSchema = mongoose.Schema({
   title: {
@@ -17,7 +18,7 @@ const bookSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Author'
   },
-  comments: {
+  description: {
     type: String,
     maxlength: 1000,
     trim: true
@@ -43,6 +44,17 @@ bookSchema.pre("save", function(next) {
   });
 
   next();
+
+});
+
+
+
+bookSchema.pre("save", async function() {
+
+  const author = await findAuthor();
+
+  this.author_listname = author.listname;
+  this.author_fullname = author.fullname;
 
 });
 

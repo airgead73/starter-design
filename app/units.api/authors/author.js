@@ -21,7 +21,7 @@ const authorSchema = mongoose.Schema({
     type: Date,
     required: [true, ['Please, add dob.']]
   },
-  comments: {
+  description: {
     type: String,
     maxlength: 200,
     trim: true

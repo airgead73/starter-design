@@ -46,6 +46,12 @@ textarea {
   padding: 0 12px;
 }
 
+textarea.control__field {
+  border: 1px solid clr(primary);
+  line-height: 1.25;
+  padding: 12px;
+}
+
 .control__error {
   position: absolute;
   top: -2px;
