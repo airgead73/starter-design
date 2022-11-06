@@ -4,15 +4,11 @@
 
 .row {
   @include row();
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .column {
   @include column();
-}
-
-div {
-  @include flag(green);
 }
 
 .a {

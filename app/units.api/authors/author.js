@@ -17,10 +17,6 @@ const authorSchema = mongoose.Schema({
     lowercase: true,
     trim: true
   },
-  // books: [{
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Book'
-  // }],
   dob: {
     type: Date,
     required: [true, ['Please, add dob.']]
