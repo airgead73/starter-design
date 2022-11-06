@@ -9,10 +9,10 @@ const handleCloudinary = asyncHandler(async (req,res,next) => {
     next();
   }
 
-  const { work, title, photo: fileStr } = req.body
+  const { title, book, photo: fileStr } = req.body
 
   const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-    upload_preset: 'dev_setup',
+    upload_preset: 'dev_books',
     eager: [
       {
         width: 300, 
@@ -48,8 +48,8 @@ const handleCloudinary = asyncHandler(async (req,res,next) => {
   const w800 = eager[2];
 
   res.results = {
-    work,
     title,
+    book,
     width,
     height,
     url_original: secure_url,
