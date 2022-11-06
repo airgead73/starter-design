@@ -22,9 +22,6 @@ exports.create = asyncHandler(async (req, res, next) => {
     });
   }
 
-  console.log(success)
-  console.log(res.results);
-
   const photo = new Photo(res.results);
   await photo.save();
 
