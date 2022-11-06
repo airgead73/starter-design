@@ -13,7 +13,7 @@
         author
       </label>
       <select name="book" id="book" class="control__field" aria-describedby="errorBook" form="addPhoto" required>
-        <option selected>choose a title</option>
+        <option selected>choose a book</option>
         <% books.forEach(book=> { %>
           <option value="<%= book.id %>">
             <%= book.title %>

@@ -22,6 +22,9 @@ exports.create = asyncHandler(async (req, res, next) => {
     });
   }
 
+  console.log(success)
+  console.log(res.results);
+
   const photo = new Photo(res.results);
   await photo.save();
 
@@ -29,7 +32,7 @@ exports.create = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({
       success: true,
-      message: `Photo ${photo.work} has been created.`,
+      message: `Photo ${photo.title} has been created.`,
       photo
     });
 
@@ -49,8 +52,8 @@ exports.create = asyncHandler(async (req, res, next) => {
   return res
     .status(200)
     .json({
-      success,
-      count,
+      success: true,
+      count: photos.length,
       photos      
     });
 

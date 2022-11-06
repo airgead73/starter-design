@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const format = require('date-fns/format');
 
 const photoSchema = mongoose.Schema({
   title: {
@@ -10,6 +11,7 @@ const photoSchema = mongoose.Schema({
   },
   book: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'Book',
     required: [true, ['Please, add book.']],
   },
   url_original: {
