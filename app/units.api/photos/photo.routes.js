@@ -3,7 +3,7 @@ const photoRouter = Router();
 const Photo = require('./photo');
 
 // controllers
-const { create, read, detail, update, remove } = require('./photos.controller');
+const { create, read, detail, update, remove } = require('./photo.controller');
 
 // middleware
 const { handleCloudinary, validationRules, validate, handleQuery } = require('../../middleware');

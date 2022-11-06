@@ -59,3 +59,19 @@ exports.books = asyncHandler(async (req, res, next) => {
   });
 
 });
+
+exports.photos = asyncHandler(async (req, res, next) => {
+
+  const books = await Book.find().select('title');
+
+  return res
+    .status(200)
+    .render('pages/home', {
+      title: 'starter',
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/photos/index',
+      books
+  });
+
+});

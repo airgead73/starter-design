@@ -43,7 +43,8 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.read = asyncHandler(async (req, res, next) => {
 
-  const { success, count, data: photos } = res.results;
+  //const { success, count, data: photos } = res.results;
+  const photos = await Photo.find().populate('book');
 
   return res
     .status(200)
