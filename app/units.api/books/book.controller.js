@@ -46,7 +46,8 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.read = asyncHandler(async (req, res, next) => {
 
-  const books = await Book.find().populate('author');
+  //const books = await Book.find().populate('author');
+  const books = await Book.find().populate({ path: 'author', options: { sort: { 'lname': 1 }} });
 
   return res
   .status(200)
@@ -87,7 +88,11 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.update = asyncHandler(async (req, res, next) => {
 
-  const updatedBook = await Book.findOneAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+  console.log(req.params.id);
+
+  const updatedBook = await Book.findOneAndUpdate(req.params.id, req.body, { new: true, runValidators: true }).populate('author');
+
+  console.log(updatedBook);
 
   return res
   .status(200)

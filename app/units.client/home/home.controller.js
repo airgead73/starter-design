@@ -36,6 +36,7 @@ exports.authors = asyncHandler(async (req, res, next) => {
       development: isDev,
       test: isTest,
       partialPath: '../partials/authors/index',
+      count: authors.length,
       authors
   });
 
@@ -43,7 +44,8 @@ exports.authors = asyncHandler(async (req, res, next) => {
 
 exports.books = asyncHandler(async (req, res, next) => {
 
-  
+  const authors = await Author.find().populate('books').sort('lname');
+  const books = await Book.find().populate({ path: 'author', options: { sort: { 'lname': 1 }} });
 
   return res
     .status(200)
@@ -52,6 +54,8 @@ exports.books = asyncHandler(async (req, res, next) => {
       development: isDev,
       test: isTest,
       partialPath: '../partials/books/index',
+      authors,
+      books
   });
 
 });

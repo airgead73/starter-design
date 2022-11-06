@@ -1,6 +1,10 @@
 <article>
   <h2 class="h3">author dashboard</h2>
-  <%- include ('./authorTable') %>
+  <% if (count < 1) { %>
+    <p>no current authors</p>
+    <% } else if(count> 0) { %>
+      <%- include ('./authorTable') %>
+        <% } %>
 </article>
 <aside>
   <h2 class="h3">add author</h2>

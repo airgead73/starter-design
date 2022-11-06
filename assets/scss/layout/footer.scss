@@ -2,6 +2,10 @@
 @use '../abstracts/tools' as *;
 @use '../abstracts/variables/root' as r;
 
-footer {
-  text-align: center;
+footer {}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

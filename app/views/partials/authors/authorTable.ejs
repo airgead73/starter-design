@@ -1,1 +1,38 @@
-<h3 class="h4">author table partial</h3>
+<table class="table">
+  <thead>
+    <tr class="dark">
+      <th class="h4">name <small><a href="/authors?sort=lname"><i class="fa-solid fa-arrow-up"></i></a> <a
+            href="/authors?sort=-lname"><i class="fa-solid fa-arrow-down"></i></a></small></th>
+      <th class="h4">books</th>
+      <th class="h4" colspan="2">birthday <small><a href="/authors?sort=dob"><i class="fa-solid fa-arrow-up"></i></a> <a
+            href="/authors?sort=-dob"><i class="fa-solid fa-arrow-down"></i></a></small></th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <% authors.forEach(author=> { const { dates_formatted, books } = author; %>
+      <tr>
+        <td>
+          <%= author.fullname %>
+        </td>
+        <td>
+          <ul>
+            <% books.forEach(book=> { %>
+              <li><a href="">
+                  <%= book.title %>
+                </a></li>
+              <% }) %>
+          </ul>
+        </td>
+        <td>
+          <%= dates_formatted.dob %>
+        </td>
+        <td width="20px">
+          <button data-api data-method="delete" data-action="/api/authors/<%= author.id %>"
+            data-message="Do you want to delete <%= author.fullname %>?">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+      <% }) %>
+  </tbody>
+</table>

@@ -47,17 +47,6 @@ bookSchema.pre("save", function(next) {
 
 });
 
-
-
-bookSchema.pre("save", async function() {
-
-  const author = await findAuthor();
-
-  this.author_listname = author.listname;
-  this.author_fullname = author.fullname;
-
-});
-
 bookSchema.virtual('dates_formatted').get(function() {
 
   return {
