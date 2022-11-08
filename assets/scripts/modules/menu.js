@@ -4,6 +4,8 @@ const initMenu = () => {
   const menuIcon = document.getElementById('menuIcon');
   const nav = document.querySelector('[role="navigation"]');
 
+  if(!menuBtn || !menuIcon || !nav) return;
+
 
   const toggleNav = () => {
 
