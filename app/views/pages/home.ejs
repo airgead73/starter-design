@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../partials/head') %>
+<%- include ('../partials/_layout/head') %>
 
   <body>
-    <%- include ('../partials/header') %>
-      <%- include ('../partials/modalAlert') %>
-        <%- include ('../partials/modalSpinner') %>
-          <%- include ('../partials/modalPreview') %>
+    <%- include ('../partials/_layout/header') %>
+      <%- include ('../partials/_layout/modalAlert') %>
+        <%- include ('../partials/_layout/modalSpinner') %>
+          <%- include ('../partials/_layout/modalPreview') %>
             <main class="main">
               <%- include (partialPath) %>
             </main>
-            <%- include ('../partials/footer') %>
+            <%- include ('../partials/_layout/footer') %>
   </body>
 
 </html>
