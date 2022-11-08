@@ -1,1 +1,28 @@
-<p>photo table</p>
+<table class="table">
+  <thead>
+    <tr class="dark">
+      <th width="70px">thumbnail</th>
+      <th>title</th>
+      <th colspan="2">book</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% photos.forEach(photo=> { %>
+
+      <tr>
+        <td>
+          <img width="50px; height: auto;" src="<%= photo.url_thumbnail %>" alt="<%= photo.title %>"
+            title="<%= photo.title %>">
+        </td>
+        <td>
+          <%= photo.title %>
+        </td>
+        <td>
+          <%= photo.book.title %>
+        </td>
+        <td>delete</td>
+      </tr>
+
+      <% }) %>
+  </tbody>
+</table>

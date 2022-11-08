@@ -5,7 +5,7 @@ const slugify = require('slugify');
 const authorSchema = mongoose.Schema({
   fname: {
     type: String,
-    required: [true, ['Please, add first name.']],
+    required: [true, 'Please, add first name.'],
     maxlength: 50,
     lowercase: true,
     trim: true
@@ -17,9 +17,17 @@ const authorSchema = mongoose.Schema({
     lowercase: true,
     trim: true
   },
+  // books: {
+  //   type: [mongoose.Schema.Types.ObjectId],
+  //   ref: 'Book'
+  // },
+  // books: [{
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Book'
+  // }],
   dob: {
     type: Date,
-    required: [true, ['Please, add dob.']]
+    required: [true, 'Please, add dob.']
   },
   description: {
     type: String,

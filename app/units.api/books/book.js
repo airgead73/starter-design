@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const format = require('date-fns/format');
 const slugify = require('slugify');
-const Author = require('../authors');
 
 const bookSchema = mongoose.Schema({
   title: {
