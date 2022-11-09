@@ -1,7 +1,8 @@
-const { itemApi } = require('./item.routes');
+const { itemAPI, itemCLIENT } = require('./item.routes');
 const Item = require('./item');
 
 module.exports = {
-  itemApi,
+  itemAPI,
+  itemCLIENT,
   Item
 }

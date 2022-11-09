@@ -1,8 +1,10 @@
 const { Router } = require('express');
 const router = Router();
-const { authorAPI, authorCLIENT } = require('./authors/author.routes');
-const { itemAPI, itemCLIENT } = require('./items/item.routes');
+const { dashboardRouter } = require('./dashboard');
+const { authorAPI, authorCLIENT } = require('./authors');
+const { itemAPI, itemCLIENT } = require('./items');
 
+router.use('/', dashboardRouter);
 router.use('/authors', authorCLIENT);
 router.use('/items', itemCLIENT);
 
