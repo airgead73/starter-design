@@ -75,7 +75,14 @@ exports.drop = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.create_client = asyncHandler(async (req, res, next) => {
-  res.send('create author (CLIENT)');
+  res.send('create author (API)');
+  // return res
+  //   .status(200)
+  //   .render('layout/page', {
+  //     development: isDev,
+  //     test: isTest,
+  //     partialPath: '../partials/authors/add'
+  //   });
 });
 
 /**
@@ -84,7 +91,14 @@ exports.create_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.read_client = asyncHandler(async (req, res, next) => {
-  res.send('read authors (CLIENT)');
+  //res.send('read authors (API)');
+  return res
+    .status(200)
+    .render('layout/page', {
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/authors/index'
+    });
 });
 
 /**
@@ -93,7 +107,13 @@ exports.read_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.drop_client = asyncHandler(async (req, res, next) => {
-  res.send('drop authors (CLIENT)');
+  return res
+    .status(200)
+    .render('layout/page', {
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/authors/drop'
+    });
 });
 
 /**
@@ -102,7 +122,13 @@ exports.drop_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.detail_client = asyncHandler(async (req, res, next) => {
-  res.send(`author detail (CLIENT): ${req.params.id}`);
+  return res
+    .status(200)
+    .render('layout/page', {
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/authors/detail'
+    });
 });
 
 /**
@@ -111,7 +137,13 @@ exports.detail_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.update_client = asyncHandler(async (req, res, next) => {
-  res.send(`update author (CLIENT): ${req.params.id}`);
+  return res
+    .status(200)
+    .render('layout/page', {
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/authors/update'
+    });
 });
 
 /**
@@ -120,5 +152,11 @@ exports.update_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.delete_client = asyncHandler(async (req, res, next) => {
-  res.send(`delete author (CLIENT): ${req.params.id}.`);
+  return res
+    .status(200)
+    .render('layout/page', {
+      development: isDev,
+      test: isTest,
+      partialPath: '../partials/authors/delete'
+    });
 });
