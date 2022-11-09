@@ -14,6 +14,7 @@ exports.dashboard = asyncHandler(async (req, res, next) => {
     .render('layout/page', {
       development: isDev,
       test: isTest,
+      partialPath: '../partials/dashboard'
     });
 
 });
