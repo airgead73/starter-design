@@ -75,6 +75,8 @@ exports.drop = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.create_client = asyncHandler(async (req, res, next) => {
+  console.log('create client');
+  console.log(req.path);
   res.send('create author (API)');
   // return res
   //   .status(200)
@@ -92,6 +94,8 @@ exports.create_client = asyncHandler(async (req, res, next) => {
  * */
 exports.read_client = asyncHandler(async (req, res, next) => {
   //res.send('read authors (API)');
+  console.log('read client');
+  console.log(req.path);
   return res
     .status(200)
     .render('layout/page', {
