@@ -19,9 +19,8 @@
 
 const { handleError } = require('./middleware');
 const { authConfig, connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
-//const mainRouter = require('./units/router');
-//const apiRouter = require('./units.api/router.api');
 const apiRouter = require('./units.api/router.api');
+const clientRouter = require('./units.client/router.client');
 
 /**
  * app activation
@@ -68,9 +67,8 @@ app.set('view engine', 'ejs');
  * routes
  */
 
-//const router = require('./units/router');
-//app.use('/', router);
 app.use('/api', apiRouter);
+app.use('/', clientRouter);
 
 /**
  * error handling

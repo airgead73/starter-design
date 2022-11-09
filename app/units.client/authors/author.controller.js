@@ -1,69 +1,5 @@
 const asyncHandler = require('express-async-handler');
 
-/////////////////////////////////
-//////////// API ////////////////
-/////////////////////////////////
-
-
-/**
- * @desc Create author
- * @route POST - /api/authors
- * @access Private
- * */
-
-exports.create = asyncHandler(async (req, res, next) => {
-  res.send('create author (API)');
-});
-
-/**
- * @desc Read authors
- * @route GET - /api/authors
- * @access Private
- * */
-
-exports.read = asyncHandler(async (req, res, next) => {
-  res.send('read authors (API)');
-});
-
-/**
- * @desc Read author detail
- * @route GET - /api/authors/:id
- * @access Private
- * */
-
- exports.detail = asyncHandler(async (req, res, next) => {
-  res.send(`read author detail (API): ${req.params.id}`);
-});
-
-/**
- * @desc Update author
- * @route PATCH - /api/authors/:id
- * @access Private
- * */
-
- exports.update = asyncHandler(async (req, res, next) => {
-  res.send(`update author (API): ${req.params.id}`);
-});
-
-/**
- * @desc Delete author
- * @route PATCH - /api/authors/:id
- * @access Private
- * */
-
- exports.remove = asyncHandler(async (req, res, next) => {
-  res.send(`remove author (API): ${req.params.id}`);
-});
-
-/**
- * @desc Drop author collection
- * @route DELETE - /api/authors
- * @access Private
- * */
-
-exports.drop = asyncHandler(async (req, res, next) => {
-  res.send('drop author collection (API)');
-});
 
 /////////////////////////////////
 //////////// CLIENT /////////////
@@ -74,17 +10,8 @@ exports.drop = asyncHandler(async (req, res, next) => {
  * @route GET - /authors/add
  * @access Private
  * */
-exports.create_client = asyncHandler(async (req, res, next) => {
-  console.log('create client');
-  console.log(req.path);
-  res.send('create author (API)');
-  // return res
-  //   .status(200)
-  //   .render('layout/page', {
-  //     development: isDev,
-  //     test: isTest,
-  //     partialPath: '../partials/authors/add'
-  //   });
+ exports.create_client = asyncHandler(async (req, res, next) => {
+  res.send('create author (CLIENT)');
 });
 
 /**
@@ -93,16 +20,7 @@ exports.create_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.read_client = asyncHandler(async (req, res, next) => {
-  //res.send('read authors (API)');
-  console.log('read client');
-  console.log(req.path);
-  return res
-    .status(200)
-    .render('layout/page', {
-      development: isDev,
-      test: isTest,
-      partialPath: '../partials/authors/index'
-    });
+  res.send('read authors (CLIENT)');
 });
 
 /**
@@ -111,13 +29,7 @@ exports.read_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.drop_client = asyncHandler(async (req, res, next) => {
-  return res
-    .status(200)
-    .render('layout/page', {
-      development: isDev,
-      test: isTest,
-      partialPath: '../partials/authors/drop'
-    });
+  res.send('drop authors (CLIENT)');
 });
 
 /**
@@ -126,13 +38,7 @@ exports.drop_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.detail_client = asyncHandler(async (req, res, next) => {
-  return res
-    .status(200)
-    .render('layout/page', {
-      development: isDev,
-      test: isTest,
-      partialPath: '../partials/authors/detail'
-    });
+  res.send(`author detail (CLIENT): ${req.params.id}`);
 });
 
 /**
@@ -141,13 +47,7 @@ exports.detail_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.update_client = asyncHandler(async (req, res, next) => {
-  return res
-    .status(200)
-    .render('layout/page', {
-      development: isDev,
-      test: isTest,
-      partialPath: '../partials/authors/update'
-    });
+  res.send(`update author (CLIENT): ${req.params.id}`);
 });
 
 /**
@@ -156,11 +56,5 @@ exports.update_client = asyncHandler(async (req, res, next) => {
  * @access Private
  * */
 exports.delete_client = asyncHandler(async (req, res, next) => {
-  return res
-    .status(200)
-    .render('layout/page', {
-      development: isDev,
-      test: isTest,
-      partialPath: '../partials/authors/delete'
-    });
+  res.send(`delete author (CLIENT): ${req.params.id}.`);
 });

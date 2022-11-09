@@ -1,55 +1,35 @@
 const { Router } = require('express');
-const authorAPI = Router();
-const authorCLIENT = Router();
+const authorRouter = Router();
 
 // controllers
-const { create, read, detail, update, remove, drop, create_client, read_client, drop_client, detail_client, update_client, delete_client } = require('./author.controller');
-
-/////////////////////////////////
-//////////// API ////////////////
-/////////////////////////////////
-
-authorAPI
-  .route('/')
-  .get(read)
-  .post(create)
-  .delete(drop);
-
-authorAPI
-  .route('/:id')
-  .get(detail)
-  .patch(update)
-  .delete(remove);
+const { create_client, read_client, drop_client, detail_client, update_client, delete_client } = require('./author.controller');
 
 /////////////////////////////////
 //////////// CLIENT /////////////
 /////////////////////////////////
 
-authorCLIENT
+authorRouter
   .route('/')
   .get(read_client);
 
-authorCLIENT
+authorRouter
   .route('/add')
   .get(create_client);
 
-authorCLIENT
+authorRouter
   .route('/drop')
   .get(drop_client);
 
-authorCLIENT
+authorRouter
   .route('/:id')
   .get(detail_client);
   
-authorCLIENT
+authorRouter
   .route('/:id/update')
   .get(update_client); 
   
-authorCLIENT
+authorRouter
   .route('/:id/delete')
   .get(delete_client);  
 
-module.exports = {
-  authorAPI,
-  authorCLIENT
-};
+module.exports = authorRouter;

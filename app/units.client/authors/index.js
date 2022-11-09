@@ -1,8 +1,5 @@
-const { authorAPI, authorCLIENT } = require('./author.routes');
-const Author = require('./author');
+const authorRouter = require('./author.routes');
 
 module.exports = {
-  authorAPI,
-  authorCLIENT,
-  Author
+  authorRouter
 }
