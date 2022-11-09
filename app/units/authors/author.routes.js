@@ -1,10 +1,9 @@
 const { Router } = require('express');
-const { authorApi } = require('.');
 const authorAPI = Router();
 const authorCLIENT = Router();
 
 // controllers
-const { create, read, detail, update, remove, drop } = require('./author.controller');
+const { create, read, detail, update, remove, drop, create_client, read_client, drop_client, detail_client, update_client, delete_client } = require('./author.controller');
 
 /////////////////////////////////
 //////////// API ////////////////
@@ -26,35 +25,29 @@ authorAPI
 //////////// CLIENT /////////////
 /////////////////////////////////
 
-// client routes "/authors"
-authorCLIENT.get('/', function(req,res,next) {
-  res.send('read authors (CLIENT)');
-});
+authorCLIENT
+  .route('/')
+  .get(read_client);
 
-// client routes "/authors/add"
-authorCLIENT.get('/add', function(req,res,next) {
-  res.send('create author (CLIENT)');
-});
+authorCLIENT
+  .route('/add')
+  .get(create_client);
 
-// client routes "/authors/drop"
-authorCLIENT.get('/drop', function(req,res,next) {
-  res.send('drop author collection (CLIENT)');
-});
+authorCLIENT
+  .route('/drop')
+  .get(drop_client);
 
-// client routes "/authors/:id"
-authorCLIENT.get('/:id', function(req,res,next) {
-  res.send(`read author detail (CLIENT): ${req.params.id}`);
-});
-
-// client routes "/authors/:id/update"
-authorCLIENT.get('/:id/update', function(req,res,next) {
-  res.send(`update author detail (CLIENT): ${req.params.id}`);
-});
-
-// client routes "/authors/:id/delet"
-authorCLIENT.get('/:id/delete', function(req,res,next) {
-  res.send(`delete author detail (CLIENT): ${req.params.id}`);
-});
+authorCLIENT
+  .route('/:id')
+  .get(detail_client);
+  
+authorCLIENT
+  .route('/:id/update')
+  .get(update_client); 
+  
+authorCLIENT
+  .route('/:id/delete')
+  .get(delete_client);  
 
 module.exports = {
   authorAPI,
