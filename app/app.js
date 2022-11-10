@@ -20,6 +20,7 @@
 const { handleError } = require('./middleware');
 const { authConfig, connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
 const apiRouter = require('./units.api/router.api');
+const clientRouter = require('./units.client/router.client');
 
 /**
  * app activation
@@ -67,28 +68,33 @@ app.set('view engine', 'ejs');
  */
 
 app.use('/api', apiRouter);
+app.use('/', clientRouter);
+
+// app.get('/authors/add', (req,res,next) => {
+//   res.send('CLIENT: add author');
+// });
+
+// app.get('/authors/drop', (req,res,next) => {
+//   res.send('CLIENT: drop author collection');
+// });
+
+// app.get('/authors/:id/update', (req,res,next) => {
+//   res.send(`CLIENT: author update ${req.params.id}`);
+// });
+
+// app.get('/authors/:id/delete', (req,res,next) => {
+//   res.send(`CLIENT: author delete ${req.params.id}`);
+// });
+
+// app.get('/authors/:id', (req,res,next) => {
+//   res.send(`CLIENT: author detail ${req.params.id}`);
+// });
+
+// app.get('/authors', (req,res,next) => {
+//   res.send('CLIENT: authors');
+// });
 
 
-
-app.use('/authors', (req,res,next) => {
-  res.send('CLIENT: authors');
-});
-
-app.use('/authors/add', (req,res,next) => {
-  res.send('CLIENT: add author');
-});
-
-app.use('/authors/add', (req,res,next) => {
-  res.send('CLIENT: add author');
-});
-
-app.use('/dashboard', (req,res,next) => {
-  res.send('CLIENT: dashboard');
-});
-
-app.use('/', (req,res,next) => {
-  res.send('CLIENT: homepage');
-});
 
 
 
