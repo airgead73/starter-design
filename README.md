@@ -12,52 +12,36 @@ practice Databases
 ### express
 
 ```
-npm i express cookie-parser express-mongo-sanitize express-openid-connect express-rate-limit express-session express-validator
-
+npm i express cookie-parser express-rate-limit express-session express-validator
 ```
-
 ### auth and security
+```
+npm i cors express-openid-connect helmet hpp memorystore xss-clean
 
 ```
-npm i cors helment hpp memorystore xss-clean
-
-```
-
 ### db
-
 ```
-npm i mongoose
-
+npm i mongoose express-mongo-sanitize
 ```
-
 ### etc.
-
 ```
 npm i cloudinary date-fns ejs slugify
-
 ```
-
 ## Dev Dependencies
 
 ### babel
 ```
 npm i -D @babel/core @babel/preset-env
-
 ```
-
 ### gulp
-
 ```
 npm i -D gulp gulp-babel gulp-concat gulp-postcss gulp-purgecss gulp-rename gulp-sass gulp-sourcemaps gulp-uglify
 ```
 ### additional css processing
-
 ```
 npm i -D autoprefixer cssnano postcss-combine-media-query rollup-stream sass vinyl-buffer vinyl-source-stream
-
 ```
 ### dev processing
-
 ```
 npm i -D concurrently del dotenv nodemon 
 ```
