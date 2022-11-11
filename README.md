@@ -12,31 +12,52 @@ practice Databases
 ### express
 
 ```
-npm i cloudinary cookie-parser cors date-fns ejs express express-mongo-sanitize express openid-connect express-rate-limit express-session express-validator helment hpp memorystore slugify xss-clean
+npm i express cookie-parser express-mongo-sanitize express-openid-connect express-rate-limit express-session express-validator
 
 ```
 
 ### auth and security
 
 ```
-npm i cloudinary cookie-parser cors date-fns ejs express express-mongo-sanitize express openid-connect express-rate-limit express-session express-validator helment hpp memorystore slugify xss-clean
+npm i cors helment hpp memorystore xss-clean
 
 ```
 
+### db
+
+```
+npm i mongoose
+
+```
 
 ### etc.
 
 ```
-npm i cloudinary cookie-parser cors date-fns ejs express express-mongo-sanitize express openid-connect express-rate-limit express-session express-validator helment hpp memorystore slugify xss-clean
+npm i cloudinary date-fns ejs slugify
 
 ```
 
 ## Dev Dependencies
 
 ### babel
-### gulp
-## additional css processing
-## dev processing
+```
+npm i -D @babel/core @babel/preset-env
 
 ```
-npm i -D @babel/core @babel/preset-env autoprefixer concurrently cssnano del dotenv gulp gulp-babel gulp-concat gulp-postcss gulp-purgecss gulp-rename gulp-sass gulp-sourcemaps gulp-uglify nodemon postcss-combine-media-query rollup-stream sass vinyl-buffer vinyl-source-stream
+
+### gulp
+
+```
+npm i -D gulp gulp-babel gulp-concat gulp-postcss gulp-purgecss gulp-rename gulp-sass gulp-sourcemaps gulp-uglify
+```
+### additional css processing
+
+```
+npm i -D autoprefixer cssnano postcss-combine-media-query rollup-stream sass vinyl-buffer vinyl-source-stream
+
+```
+### dev processing
+
+```
+npm i -D concurrently del dotenv nodemon 
+```
